@@ -1,0 +1,80 @@
+.layout-8
+  .items__wrapper
+    flex-direction: column
+    .layout__title
+      margin-bottom: 40px
+    .item
+      &__wrapper
+        align-items center
+        width: 100%
+        margin-bottom: 80px
+        &:last-child
+          margin-bottom: 0
+      &__text
+        &__wrapper
+          min-width: 500px
+          width: 500px
+          &+.item__icon
+            margin-left: 40px
+        &__icon
+          width: 80px
+          height: 80px
+          margin-bottom: 40px
+          img
+            width: 100%
+            height: auto
+        &
+          font-size: 18px
+          line-height: 150%
+          color: #3A393C
+          font-family: 'Roboto', Arial, sans-serif
+        &__subtitle
+           font-size: 27px
+           line-height: 90%
+           color: #003349
+           font-family: "Gilroy-Bold", Arial, sans-serif
+           text-transform uppercase
+           margin-bottom: 20px
+      &__icon
+        min-width: 720px
+        width: 720px
+        img
+          width: 100%
+          height: auto
+        &+.item__text__wrapper
+          margin-left: 40px
+  @media(max-width: 1024px)
+    margin-bottom: 70px
+    .layout__title
+      margin-bottom: 30px
+    .items__wrapper
+      .item
+        &__wrapper
+          flex-direction: column
+          width: 100%
+          margin-bottom: 50px
+          &:last-child
+            margin-bottom: 0
+        &__text
+          &__wrapper
+            width: 100%
+            min-width: auto
+            margin-bottom: 27px
+            &+.item__icon
+              margin-left: 0
+          &
+            margin-bottom: 0
+            font-size: 14px
+            line-height: 150%
+          &__icon
+            margin-bottom: 30px
+            width: 60px
+            min-width: 60px
+            height: 60px
+        &__icon
+          order: 1
+          margin-left: 0
+          width: 100%
+          min-width: auto
+          &+.item__text__wrapper
+            margin-left: 0

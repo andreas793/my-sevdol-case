@@ -1,0 +1,183 @@
+@import "../mixin/flex.styl"
+.empty__result
+  margin: 0 auto 120px auto
+  max-width: 400px
+  &__img
+    width: 64px
+    height: 64px
+    margin: 0 auto 32px auto
+    img
+      width: 100%
+      height: auto
+  &__text
+    font-size: 24px
+    line-height: 29px
+    text-transform: uppercase
+    text-align center
+    color: #3a393c
+    font-family: Gilroy-Bold, Arial, sans-serif
+.no-items__news
+  font-size: 24px
+  line-height: 29px
+  text-align: center
+  color: #3a393c
+  font-family: Gilroy, Arial, sans-serif
+  margin-bottom: 120px
+@media (max-width: 768px)
+  .empty__result
+    margin: 0 auto 40px auto
+  .no-items__news
+    margin-bottom: 40px
+
+.news
+  &__items
+    flex(flex-start, flex-start, row)
+    flex-wrap: wrap
+    width: 100%
+    box-sizing: border-box
+    @media(max-width: 1023px)
+      justify-content: center
+  &__item
+    width: 339px
+    min-width: 339px
+    height: 386px
+    margin-bottom: 40px
+    margin-right: 80px
+    text-decoration: none
+    overflow: hidden
+    position relative
+    @media(min-width: 1597px)
+      &:nth-child(4n+4)
+        margin-right: 0
+    @media(max-width: 1596px)
+      margin-right: 75px
+      &:nth-child(3n+3)
+        margin-right: 0
+    @media(max-width: 1400px)
+      width: 385px
+      min-width: 385px
+      margin-bottom: 80px
+      margin-right: 80px
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1)
+      &:nth-child(3n+3)
+        margin-right: 80px
+    @media(max-width: 1124px)
+      margin-right: 40px
+      &:nth-child(3n+3)
+        margin-right: 40px
+      &:nth-child(2n+2)
+        margin-right: 0
+    @media(max-width: 767px)
+      width: 76%
+      min-width: auto
+      margin-bottom: 40px
+      margin-right: 0
+      &:nth-child(3n+3)
+        margin-right: 0
+      .news__title
+        margin-bottom: 31px
+      .news__text,
+      .news__action__btns
+        display: none
+
+
+
+  &__img__wrapper
+    width: 100%
+    img
+      width: 100%
+      height: auto
+  &__text__wrapper
+    display: block
+    padding: 19px
+    background-color: white
+    b
+      font-weight: normal
+      background: rgba(0,114,199,0.2)
+  &__info
+    font-size: 14px
+    line-height: 13px
+    font-family: "Roboto", Arial, sans-serif
+    color: #BEBEBE
+    margin-bottom: 14px
+  &__text__section
+    height: 78px
+    overflow: hidden
+    width: 100%
+    margin-bottom: 17px
+    @media(max-width:767px)
+      height: auto
+  &__title
+    font-size: 14px
+    line-height: 19px
+    color: #3A393C
+    font-family: "Gilroy-Bold", Arial, sans-serif
+    text-transform: uppercase
+    margin-bottom: 4px
+  &__text
+    font-family: "Roboto", Arial, sans-serif
+    font-size: 14px
+    line-height: 18px
+    color: rgba(58, 57, 60, 0.78)
+    margin-bottom: 17px
+    height: 54px
+    -webkit-line-clamp: 3
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    overflow: hidden
+
+  &__action
+    &__wrapper
+      flex(space-between, flex-start, row)
+      opacity: 0
+    &__link
+      font-family: "Roboto", Arial, sans-serif
+      font-size: 14px
+      line-height: 18px
+      color: #0072C7
+      position: relative
+      &:after
+        content: ""
+        display: block
+        width: 100%
+        height: 1px
+        background-color: #0072C7
+        position: absolute
+        left: 0
+        bottom: -1px
+      &:hover
+        color: #0072C7
+    &__btns
+      flex()
+    &__btn
+      min-width: 16px
+      width: 16px
+      height: 16px
+      margin-right: 12px
+      img
+        width: 100%
+        height: auto
+      &:last-child
+        margin-right: 0
+  &__item:hover
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+  &__item:hover .news__text__wrapper
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+  &__item:hover .news__action__wrapper
+    opacity: 1
+@media(max-width: 1280px)
+  .news__item
+    height: auto
+  .news__action__wrapper
+    opacity: 1
+  .news__item:hover .news__text__wrapper
+    position: relative
+    bottom: auto
+
+
+
+
+

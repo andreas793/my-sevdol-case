@@ -1,0 +1,191 @@
+.layout-3
+  max-width: 1920px
+  width: 100%
+  position: relative
+  @media(max-width: 450px)
+    padding: 0
+    margin-bottom: 74px
+  .main__img
+    width: 100%
+    img
+      width: 100%
+      height: auto
+    &-mob
+      display: none
+    @media (max-width: 767px)
+      &-mob
+        display: block
+      &-desk
+        display: none
+
+  .infographics__section
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    .item
+      position: absolute
+      max-width: 181px
+      &__text
+        color: #fff
+      .number
+          font-family: 'Gilroy-Bold', Arial, sans-serif
+          font-size: 48px
+          line-height: 90%
+          margin-bottom: 3px
+        .text
+          font-family: 'Gilroy', Arial, sans-serif
+          font-size: 24px
+          line-height: 90%
+          text-transform uppercase
+          margin-bottom: 14px
+      &__icon
+        border: 3px solid #fff
+        border-radius 2px
+        background-color: rgba(0, 51, 73, 0.5)
+        box-sizing border-box
+        padding: 23px
+        width: 100px
+        height: 100px
+        img
+          width: 100%
+          height: auto
+      &__line
+        width: 2px
+        height: 153px
+        margin-left: 49px
+        position: relative
+        background-color: #fff
+        &:after
+          content: ''
+          width: 10px
+          height: 10px
+          background-color: #fff
+          border-radius: 5px
+          position: absolute
+          left: -4px
+          bottom: -10px
+      &.parking
+        top: 32%
+        left: 19%
+      &.house
+        top: 15%
+        left: 41%
+      &.bell
+        top: 10%
+        left: 58%
+      &.cart
+        top: 35%
+        left: 71%
+    .logo__wrapper
+      width: 225px
+      position: absolute
+      left: 75%
+      top: 86%
+      img
+        width: 100%
+        height: auto
+      @media (max-width: 1250px) and (min-width: 768px)
+        left: 36%
+        top: 76%
+      @media (max-width: 450px)
+        left: auto
+        right: 10px
+        top: 54px
+
+    @media (max-width: 1440px) and (min-width: 1250px)
+        .item
+          &.parking
+            top: 15%
+          &.house
+            top: 4%
+          &.bell
+            top: 1%
+          &.cart
+            top: 24%
+    @media (max-width: 1249px) and (min-width: 768px)
+      .item
+        max-width: 140px
+        &__icon
+          padding: 5px
+          width: 75px
+          height: 75px
+        &__text
+          .number
+            font-size: 38px
+          .text
+            font-size: 18px
+        &__line
+          margin-left: 37.5px
+        &.parking
+          top: 20%
+          .item__line
+            height: 80px
+        &.house
+          top: 3%
+          .item__line
+            height: 40px
+        &.bell
+          top: 4%
+          left: 55%
+          .item__line
+            height: 20px
+        &.cart
+          top: 5%
+          left: 71%
+          .item__line
+            height: 120px
+
+    @media (max-width: 450px)
+      .item
+        flex(flex-start, center, row)
+        max-width: 100%
+        &__icon
+          order: 1
+          width: 58px
+          min-width: 58px
+          height: 58px
+          padding: 13px
+          border-width: 1.7px
+          border-radius: 1.16px
+        &__text
+          position: absolute
+          left: 70px
+          top: 0
+          min-width: 207px
+          .number
+            font-size: 20px
+            line-height: 90%
+            margin-bottom: 21px
+          .text
+            font-size: 14px
+            line-height: 90%
+            margin-bottom: 0
+            font-family: 'Gilroy-Bold', Arial, sans-serif
+        &__line
+          order: 2
+          margin-left: 0
+          height: 1px
+          width: 89px
+          &:after
+            left: 100%
+            bottom: -2.5px
+            min-width: 6px
+            width: 6px
+            height: 6px
+            border-radius 50%
+        &.parking
+          left: 10px
+          top: 174px
+        &.house
+          left: 10px
+          top: 244px
+        &.bell
+          left: 10px
+          top: 314px
+        &.cart
+          left: 10px
+          top: 384px
+          .item__text
+            top: 39px

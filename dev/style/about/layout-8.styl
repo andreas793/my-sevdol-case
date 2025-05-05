@@ -1,0 +1,114 @@
+@import "../mixin/flex.styl"
+.layout__wrapper-8
+  background: url(../img/about/layout-8-bg.png) no-repeat 50% 50%
+
+  @media(max-width: 1279px)
+    background: url(../img/about/layout-8-bg-2.png) no-repeat 50% 50%
+    background-size: cover
+  .content__section
+    max-width: 1366px
+    height: 658px
+    margin: 0 auto 120px auto
+    position: relative
+    @media(max-width: 1279px)
+      height: 930px
+    @media(max-width: 767px)
+      margin-bottom: 319px
+
+  .layout__title
+    color: #fff
+    font-family: Gilroy-Bold, Arial, sans-serif
+    padding-top: 90px
+    margin-left: 42%
+    position: relative
+    @media(max-width: 1366px)
+      margin-left: 42%
+      padding-left: 0
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 60px
+      height: 66px
+      background: url('../img/about/icons/arrow.svg') no-repeat 50% 50%
+      left: -116px
+      top: 78px
+    @media(max-width: 1279px)
+      margin-top: 0
+      padding-top: 72px
+      margin-left: 72px
+      margin-bottom: 13px
+      &:before
+        left: 163px
+        top: 238px
+        transform: rotate(180deg)
+    @media(max-width: 767px)
+      margin-left: 10px
+      padding-top: 41px
+      &:before
+        display: none
+  .layout__text
+    color: #fff
+    max-width: 567px
+    margin-left: 42%
+    font-family: Roboto, Arial, sans-serif
+    @media(max-width: 1279px)
+      margin-left: 72px
+      max-width: 538px
+    @media(max-width: 767px)
+      margin-left: 10px
+      max-width: 100%
+      margin-bottom: 33px
+  .links__wrapper
+    position: absolute
+    bottom: 96px
+    left: 42%
+    flex()
+    @media(max-width: 1279px)
+      left: 74px
+      bottom: 60px
+    @media(max-width: 767px)
+      left: inherit
+      bottom: inherit
+      position: relative
+      margin-left: 10px
+    .social__link
+      width: 40px
+      height: 40px
+      margin-right: 20px
+      img
+        width: 100%
+        height: auto
+  .video__wrapper
+    width: 335px
+    height: 704px
+    border-radius: 48px
+    position: absolute
+    bottom: 0
+    left: 0
+    overflow: hidden
+    pointer-events: none
+    @media(max-width: 1366px)
+      left: 10px
+    @media(max-width: 1279px)
+      left: inherit
+      right: 72px
+      bottom: -72px
+    @media(max-width: 767px)
+      right: inherit
+      left: 10px
+      bottom: -180px
+    @media(max-width: 320px)
+      width: 320px
+      left: 0
+    video
+      width: auto
+      height: 100%
+      position: relative
+      left: -30px
+      bottom: 0
+      @media(max-width: 320px)
+        left: -40px
+
+
+

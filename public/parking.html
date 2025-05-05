@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Заголовок</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery.multiselect.css">
+    <link rel="stylesheet" href="css/multiselect.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="./css/parking.css">
+  </head>
+  <body>
+    <div class="breadcrumb">
+      <div class="bx-breadcrumb"><a href="#">Главная/</a></div>
+    </div>
+    <div class="layout__wrapper">
+      <form class="filter__items">
+        <div class="filter__item">
+          <div class="filter__label">Адрес</div>
+          <select id="select">
+            <div>
+              <optgroup label="Северная долина">
+                <option value="1">ул. Шишкина, участок 21, корпус 29</option>
+                <option value="2">ул. Шишкина, участок 21, корпус 33</option>
+                <option value="3">улица Шишкина, дом 289, строение 1</option>
+              </optgroup>
+            </div>
+            <div>
+              <optgroup label="21 квартал">
+                <option value="1">ул. Шишкина, участок 21, корпус 29</option>
+                <option value="2">ул. Шишкина, участок 21, корпус 33</option>
+                <option value="3">улица Шишкина, дом 289, строение 1</option>
+              </optgroup>
+            </div>
+          </select>
+        </div>
+        <div class="filter__item filter__item-floor">
+          <div class="filter__label">Этаж</div>
+          <div class="floor__items">
+            <label>
+              <input type="radio" name="floor" value="1">
+              <div class="floor__item">1</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="2" checked>
+              <div class="floor__item">2</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="3">
+              <div class="floor__item">3</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="4">
+              <div class="floor__item">4</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="5">
+              <div class="floor__item">5</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="6">
+              <div class="floor__item">6</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="7">
+              <div class="floor__item">7</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="8">
+              <div class="floor__item">8</div>
+            </label>
+            <label>
+              <input type="radio" name="floor" value="K">
+              <div class="floor__item">K</div>
+            </label>
+          </div>
+        </div>
+        <div class="filter__item">
+          <div class="filter__label">Показать</div>
+          <div class="show-type__wrapper">
+            <label>
+              <input type="radio" name="show-type" value="scheme" checked>
+              <div class="show-type__radio">на схеме</div>
+            </label>
+            <label>
+              <input type="radio" name="show-type" value="list">
+              <div class="show-type__radio">списком</div>
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="plane__section">
+        <div class="plane__wrapper"><img src="img/parking/plane-2.png" usemap="#parking_map">
+          <canvas id="canvasMap" width="117" height="930"></canvas><map name="parking_map">
+            <area target="" alt="" title="" href="1" coords="381,162,396,162,396,196,381,196" shape="poly"></map>
+          <div class="magnific-popup"><a class="gallery-magnific-popup button__wrapper-white" href="img/parking/plane.png">На весь экран</a></div>
+        </div>
+        <div class="plane__info"><img src="img/parking/card.png">
+          <div class="location__wrapper">
+            <div class="img__wrapper"><img src="img/parking/icons/location.svg"></div>
+            <div class="location__text">ул. Федора Абрамова, д. 4, литера А</div>
+          </div>
+          <div class="parking__type__wrapper">
+            <div class="parking__type">Надземный</div>
+            <div class="parking__price">от 399 000 ₽</div>
+          </div>
+          <div class="button__wrapper popup__show" data-anchor="#application-1">Оставить заявку</div><a class="link__wrapper" href="#"><span>Смотреть на карте</span>
+            <div class="img__wrapper"><img src="img/parking/icons/link.svg"></div></a>
+        </div>
+        <div class="plane__side">
+          <div class="plane__side-floor">2 этаж</div>
+          <div class="plane__side-amount">Свободно<span>14</span>мест</div>
+        </div>
+      </div>
+      <div class="table__wrapper-parking">
+        <div class="table__row table__header">
+          <div class="table__cell">№</div>
+          <div class="table__cell">Тип места</div>
+          <div class="table__cell">Корпус</div>
+          <div class="table__cell">Ввод в эксплуатацию</div>
+          <div class="table__cell">Этаж</div>
+          <div class="table__cell">Цена покупки</div>
+        </div>
+        <div class="table__body">
+          <div class="table__row">
+            <div class="table__cell">57</div>
+            <div class="table__cell parking-type-standart">Стандартное</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row double__seat double__seat-family">
+            <div class="table__cell">89, 90</div>
+            <div class="table__cell parking-type-family">Семейное
+              <div class="tooltip__wrapper"><span class="tooltip__title">Сдвоенное</span>
+                <div class="tooltip__icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0C2.70445 0 0 2.70445 0 6C0 9.29555 2.70445 12 6 12C9.29555 12 12 9.29555 12 6C12 2.70445 9.29555 0 6 0ZM6 9.16406C5.80584 9.16406 5.64844 9.00666 5.64844 8.8125C5.64844 8.6183 5.80584 8.46094 6 8.46094C6.19416 8.46094 6.35156 8.6183 6.35156 8.8125C6.35156 9.00666 6.19416 9.16406 6 9.16406ZM6.87926 6.11604C6.55378 6.30452 6.35156 6.65473 6.35156 7.02996V7.40625C6.35156 7.60057 6.19432 7.75781 6 7.75781C5.80568 7.75781 5.64844 7.60057 5.64844 7.40625V7.02996C5.64844 6.40444 5.98523 5.82113 6.52699 5.50767C6.85247 5.31919 7.05469 4.96901 7.05469 4.59375C7.05469 4.01217 6.58158 3.53906 6 3.53906C5.41842 3.53906 4.94531 4.01217 4.94531 4.59375C4.94531 4.78807 4.78807 4.94531 4.59375 4.94531C4.39943 4.94531 4.24219 4.78807 4.24219 4.59375C4.24219 3.62454 5.03079 2.83594 6 2.83594C6.96921 2.83594 7.75781 3.62454 7.75781 4.59375C7.75781 5.21927 7.42102 5.80259 6.87926 6.11604Z" fill="#A3AEC1"></path>
+                  </svg>
+                </div>
+                <div class="tooltip__text">Продается только совместно</div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="duble__text">
+              <div class="img__wrapper"><img src="img/parking/icons/attention.svg"></div>Сдвоенное машиноместо. Продается только совместно
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">91</div>
+            <div class="table__cell parking-type-increased">Увеличенное</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">62</div>
+            <div class="table__cell parking-type-boxing">Бокс</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">57</div>
+            <div class="table__cell parking-type-small-class">Для машин малого класса</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">57</div>
+            <div class="table__cell parking-type-other">Для иного транспорта</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row double__seat double__seat-family-small">
+            <div class="table__cell">57, 58</div>
+            <div class="table__cell parking-type-family-small">Семейное малого класса
+              <div class="tooltip__wrapper">
+                <div class="tooltip__icon">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0C2.70445 0 0 2.70445 0 6C0 9.29555 2.70445 12 6 12C9.29555 12 12 9.29555 12 6C12 2.70445 9.29555 0 6 0ZM6 9.16406C5.80584 9.16406 5.64844 9.00666 5.64844 8.8125C5.64844 8.6183 5.80584 8.46094 6 8.46094C6.19416 8.46094 6.35156 8.6183 6.35156 8.8125C6.35156 9.00666 6.19416 9.16406 6 9.16406ZM6.87926 6.11604C6.55378 6.30452 6.35156 6.65473 6.35156 7.02996V7.40625C6.35156 7.60057 6.19432 7.75781 6 7.75781C5.80568 7.75781 5.64844 7.60057 5.64844 7.40625V7.02996C5.64844 6.40444 5.98523 5.82113 6.52699 5.50767C6.85247 5.31919 7.05469 4.96901 7.05469 4.59375C7.05469 4.01217 6.58158 3.53906 6 3.53906C5.41842 3.53906 4.94531 4.01217 4.94531 4.59375C4.94531 4.78807 4.78807 4.94531 4.59375 4.94531C4.39943 4.94531 4.24219 4.78807 4.24219 4.59375C4.24219 3.62454 5.03079 2.83594 6 2.83594C6.96921 2.83594 7.75781 3.62454 7.75781 4.59375C7.75781 5.21927 7.42102 5.80259 6.87926 6.11604Z" fill="#A3AEC1"></path>
+                  </svg>
+                </div>
+                <div class="tooltip__text">Сдвоенное. Продается только совместно</div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="duble__text">
+              <div class="img__wrapper"><img src="img/parking/icons/attention.svg"></div>Сдвоенное машиноместо. Продается только совместно
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">57</div>
+            <div class="table__cell parking-type-standard-small">Уменьшенное стандартное</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell">57</div>
+            <div class="table__cell parking-type-limited">Ограниченное</div>
+            <div class="table__cell">
+              <div class="table__cell__label">Корпус</div>
+              <div class="table__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Ввод в эксплуатацию</div>
+              <div class="table__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="table__cell">
+              <div class="table__cell__label">Этаж</div>
+              <div class="table__cell__text">2</div>
+            </div>
+            <div class="table__cell table__cell-price">
+              <div class="table__cell__label">Цена покупки</div>
+              <div class="table__cell__text">399 000 ₽</div>
+            </div>
+            <div class="button__wrapper popup__show" data-anchor="#booking">Забронировать</div>
+          </div>
+        </div>
+        <div class="button__wrapper button__wrapper-white">+ показать ещё  10 из 30</div>
+      </div>
+      <div class="layout__title">Типы парковочных мест</div>
+      <div class="parking-type__items">
+        <div class="parking-type__item standard">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-standart.svg"></div>
+          <div>
+            <div class="parking-type__square">5,3 х 2,5 м</div>
+            <div class="parking-type__text"><span>Стандартное</span>м/место</div>
+          </div>
+        </div>
+        <div class="parking-type__item family">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-family.svg"></div>
+          <div>
+            <div class="parking-type__square">10,6 х 5 м</div>
+            <div class="parking-type__text"><span>Семейное</span>м/место</div>
+          </div>
+        </div>
+        <div class="parking-type__item increased">
+          <div class="img__wrapper"><img src="img/parking/icons/p-enlarged.svg"></div>
+          <div>
+            <div class="parking-type__square">6 х 3,6 м</div>
+            <div class="parking-type__text"><span>Увеличенное</span>м/место</div>
+          </div>
+        </div>
+        <div class="parking-type__item boxing">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-box.svg"></div>
+          <div>
+            <div class="parking-type__square">5,3 х 2,5 м</div>
+            <div class="parking-type__text"><span>Бокс</span></div>
+          </div>
+        </div>
+        <div class="parking-type__item small-class">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-small-class.svg"></div>
+          <div>
+            <div class="parking-type__square">2,1 х 1,9 м</div>
+            <div class="parking-type__text"><span>Для машин малого класса</span></div>
+          </div>
+        </div>
+        <div class="parking-type__item other">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-other.svg"></div>
+          <div>
+            <div class="parking-type__square">< 1,9 м</div>
+            <div class="parking-type__text"><span>Для иного транспорта</span></div>
+          </div>
+        </div>
+        <div class="parking-type__item family-small">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-family-small.svg"></div>
+          <div>
+            <div class="parking-type__square">< 4,6 х 10</div>
+            <div class="parking-type__text"><span>Семейное малого класса</span></div>
+          </div>
+        </div>
+        <div class="parking-type__item standard-small">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-standart-small.svg"></div>
+          <div>
+            <div class="parking-type__square">2,3 х 6,5</div>
+            <div class="parking-type__text"><span>Семейное малого класса</span></div>
+          </div>
+        </div>
+        <div class="parking-type__item limited">
+          <div class="img__wrapper"><img src="/img/parking/icons/p-limited.svg"></div>
+          <div>
+            <div class="parking-type__square">5,3 х 2,5 м</div>
+            <div class="parking-type__text"><span>Ограниченное м/место</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup__wrapper" id="application-1">
+        <div class="popup__bg"></div>
+        <div class="popup__body">
+          <div class="popup__close" data-anchor="#application-1"><img src="img/parking/icons/close.svg" alt=""></div>
+          <div class="popup__title">Спасибо!</div>
+          <div class="popup__text">Данные успешно отправлены. Менеджер свяжется с Вами в ближайшее время.</div>
+        </div>
+      </div>
+      <div class="popup__wrapper" id="application">
+        <div class="popup__bg"></div>
+        <div class="popup__body">
+          <div class="popup__close" data-anchor="#application"><img src="img/parking/icons/close.svg" alt=""></div>
+          <div class="popup__title">Оставить заявку</div>
+          <div class="popup__text">Оставьте свой номер телефона и мы подберём для вас самое выгодное предложение</div>
+          <form class="feedback__wrapper">
+            <div class="input__wrapper">
+              <input type="text" name="feedback-name" placeholder="Ваше имя">
+            </div>
+            <div class="input__wrapper">
+              <input type="text" name="feedback-phone" placeholder="Телефон">
+            </div>
+            <input class="button__wrapper" type="submit" value="Оставить заявку">
+          </form>
+        </div>
+      </div>
+      <div class="popup__wrapper" id="booking">
+        <div class="popup__bg"></div>
+        <div class="popup__body">
+          <div class="popup__close" data-anchor="#booking"><img src="./img/parking/icons/close.svg" alt=""></div>
+          <div class="popup__title">Забронировать</div>
+          <div class="parking__number">Место<span>92</span></div>
+          <div class="popup__text">Оставьте свой номер телефона  для подтверждения брони</div>
+          <form class="feedback__wrapper">
+            <div class="input__wrapper">
+              <input type="text" name="feedback-phone" placeholder="Ваше имя">
+            </div>
+            <div class="input__wrapper">
+              <input type="text" name="feedback-phone" placeholder="Телефон">
+            </div>
+            <input class="button__wrapper" type="submit" value="Оставить заявку">
+          </form>
+        </div>
+      </div>
+      <div class="popup__wrapper popup__wrapper-parking-info" id="parking-info">
+        <div class="popup__bg"></div>
+        <div class="popup__body">
+          <div class="popup__close" data-anchor="#parking-info"><img src="img/parking/icons/close.svg" alt=""></div>
+          <div class="popup__table__wrapper">
+            <div class="popup__cell">
+              <div class="table__number">57</div>
+              <!--классы у типа паркингов могут быть: .parking-type-standart, .parking-type-family, .parking-type-increased, .parking-type-increased-small-class, .parking-type-increased-other, .parking-type-family-small, .parking-type-standard-small, .parking-type--limited-->
+              <div class="parking-type parking-type-family">Семейное
+                <div class="tooltip__wrapper"><span class="tooltip__title">Сдвоенное</span>
+                  <div class="tooltip__icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 0C2.70445 0 0 2.70445 0 6C0 9.29555 2.70445 12 6 12C9.29555 12 12 9.29555 12 6C12 2.70445 9.29555 0 6 0ZM6 9.16406C5.80584 9.16406 5.64844 9.00666 5.64844 8.8125C5.64844 8.6183 5.80584 8.46094 6 8.46094C6.19416 8.46094 6.35156 8.6183 6.35156 8.8125C6.35156 9.00666 6.19416 9.16406 6 9.16406ZM6.87926 6.11604C6.55378 6.30452 6.35156 6.65473 6.35156 7.02996V7.40625C6.35156 7.60057 6.19432 7.75781 6 7.75781C5.80568 7.75781 5.64844 7.60057 5.64844 7.40625V7.02996C5.64844 6.40444 5.98523 5.82113 6.52699 5.50767C6.85247 5.31919 7.05469 4.96901 7.05469 4.59375C7.05469 4.01217 6.58158 3.53906 6 3.53906C5.41842 3.53906 4.94531 4.01217 4.94531 4.59375C4.94531 4.78807 4.78807 4.94531 4.59375 4.94531C4.39943 4.94531 4.24219 4.78807 4.24219 4.59375C4.24219 3.62454 5.03079 2.83594 6 2.83594C6.96921 2.83594 7.75781 3.62454 7.75781 4.59375C7.75781 5.21927 7.42102 5.80259 6.87926 6.11604Z" fill="#A3AEC1"></path>
+                    </svg>
+                  </div>
+                  <div class="tooltip__text">Продается только совместно</div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__cell">
+              <div class="popup__cell__label">Корпус</div>
+              <div class="popup__cell__text">29 (3 очередь)</div>
+            </div>
+            <div class="popup__cell">
+              <div class="popup__cell__label">Этаж</div>
+              <div class="popup__cell__text">2</div>
+            </div>
+            <div class="popup__cell">
+              <div class="popup__cell__label">Ввод в эксплуатацию</div>
+              <div class="popup__cell__text">IV квартал 2022 года</div>
+            </div>
+            <div class="popup__cell popup__cell-price">
+              <div class="popup__cell__label">Цена покупки</div>
+              <div class="popup__cell__text">399 000 ₽</div>
+            </div><a class="button__wrapper" href="#">Забронировать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+@media (max-width: 450px) {
+  .layout-6 {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+}
+.layout-6 .layout__title {
+  margin-bottom: 60px;
+}
+@media (max-width: 1360px) {
+  .layout-6 .layout__title {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .layout-6 .layout__title {
+    margin-left: 10px;
+  }
+}
+.layout-6 .items__wrapper {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.layout-6 .items__wrapper .item__wrapper {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.layout-6 .items__wrapper .item__wrapper:nth-child(4) {
+  margin-bottom: 0;
+}
+.layout-6 .items__wrapper .item__wrapper:last-child {
+  margin-bottom: 0;
+}
+.layout-6 .items__wrapper .item__wrapper:last-child .item__text {
+  max-width: 810px;
+}
+.layout-6 .items__wrapper .item__icon {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+.layout-6 .items__wrapper .item__text {
+  max-width: 280px;
+  font-size: 16px;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .layout-6 .items__wrapper {
+    padding: 0 10px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .layout-6 .items__wrapper .item__wrapper {
+    max-width: 44%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .layout-6 .items__wrapper .item__wrapper:last-child {
+    max-width: 100%;
+  }
+  .layout-6 .items__wrapper .item__wrapper:last-child .item__icon {
+    margin-right: 0;
+  }
+  .layout-6 .items__wrapper .item__icon {
+    margin-bottom: 25px;
+  }
+  .layout-6 .items__wrapper .item__text {
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+.layout-6 .main__img {
+  margin-bottom: 80px;
+}
+.layout-6 .main__img img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 450px) {
+  .layout-6 .main__img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .layout-6 .main__img img {
+    width: 100%;
+    height: 300px;
+  }
+}
+.layout-6 .apartament-search__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: #e6e5e6;
+  padding: 26px 0;
+}
+.layout-6 .apartament-search__section .text {
+  margin-right: 80px;
+  font-size: 18px;
+  line-height: 110%;
+  font-family: 'Gilroy', Arial, sans-serif;
+  color: #000;
+}
+@media (max-width: 450px) {
+  .layout-6 .apartament-search__section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 13px 0 20px 0;
+  }
+  .layout-6 .apartament-search__section .text {
+    margin-right: 0;
+    margin-bottom: 10;
+    text-align: center;
+    font-size: 16px;
+    max-width: 200px;
+  }
+}
+
+/*# sourceMappingURL=../maps/content/layout-6.css.map */

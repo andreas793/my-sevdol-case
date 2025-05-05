@@ -1,0 +1,156 @@
+@import "../mixin/flex.styl"
+.cards__section
+  overflow-x: auto
+  width: 100%
+  margin-bottom: 84px
+.cards__items__wrapper
+  width: 100%
+  flex(space-between, flex-start, row)
+  .card
+    &__wrapper
+      width: 471px
+      border: 1px solid #DCDCDC
+      box-sizing border-box
+      padding: 51px 20px 20px 20px
+      margin: 0  20px 20px 0
+      font-family: "Geometria", Arial, sans-serif
+      font-size: 14px
+      line-height: 18px
+      color: #3A393C
+      position: relative
+      &:last-child
+        margin-right: 0
+      @media(max-width: 767px)
+        width: 223px
+        min-width: 223px
+        &:first-child
+          margin-left: 15%
+        &:last-child
+          margin-right: 15%
+    &__slider
+      width: 100%
+      margin: 0 auto 14px auto
+      flex(center, center, row)
+      img
+        width: 100%
+        max-width: 200px
+        height: auto
+        max-height: 200px
+        margin: auto
+    &__row
+      flex()
+      &-meters-apartment
+        margin-bottom: 20px
+        white-space: nowrap
+        .card__cell-deadline
+          display: none
+      sup
+        font-size: 8px
+        line-height: 8px
+      &-type
+        position: absolute
+        top: 10px
+        left: 10px
+        flex-wrap: wrap
+
+    &__cell
+      margin-bottom: 20px
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      &-type-finishing,
+      &-type-notfinish,
+      &-type-office,
+      &-type-discount
+        display: inline-block
+        box-sizing: border-box
+        border-radius: 5px
+        background: rgba(0, 114, 199, 0.05)
+        padding: 8px 12px
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.02em
+        font-family: "Geometria", Arial, sans-serif
+        color: #0072C7
+        white-space: nowrap
+        margin: 0 10px 10px 0
+      &-type-notfinish
+        background: rgba(0, 51, 73, 0.05)
+        color: rgba(0, 51, 73, 0.5)
+      &-type-office
+        background: rgba(183, 49, 44, 0.05)
+        color: #B7312C
+      &-type-discount
+        background: #EBFBE9
+        color: #38792A
+      &-turn
+        display: none
+    &__title
+      font-size: 20px
+      line-height: 24px
+      display: inline-block
+      margin-right: 10px
+      font-family: "Geometria-Bold", Arial, sans-serif
+      color: #353535
+    &__meters-apartment
+      font-size: 20px
+      line-height: 24px
+      font-family: "Geometria-Bold", Arial, sans-serif
+      color: #353535
+    &__lable
+      font-size: 12px
+      line-height: 14px
+      margin-bottom: 8px
+      color: #A3A3A3
+    &__text
+      font-size: 16px
+      line-height: 19px
+      color: #353535
+    &__footer
+      border-top: 1px solid #DADADA
+      padding-top: 20px
+      box-sizing: border-box
+      flex(space-between, center, row)
+      flex-wrap: wrap
+      .card
+        &__cell
+          display: inline-block
+          margin-bottom: 0
+          margin-right: 0
+          &-square-meter
+            font-size: 14px
+            line-height: 17px
+            color: #A3A3A3
+            width: 50%
+          &-price
+            font-size: 20px
+            line-height: 30px
+            font-weight: 500
+            margin-bottom: 4px
+            color: #0072C7
+            font-family: "Geometria-Bold", Arial, sans-serif
+            text-align: right
+            width: 50%
+@media(max-width: 767px)
+  .cards__items__wrapper
+    .card__row .card__title, .card__row .card__meters-apartment
+      font-size: 16px
+      line-height: 20px
+    .card__cell
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+      .card__text
+        font-size: 13px
+        line-height: 19px
+    .card__footer .card__cell
+      &.card__cell-square-meter
+        width: 100%
+        text-align: right
+        order: 1
+      &.card__cell-price
+        width: 100%
+        text-align: right
+
+
+

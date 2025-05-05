@@ -1,0 +1,104 @@
+@import "../mixin/flex.styl"
+
+.baner__wrapper
+  position: relative
+  max-width: 1920px
+  margin: 0 auto 105px auto
+  @media(max-width: 767px)
+    margin: 0 auto 40px auto
+  .img__wrapper
+    width: 100%
+    margin-bottom: 104px
+    @media(max-width: 1024px)
+      margin-bottom: 90px
+    @media(max-width: 767px)
+      margin-bottom: 29px
+    img
+      width: 100%
+      height: auto
+  .baner
+    &__title
+      font-family: Gilroy-Bold, Arial, sans-serif
+      font-size: 96px
+      line-height: 116px
+      letter-spacing 0.05em
+      text-transform: uppercase
+      color: #fff
+      position: absolute
+      top: 124px
+      left: 220px
+      @media(max-width: 1440px)
+        top: 134px
+        left: 130px
+      @media(max-width: 1024px)
+        top: 87px
+        left: 70px
+        font-size: 70px
+        line-height: 85px
+      @media(max-width: 767px)
+        top: 46px
+        left: 32px
+        line-height: 43px
+        font-size: 30px
+    &__subtitle
+      position: absolute
+      left: 220px
+      top: 377px
+      color: #fff
+      font-size: 24px
+      line-height: 29px
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      font-family: Gilroy-Bold, Arial, sans-serif
+      @media(max-width: 1440px)
+        top: 377px
+        left: 130px
+      @media(max-width: 1024px)
+        left: 70px
+        top: 299px
+      @media(max-width: 767px)
+        left: 32px
+        top: 140px
+        width: 272px
+        font-size: 14px
+        line-height: 17px
+    &__text
+      font-family: Gilroy, Arial, sans-serif
+      font-size: 32px
+      line-height: 130%
+      color: #B19A7C
+      letter-spacing: 0.01em
+      position: relative
+      max-width: 727px
+      margin: 0 0 0 20.5%
+      &:after
+        display: block
+        content: ''
+        position: absolute
+        right: -274px
+        top: -23px
+        background: url("../img/hotoffer/baner-text-bg.svg") no-repeat 50% 50%
+        width: 156px
+        height: 172px
+        background-size: cover
+      @media(max-width: 1440px)
+        margin: 0 0 0 13%
+      @media(max-width: 1024px)
+        margin: 0 0 0 40px
+        max-width: 484px
+        font-size: 22px
+        line-height: 130%
+        &:after
+          right: -202px
+      @media(max-width: 767px)
+        max-width: inherit
+        margin: 0 20px
+        font-size: 14px
+        &:after
+          right: 0
+          top: 0
+          z-index: -1
+          width: 72px
+          height: 79px
+
+

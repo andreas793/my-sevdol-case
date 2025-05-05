@@ -1,0 +1,57 @@
+form.filter__items
+    .filter__item
+        .filter__label Адрес
+        select(id="select")
+            div
+                optgroup(label="Северная долина")
+                    option(value="1") ул. Шишкина, участок 21, корпус 29
+                    option(value="2") ул. Шишкина, участок 21, корпус 33
+                    option(value="3") улица Шишкина, дом 289, строение 1
+            div
+                optgroup(label="21 квартал")
+                    option(value="1") ул. Шишкина, участок 21, корпус 29
+                    option(value="2") ул. Шишкина, участок 21, корпус 33
+                    option(value="3") улица Шишкина, дом 289, строение 1
+    .filter__item.filter__item-floor
+        .filter__label Этаж
+        .floor__items
+            label
+                input(type="radio" name="floor" value="1")
+                .floor__item 1
+            label
+                input(type="radio" name="floor" value="2" checked)
+                .floor__item 2
+            label
+                input(type="radio" name="floor" value="3")
+                .floor__item 3
+            label
+                input(type="radio" name="floor" value="4")
+                .floor__item 4
+            label
+                input(type="radio" name="floor" value="5")
+                .floor__item 5
+            label
+                input(type="radio" name="floor" value="6")
+                .floor__item 6
+            label
+                input(type="radio" name="floor" value="7")
+                .floor__item 7
+            label
+                input(type="radio" name="floor" value="8")
+                .floor__item 8
+            label
+                input(type="radio" name="floor" value="K")
+                .floor__item K
+    .filter__item
+        .filter__label Показать
+        .show-type__wrapper
+            label
+               input(type="radio" name="show-type" value="scheme" checked)
+               .show-type__radio на схеме
+            label
+                input(type="radio" name="show-type" value="list")
+                .show-type__radio списком
+
+
+
+

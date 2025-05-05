@@ -1,0 +1,58 @@
+@import "../mixin/flex.styl"
+
+.layout-1
+  width: 100%
+  max-width: 1920px
+  position: relative
+  padding-top: 140px
+  h1
+    color: red
+  .b-slider
+    width: 100%
+    height: calc(100vh - 140px)
+    .b-sliders_wrapper
+      height: 100%
+    .b-slide_content
+      height: 100%
+    .b-slide
+      height: 100%
+    .b-image_set
+      height: 100%
+      position: relative
+    .b-image_set img
+      position: absolute
+      left: 0
+      bottom: 0
+    .b-arrow_left,.b-arrow_right
+      width: 80px
+      height: 80px
+      position: absolute
+      top: calc(100% - 40px)
+      cursor: pointer
+      z-index: 200
+      svg
+        width: 100%
+        height: auto
+        &:hover
+          path
+            opacity: 1
+    .b-arrow_left
+      left: 0
+    .b-arrow_right
+      right: 0
+
+  @media(max-width: 1280px)
+    .b-slider
+      height: auto
+      .b-image_set img
+        position: relative
+        width: 100%
+        height: auto
+
+  @media(max-width: 1024px)
+    padding: 132px 0 0 0
+    margin-bottom: 60px
+
+
+
+

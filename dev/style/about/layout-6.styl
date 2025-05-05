@@ -1,0 +1,247 @@
+@import "../mixin/flex.styl"
+
+.layout__wrapper-6
+  margin-bottom: 114px
+  .layout__text
+    max-width: 668px
+    margin-bottom: 53px
+  .apartment__tabs__section
+    flex()
+    margin-bottom: 60px
+    @media(max-width: 1279px)
+      flex-wrap: wrap
+      justify-content: center
+.apartment__layout
+  &__tabs
+    flex()
+    flex-wrap: wrap
+    width: 49%
+    border: 1px solid #E0E0E0
+    border-right-width: 0
+    border-bottom-width: 0
+    @media(max-width: 1279px)
+      width: 100%
+      max-width: 620px
+      margin-bottom: 32px
+    @media(max-width: 767px)
+      margin: 0 10px 23px 10px
+  &__tab
+    width: calc(50% - 2px)
+    height: 216px
+    flex(center, center, row)
+    border-bottom: 1px solid #E0E0E0
+    border-right: 1px solid #E0E0E0
+    font-family: Roboto, Arial, sans-serif
+    font-size: 18
+    line-height: 25px
+    color: rgba(51, 51, 51, 0.6)
+    cursor: pointer
+    &-active
+      background-color: #005BB9
+      color: #fff
+    &:nth-child(2n+2)
+      border-right-width: 0
+    @media(max-width: 1279px)
+      height: 60px
+      &:nth-child(2n+2)
+        border-right-width: 1px
+  &__contents
+    width: 51%
+    height: 434px
+    position: relative
+    flex(center, center, row)
+    background-color: #F7F5F3
+    @media(max-width: 1279px)
+      width: 100%
+      max-width: 620px
+    @media(max-width: 767px)
+      width: 320px
+      height: 434px
+  &__content
+    display: none
+    width: 100%
+    height: 100%
+    overflow: hidden
+  &__content-active
+    flex(center, center, row)
+  &__contents
+    .apartment
+      &__title
+        position: absolute
+        top: 29px
+        left: 26px
+        font-family: Gilroy-SemiBold, Arial, sans-serif
+        font-size: 24px
+        line-height: 29px
+        color: #B19A7C
+        z-index: 1
+      &__link
+        position: absolute
+        bottom: 19px
+        left: 28px
+        font-family: Roboto, Arial, sans-serif
+        font-size: 16px
+        line-height: 125%
+        color: #005BB9
+        z-index: 1
+        @media(max-width: 767px)
+          bottom: 32px
+    .slider-2
+      width: 100%
+      height: 100%
+      max-width: 474px
+      margin: 0 auto
+      .slick-slide img
+        width: 100%
+        height: auto
+    .slick-arrow
+      position: absolute
+      bottom: 13px
+      z-index: 1
+      background-size: 40px 40px;
+      &.slick-next
+        background: url("../img/about/icons/slider-next.svg") no-repeat 50% 50%
+        right: -77px
+        left: inherit
+      &.slick-prev
+        background: url("../img/about/icons/slider-prev.svg") no-repeat 50% 50%
+        right: -27px
+        left: inherit
+      @media(max-width: 1279px)
+        &.slick-next
+          right: -40px
+        &.slick-prev
+          right: 0
+      @media(max-width: 767px)
+        bottom: -64px
+        &.slick-next
+          right: 10px
+        &.slick-prev
+          right: 60px
+
+.apartment__table
+  &__wrapper
+    height: 720px
+    box-sizing: border-box
+  &__row
+    flex()
+    height: 50%
+  &__cell
+    width: 33.333%
+    height: 100%
+    padding: 86px 0 0 0
+    border: 1px solid #C4C4C4
+    box-sizing: border-box
+    cursor: pointer
+    overflow: hidden
+    opacity: 0.5
+    &:hover
+      opacity: 1
+
+  &__title
+    font-family: Gilroy-SemiBold, Arial, sans-serif
+    font-size: 24px
+    line-height: 29px
+    color: #B19A7C
+    margin-bottom: 19px
+    padding: 0 48px
+  &__text
+    font-family: Roboto, Arial, sans-serif
+    font-size: 16px
+    line-height: 132%
+    color: rgba(51, 51, 51, 0.78)
+    maring-bottom: 66px
+    padding: 0 48px
+    height: 64px
+    overflow: hidden
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  &__img
+    width: 100%
+    display: none
+    img
+      width: 100%
+      height: auto
+  @media(min-width:1023px)
+    &__row
+      &-no-active
+        height: 34%
+      &-active
+        height: 66%
+    &__cell
+      &[data-numb="1"]
+        border-left-color: transparent
+      &[data-numb="3"]
+        border-right-color: transparent
+      &-no-active
+        width: 29%
+      &-active
+        width: 42%
+        padding-top: 58px
+    &__row-active
+      .apartment__table__cell-active
+        opacity: 1
+        .apartment__table__img
+          display: block
+        .apartment__table__text
+          margin-bottom: 36px
+          display: block
+          height: auto
+@media(max-width: 1024px)
+  .apartment__table
+    &__wrapper
+      flex()
+      height: auto
+    &__row
+      flex-direction: column
+      width: 50%
+      height: 100%
+      &-no-active
+        width: 40%
+      &-active
+        width: 60%
+        .apartment__table__cell-active
+          .apartment__table__text
+            margin-bottom: 36px
+            display: block
+            height: auto
+    &__cell
+      width: 100%
+      height: 211px
+      min-height: 211px
+      padding-top: 29px
+      opacity: 1
+      &-no-active
+        min-height: 154px
+        height: 154px
+      &-active
+        height: 333px
+@media(max-width: 767px)
+  .apartment__table
+    &__wrapper
+      flex-wrap: wrap
+    &__row
+      width: 98%
+      margin: 0 1%
+      &-no-active
+        .apartment__table__cell-active
+          height: 154px
+          min-height: 154px
+      &-active
+        .apartment__table__cell-active
+          height: auto
+          min-height: auto
+        .apartment__table__cell-active
+          .apartment__table__img
+            display: block
+    &__title
+      padding: 0 10px
+    &__text
+      padding: 0 10px
+
+
+
+
+
+

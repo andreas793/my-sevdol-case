@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ЛК</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/simplebar.css">
+    <link rel="stylesheet" href="./css/lk.css">
+  </head>
+  <body>
+    <div class="layout__booking">
+      <div class="layout__title">Ваши бронирования</div>
+      <div class="no-data-found">
+        <div class="info__block">
+          <div class="layout__text layout__text-bold"> Данных о бронировании объектов не найдено</div>
+          <div class="layout__text">Выберите и забронируйте квартиру или паркинг на сайте</div>
+        </div>
+        <div class="action__buttons"><a class="action__button" href="#">
+            <div class="icon__wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+              </svg>
+            </div>
+            <div class="layout__text">Выбрать и забронировать квартиру</div></a><a class="action__button" href="#">
+            <div class="icon__wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+              </svg>
+            </div>
+            <div class="layout__text">Выбрать и забронировать паркинг</div></a></div>
+      </div>
+      <div class="feedback">
+        <div class="feedback__location">
+          <div class="icon__wrapper"><img src="img/lk/location.svg"></div>
+          <div class="layout__text layout__text-small">Отдел продаж</div>
+          <div class="layout__text">ул. Оптиков, д. 4, корпус 2, БЦ Лахта 1</div>
+        </div>
+        <div class="action__buttons"><a class="action__button" href="#">
+            <div class="icon__wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+              </svg>
+            </div>
+            <div class="layout__text">Назначить встречу</div></a><a class="action__button" href="#">
+            <div class="icon__wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+              </svg>
+            </div>
+            <div class="layout__text">Записаться на экскурсию</div></a></div>
+        <div class="action__buttons">
+          <div class="action__button active">
+            <div class="icon__wrapper"><img src="img/lk/people.svg"></div>
+            <div class="layout__text">Встреча назначена 21.09.2021, 15:30</div>
+          </div>
+          <div class="action__button active">
+            <div class="icon__wrapper"><img src="img/lk/map.svg"></div>
+            <div class="layout__text">Вы записаны<br>на экскурсию 25.09.2021, 11:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="layout__title">Ваши бронирования</div>
+      <div class="tabs__wrapper">
+        <div class="tab__contents">
+          <div class="card__wrapper">
+            <div class="card__title">Студия № 258
+              <div class="card__subtitle">17 корпус, 18 этаж</div>
+              <div class="finishing__type">
+                <div class="img__wrapper"><img src="img/lk/finishing-type.png"></div>
+                <div class="text__wrapper">с отделкой</div>
+              </div>
+            </div>
+            <div class="card__img"><img src="img/lk/plan.png"></div>
+            <div class="card__row">
+              <div class="card__cell">
+                <div class="card__label">срок сдачи</div>
+                <div class="card__text">IV кв. 2023 г.</div>
+              </div>
+              <div class="card__cell card__cell-floor">
+                <div class="card__label">этаж</div>
+                <div class="card__text">18</div>
+              </div>
+              <div class="card__cell card__cell-corp">
+                <div class="card__label">корпус</div>
+                <div class="card__text">17</div>
+              </div>
+              <div class="card__cell">
+                <div class="card__label">площадь</div>
+                <div class="card__text">20,52 м</div>
+              </div>
+              <div class="card__cell card__cell-price">
+                <div class="card__label">цена покупки</div>
+                <div class="card__text">3 563 219 ₽</div>
+              </div>
+              <div class="card__cell">
+                <div class="card__label">в ипотеку</div>
+                <div class="card__text">от 17 784 ₽/мес</div>
+              </div>
+            </div>
+            <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="period__wrapper">
+            <div class="img__wrapper"><img src="img/lk/locked.svg"></div>Забронировано до<span class="text__date"> 20.09.2021</span>
+          </div>
+        </div>
+        <div class="tab__items tab__items__mob">
+          <div class="tab__item__mob" data-key="1">
+            <div class="tab__item__title">Квартиры<span class="current">1</span></div>
+          </div>
+          <div class="tab__item__mob" data-key="2">
+            <div class="tab__item__title">Паркинг<span class="current">2</span></div>
+          </div>
+          <div class="tab__item__mob" data-key="3">
+            <div class="tab__item__title">Кладовые<span class="current">5</span></div>
+          </div>
+        </div>
+        <div class="tab__items">
+          <div class="tab__item active" data-anchor="1">
+            <div class="tab__item__title">Квартиры<span class="current">1</span></div>
+            <div class="tab__item__content">
+              <div class="text__title">Данных о бронировании объектов не найдено</div>
+              <div class="text__wrapper">Выберите и забронируйте квартиру на сайте</div>
+              <div class="button__wrapper">Выбрать квартиру</div>
+            </div>
+          </div>
+          <div class="tab__item" data-anchor="2">
+            <div class="tab__item__title">Паркинг<span class="current">2</span></div>
+            <div class="tab__item__content">
+              <div class="text__title">Данных о бронировании объектов не найдено</div>
+              <div class="text__wrapper">Выберите и забронируйте паркинг на сайте</div>
+              <div class="button__wrapper">Выбрать паркинг</div>
+            </div>
+          </div>
+          <div class="tab__item" data-anchor="3">
+            <div class="tab__item__title">Кладовые<span class="current">5</span></div>
+            <div class="tab__item__content">
+              <div class="text__title">Данных о бронировании объектов не найдено</div>
+              <div class="text__wrapper">Выберите и забронируйте кладовую на сайте</div>
+              <div class="button__wrapper">Выбрать кладовую</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="manager__wrapper">
+          <div class="manager__img"></div>
+          <div class="manager__form">
+            <div class="manager__name">Артемий Длиннаяфамилия</div>
+            <div class="manager__text">Ваш персональный менеджер</div>
+            <div class="manager__phone__wrapper">
+              <div class="img__wrapper"><img src="img/lk/phone.svg"></div>
+              <div class="manager__phone__text">
+                <div class="manager__phone">+7 (912) 000-00-00</div>
+                <div class="manager__link popup__show" data-anchor="#feedback-form">Заказать звонок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback__location">
+          <div class="icon__wrapper"><img src="img/lk/location.svg"></div>
+          <div class="layout__text layout__text-small">Отдел продаж</div>
+          <div class="layout__text">ул. Оптиков, д. 4, корпус 2, БЦ Лахта 1</div>
+        </div>
+        <div class="action__buttons"><a class="action__button active" href="#">
+            <div class="icon__wrapper"><img src="img/lk/people.svg"></div>
+            <div class="layout__text">Встреча назначена 21.09.2021, 15:30</div></a><a class="action__button active" href="#">
+            <div class="icon__wrapper"><img src="img/lk/map.svg"></div>
+            <div class="layout__text">Вы записаны<br>на экскурсию 25.09.2021, 11:00</div></a></div>
+      </div>
+      <div class="layout__title">Ваши бронирования</div>
+      <div class="tabs__wrapper">
+        <div class="tab__contents">
+          <div class="card__wrapper">
+            <div class="card__title">Машиноместо № 25
+              <div class="card__subtitle">1 этаж</div>
+              <div class="parking-type">Надземный</div>
+            </div>
+            <div class="card__img"><img src="img/lk/plan.png"></div>
+            <div class="card__row">
+              <div class="card__cell">
+                <div class="card__label">тип</div>
+                <div class="card__text parking-type parking-type-standart">стандартное</div>
+              </div>
+              <div class="card__cell">
+                <div class="card__label">ввод в эксплуатацию</div>
+                <div class="card__text">IV кв. 2022 года</div>
+              </div>
+              <div class="card__cell card__cell-floor">
+                <div class="card__label">этаж</div>
+                <div class="card__text">1</div>
+              </div>
+              <div class="card__cell">
+                <div class="card__label">корпус</div>
+                <div class="card__text">29 (3 очередь)</div>
+              </div>
+              <div class="card__cell card__cell-price">
+                <div class="card__label">цена покупки</div>
+                <div class="card__text">399 000 ₽</div>
+              </div>
+            </div>
+            <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="period__wrapper">
+            <div class="img__wrapper"><img src="img/lk/locked.svg"></div> Забронировано до<span class="text__date"> 20.09.2021</span>
+          </div>
+        </div>
+        <div class="tab__items tab__items__mob">
+          <div class="tab__item__mob active" data-key="1">
+            <div class="tab__item__title">Квартиры<span class="current">1</span></div>
+          </div>
+          <div class="tab__item__mob" data-key="2">
+            <div class="tab__item__title">Паркинг<span class="current">2</span></div>
+          </div>
+          <div class="tab__item__mob" data-key="3">
+            <div class="tab__item__title">Кладовые<span class="current">5</span></div>
+          </div>
+        </div>
+        <div class="tab__items">
+          <div class="tab__item active" data-anchor="1">
+            <div class="tab__item__title">Квартиры<span class="current">1</span></div>
+            <div class="tab__item__content" data-simplebar>
+              <div class="cards__wrapper">
+                <div class="card__wrapper card__wrapper-small active">
+                  <div class="card__title">Студия № 258</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">20,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">3 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">2-комнатная № 245</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">60,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">7 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">Студия № 258</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">20,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">3 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">2-комнатная № 245</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">60,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">7 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">2-комнатная № 245</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">60,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">7 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="button__img">
+                <div class="icon__wrapper tooltip__icon" data-tooltip="Добавить ещё">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+                  </svg>
+                </div>
+                <div class="button__text">Добавить ещё</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab__item" data-anchor="2">
+            <div class="tab__item__title">Паркинг<span class="current">2</span></div>
+            <div class="tab__item__content">
+              <div class="cards__wrapper">
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">Машиноместо №25</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">тип места</div>
+                      <div class="card__text parking-type parking-type-standart">стандартное</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">400 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button tooltip__icon" data-tooltip="Отказаться от бронирования">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.875 3H15.75V2.25C15.75 1.00734 14.7427 0 13.5 0H10.5C9.25734 0 8.25 1.00734 8.25 2.25V3H4.125C3.08948 3 2.25 3.83948 2.25 4.875V6.375C2.25 6.78923 2.58577 7.125 3 7.125H21C21.4142 7.125 21.75 6.78923 21.75 6.375V4.875C21.75 3.83948 20.9105 3 19.875 3ZM9.75 2.25C9.75 1.83656 10.0866 1.5 10.5 1.5H13.5C13.9134 1.5 14.25 1.83656 14.25 2.25V3H9.75V2.25Z" fill="#D6D6D6"></path>
+                      <path d="M3.67284 8.625C3.53901 8.625 3.43237 8.73684 3.43875 8.87053L4.0575 21.8569C4.11469 23.0588 5.10187 24 6.30469 24H17.6944C18.8972 24 19.8844 23.0588 19.9416 21.8569L20.5603 8.87053C20.5667 8.73684 20.46 8.625 20.3262 8.625H3.67284ZM14.9995 10.5C14.9995 10.0856 15.3352 9.75 15.7495 9.75C16.1639 9.75 16.4995 10.0856 16.4995 10.5V20.25C16.4995 20.6644 16.1639 21 15.7495 21C15.3352 21 14.9995 20.6644 14.9995 20.25V10.5ZM11.2495 10.5C11.2495 10.0856 11.5852 9.75 11.9995 9.75C12.4139 9.75 12.7495 10.0856 12.7495 10.5V20.25C12.7495 20.6644 12.4139 21 11.9995 21C11.5852 21 11.2495 20.6644 11.2495 20.25V10.5ZM7.49953 10.5C7.49953 10.0856 7.83515 9.75 8.24953 9.75C8.6639 9.75 8.99953 10.0856 8.99953 10.5V20.25C8.99953 20.6644 8.6639 21 8.24953 21C7.83515 21 7.49953 20.6644 7.49953 20.25V10.5Z" fill="#D6D6D6"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab__item" data-anchor="3">
+            <div class="tab__item__title">Кладовые<span class="current">5</span></div>
+            <div class="tab__item__content">
+              <div class="cards__wrapper">
+                <div class="card__wrapper card__wrapper-small">
+                  <div class="card__title">Студия № 258</div>
+                  <div class="card__img"><img src="img/lk/plan.png"></div>
+                  <div class="card__row">
+                    <div class="card__cell">
+                      <div class="card__label">площадь</div>
+                      <div class="card__text">20,52 м</div>
+                    </div>
+                    <div class="card__cell card__cell-price">
+                      <div class="card__label">цена покупки</div>
+                      <div class="card__text">3 563 219 ₽</div>
+                    </div>
+                  </div>
+                  <div class="deleted__button"><img src="img/lk/deleted.svg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="manager__wrapper">
+          <div class="manager__img"></div>
+          <div class="manager__form">
+            <div class="manager__name">Артемий Длиннаяфамилия</div>
+            <div class="manager__text">Ваш персональный менеджер</div>
+            <div class="manager__phone__wrapper">
+              <div class="img__wrapper"><img src="img/lk/phone.svg"></div>
+              <div class="manager__phone__text">
+                <div class="manager__phone">+7 (912) 000-00-00</div>
+                <div class="manager__link popup__show" data-anchor="#feedback-form">Заказать звонок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback__location">
+          <div class="icon__wrapper"><img src="img/lk/location.svg"></div>
+          <div class="layout__text layout__text-small">Отдел продаж</div>
+          <div class="layout__text">ул. Оптиков, д. 4, корпус 2, БЦ Лахта 1</div>
+        </div>
+        <div class="action__buttons"><a class="action__button active" href="#">
+            <div class="icon__wrapper"><img src="img/lk/people.svg"></div>
+            <div class="layout__text">Встреча назначена 21.09.2021, 15:30</div></a><a class="action__button active" href="#">
+            <div class="icon__wrapper"><img src="img/lk/map.svg"></div>
+            <div class="layout__text">Вы записаны<br>на экскурсию 25.09.2021, 11:00</div></a></div>
+      </div>
+      <div class="flex__wrapper">
+        <div class="tab__items-bottom">
+          <div class="tab__item-bottom active" data-key="steps">Этапы сделки</div>
+          <div class="tab__item-bottom" data-key="questionnaire">Анкета покупателя</div>
+          <div class="tab__item-bottom" data-key="#digital_ipo">Цифровая ипотека</div>
+        </div>
+        <div class="questionnaire__wrapper item-bottom-anchor" data-anchor="questionnaire">
+          <div class="layout__title">Анкета покупателя</div>
+          <div class="questionnaire__item" data-progress-value="90">
+            <div class="questionnaire__title">Лаврухина Виолетта Филлиповна</div>
+            <div class="questionnaire__text"></div>
+            <div class="questionnaire__progress__wrapper">
+              <div class="questionnaire__progress__value"></div>
+            </div>
+            <div class="questionnaire__actions">
+              <div class="button__img edit__questionnaire">
+                <div class="icon__wrapper"><img src="img/lk/pencil.svg"></div>Редактировать анкету
+              </div>
+              <div class="button__img delate__questionnaire">
+                <div class="icon__wrapper"><img src="img/lk/deleted-blue.svg"></div>Удалить
+              </div>
+              <div class="button__img delate__questionnaire">
+                <div class="icon__wrapper"><img src="img/lk/view.svg"></div>Посмотреть анкету
+              </div>
+            </div>
+            <form class="questionnaire__form">
+              <div class="input__wrapper">
+                <div class="input__label">Фамилия</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Имя</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Отчество</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">E-mail</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Дата рождения</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">СНИЛС</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Серия и номер паспорта</div>
+                <div class="input__wrapper-double">
+                  <input type="text">
+                  <input type="text">
+                </div>
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Код подразделения</div>
+                <input type="text">
+              </div>
+              <div class="input__wrapper">
+                <div class="input__label">Дата выдачи</div>
+                <input type="text">
+              </div>
+              <div class="button__section">
+                <input class="button__wrapper edit__close" type="submit" value="Сохранить">
+              </div>
+            </form>
+          </div>
+          <div>
+            <div class="questionnaire__item" data-progress-value="10">
+              <div class="questionnaire__title">Лаврухина Виолетта Филлиповна</div>
+              <div class="questionnaire__text"></div>
+              <div class="questionnaire__progress__wrapper">
+                <div class="questionnaire__progress__value"></div>
+              </div>
+              <div class="questionnaire__actions">
+                <div class="button__img edit__questionnaire">
+                  <div class="icon__wrapper"><img src="img/lk/pencil.svg"></div>Редактировать анкету
+                </div>
+                <div class="button__img delate__questionnaire">
+                  <div class="icon__wrapper"><img src="img/lk/deleted-blue.svg"></div>Удалить
+                </div>
+              </div>
+              <form class="questionnaire__form">
+                <div class="input__wrapper">
+                  <div class="input__label">Фамилия</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Имя</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Отчество</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">E-mail</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Дата рождения</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">СНИЛС</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Серия и номер паспорта</div>
+                  <div class="input__wrapper-double">
+                    <input type="text">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Код подразделения</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Дата выдачи</div>
+                  <input type="text">
+                </div>
+                <div class="button__section">
+                  <input class="button__wrapper edit__close" type="submit" value="Сохранить">
+                </div>
+              </form>
+            </div>
+            <div class="questionnaire__item questionnaire__item-add active">
+              <form class="questionnaire__form">
+                <div class="input__wrapper">
+                  <div class="input__label">Фамилия</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Имя</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Отчество</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">E-mail</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Дата рождения</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">СНИЛС</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Серия и номер паспорта</div>
+                  <div class="input__wrapper-double">
+                    <input type="text">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Код подразделения</div>
+                  <input type="text">
+                </div>
+                <div class="input__wrapper">
+                  <div class="input__label">Дата выдачи</div>
+                  <input type="text">
+                </div>
+                <div class="button__section">
+                  <input class="button__wrapper edit__close" type="submit" value="Сохранить">
+                  <div class="button__wrapper close-form">Отменить</div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="flex__wrapper">
+            <div>
+              <div class="button__img add-owner">
+                <div class="icon__wrapper">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+                  </svg>
+                </div>Добавить собственника
+              </div>
+              <div class="button__img popup__show" data-anchor="#list-owners">
+                <div class="icon__wrapper">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9"></path>
+                  </svg>
+                </div>Выбрать собственника из списка
+              </div>
+            </div>
+            <div class="button__wrapper">Отправить анкеты</div>
+          </div>
+          <div class="digital__mortgage">
+            <div class="title__wrapper">Цифровая ипотека</div>
+            <div class="text__wrapper">Отправить анкету в банки</div>
+            <label>
+              <input type="checkbox" name="checkbox" value="checkbox">
+              <div class="checkbox__wrapper">
+                <div class="checkbox__text">Включить модуль ЦИ</div>
+              </div>
+            </label>
+            <div class="text__wrapper small__text">* Хинт для модуля ЦИ хинт для модуля ци</div>
+            <div class="img__bg"><img src="img/lk/percent.svg"></div>
+            <div class="popup__show" data-anchor="#digital_ipo"></div>
+          </div>
+        </div>
+        <div class="steps__wrapper item-bottom-anchor active" data-anchor="steps">
+          <div class="layout__title"><span class="layout__title__text">Этапы сделки</span><span class="name">Студия № 258</span></div>
+          <div class="step__wrapper completed check">
+            <div class="step__number">1</div>
+            <div class="step__title">Бронирование квартиры</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper active arrow">
+            <div class="step__number">2</div>
+            <div class="step__title">Заполнение анкеты покупателя</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">3</div>
+            <div class="step__title">Выбор способа оплаты</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">4</div>
+            <div class="step__title">Ипотека</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">5</div>
+            <div class="step__title">Подготовка к сделке</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">6</div>
+            <div class="step__title">Подписание договоров</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">7</div>
+            <div class="step__title">Регистрация в Росреестре</div>
+            <div class="step__text">Вам необходимо заполнить информацию о себе в Личном кабинете для формирования Договора долевого участия (ДДУ) и подачи заявки на ипотеку (если потребуется). После заполнения и отправки анкеты, с вами свяжется менеджер отдела продаж.</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">8</div>
+            <div class="step__title">Зачисление средств</div>
+          </div>
+          <div class="step__wrapper">
+            <div class="step__number">9</div>
+            <div class="step__title">Получение договора долевого участия</div>
+          </div>
+        </div>
+        <div class="digital__mortgage item-bottom-anchor">
+          <div class="title__wrapper">Цифровая ипотека</div>
+          <div class="text__wrapper">Отправить анкету в банки</div>
+          <label>
+            <input type="checkbox" name="checkbox" value="checkbox">
+            <div class="checkbox__wrapper">
+              <div class="checkbox__text">Включить модуль ЦИ</div>
+            </div>
+          </label>
+          <div class="img__bg"><img src="img/lk/percent.svg"></div>
+          <div class="popup__show" data-anchor="#digital_ipo"></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup__wrapper" id="feedback-form">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#feedback-form"><img src="img/lk/close.svg" alt=""></div>
+        <div class="popup__text">Закажите обратный звонок для связи с отделом продаж.</div>
+        <div class="popup__text">Ваш номер телефона:</div>
+        <div class="tel__wrapper">+7 (912) 000-00-00</div>
+        <div class="popup__link">Изменить номер</div>
+        <form class="form__wrapper active">
+          <div class="input__wrapper">
+            <input type="text">
+          </div>
+          <input type="submit" value="Заменить">
+        </form>
+        <div class="button__wrapper popup__show" data-anchor="#feedback-send">Заказать звонок</div>
+      </div>
+    </div>
+    <div class="popup__wrapper" id="feedback-send">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#feedback-send"><img src="img/lk/close.svg" alt=""></div>
+        <div class="popup__text popup__text-bold">Спасибо за обращение!</div>
+        <div class="popup__text">Мы Вам перезвоним</div>
+        <div class="img__wrapper"><img src="img/lk/popup-phone.png"></div>
+        <div class="button__wrapper">Хорошо</div>
+      </div>
+    </div>
+    <div class="popup__wrapper" id="list-owners">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#list-owners"><img src="img/lk/close.svg" alt=""></div>
+        <form class="form__wrapper">
+          <div class="list-owners__wrapper" data-simplebar>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+            <label class="checkbox__section">
+              <div class="checkbox__label">Петина Августина Филлиповна</div>
+              <input type="checkbox">
+              <div class="checkbox__wrapper"></div>
+            </label>
+          </div>
+          <input class="button__wrapper" type="submit" value="Добавить анкеты">
+        </form>
+      </div>
+    </div>
+    <div class="popup__wrapper" id="digital_ipo">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#digital_ipo"><img src="img/lk/close.svg" alt=""></div>
+        <div class="popup__text popup__text-bold">Цифровая ипотека</div>
+        <div class="digital__mortgage-frame">Ифрейм</div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/lk/script.js"></script>
+    <script src="js/lk/simplebar.js"></script>
+  </body>
+</html>

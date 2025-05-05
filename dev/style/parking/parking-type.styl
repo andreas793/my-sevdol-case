@@ -1,0 +1,127 @@
+@import "../mixin/flex.styl"
+
+.parking-type
+  &__items
+    flex()
+    flex-wrap: wrap
+    margin-bottom: 120px
+    @media(max-width: 1366px)
+      flex-wrap: wrap
+      margin-bottom: 96px
+    @media(max-width: 768px)
+      margin-bottom: 80px
+  &__item
+    flex()
+    margin-bottom: 15px
+    margin-right: 5px
+    @media(max-width: 1024px)
+      align-items: center
+      margin-right: 0
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+    .img__wrapper
+      width: 78px
+      height: 100px
+      margin-right: 19px
+    .parking-type__text
+      color: rgba(51, 51, 51, 0.78)
+      min-width: 240px
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        height: 6px
+        margin-bottom: 3px
+        background-color: #B19A7C
+      span
+        color: #B19A7C
+        margin-right: 6px
+    &.standard
+      .parking-type__text
+        &:before
+          background-color: #B19A7C
+        span
+          color: #B19A7C
+    &.family
+      .parking-type__text
+        &:before
+          background-color: #A3AEC1
+        span
+          color: #A3AEC1
+    &.increased
+      .parking-type__text
+        &:before
+          background-color: #799CA3
+        span
+          color: #799CA3
+    &.boxing
+      margin-right: 0
+      .parking-type__text
+        &:before
+          background-color: #476A87
+        span
+          color: #476A87
+    &.small-class
+      .parking-type__text
+        &:before
+          background-color: #0A2F49
+        span
+          color: #0A2F49
+    &.other
+      .parking-type__text
+        &:before
+          background-color: #B7202E
+        span
+          color: #B7202E
+    &.family-small
+      .parking-type__text
+        &:before
+          background-color: #F38723
+        span
+          color: #F38723
+    &.standard-small
+      margin-right: 0
+      .parking-type__text
+        &:before
+          background-color: #5A4F9B
+        span
+          color: #5A4F9B
+    &.limited
+      .parking-type__text
+        &:before
+          background-color: #65431C
+        span
+          color: #65431C
+  &__square
+    font-family: Gilroy, Arial, sans-serif
+    font-size: 45px
+    line-height: 52px
+    margin-bottom: 8px
+    color: rgba(51, 51, 51, 0.78)
+    white-space: nowrap
+    margin-top: 6px
+    @media(max-width: 1023px)
+      font-weight: bold
+      font-family: Roboto-Bold
+      font-family Roboto-Bold, Arial, sans-serif
+      font-size: 18px
+      line-height: 138%
+      margin-bottom: 2px
+      margin-top: 6px
+  &__text
+    font-family: Roboto, Arial, sans-serif
+    font-size: 18px
+    line-height: 25px
+    flex(flex-start, center, row)
+    white-space: nowrap
+    &:before
+      content: ''
+      display: inline-block
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      margin-right: 8px
+    @media(max-width: 1023px)
+      font-size: 16px
+

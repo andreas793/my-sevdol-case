@@ -1,0 +1,131 @@
+@import "../mixin/flex.styl"
+
+.layout-6
+  @media(max-width: 450px)
+    padding: 0
+    margin-bottom: 60px
+  .layout
+    &__title
+      margin-bottom: 60px
+      @media(max-width: 1360px)
+        margin-left: 20px
+      @media(max-width: 450px)
+        margin-left: 10px
+  .items__wrapper
+    flex-wrap: wrap
+    margin-bottom: 50px
+    .item
+      &__wrapper
+        margin-right: 50px
+        margin-bottom: 50px
+        &:nth-child(4)
+          margin-bottom: 0
+        &:last-child
+          margin-bottom: 0
+          .item__text
+              max-width: 810px
+      &__icon
+        width: 60px
+        min-width: 60px
+        height: 60px
+        margin-right: 20px
+      &__text
+        max-width: 280px
+        font-size: 16px
+        line-height: 120%
+    @media(max-width: 450px)
+      padding: 0 10px
+      justify-content space-between
+      .item
+        &__wrapper
+          max-width: 44%
+          flex-direction: column
+          align-items center
+          margin-right: 0
+          &:last-child
+            max-width: 100%
+            .item__icon
+              margin-right: 0
+        &__icon
+          margin-bottom: 25px
+        &__text
+          font-size: 14px
+          line-height: 130%
+          text-align: center
+
+  .slider__wrapper
+    margin-bottom: 80px
+    width: 100%
+    @media(max-width: 450px)
+      width: 100%
+      margin-bottom: 40px
+      img
+        width: 100%
+  .apartament-search__section
+    flex(center, center, row)
+    background-color: #E6E5E6
+    padding: 26px 0
+    .text
+      margin-right: 80px
+      font-size: 18px
+      line-height: 110%
+      font-family: 'Gilroy', Arial, sans-serif
+      color: #000
+    @media(max-width: 450px)
+      flex-direction: column
+      padding: 13px 0 20px 0
+      .text
+        margin-right: 0
+        margin-bottom: 10px
+        text-align: center
+        font-size: 16px
+        max-width: 200px
+      .button
+        width: 240px
+        min-width: 240px
+.layout-about
+  background: #F7F5F3
+  padding: 56px 80px
+  box-sizing border-box
+  position relative
+  flex()
+  @media(max-width: 767px)
+    padding: 20px 10px
+  .layout__text
+    max-width: 484px
+    margin-right: 60px
+    font-size: 24px
+    line-height: 29px
+    color: #B19A7C
+    font-family: "Gilroy-Bold", Arial, sans-serif
+    @media(max-width: 767px)
+      margin-right: 40px
+      max-width: auto
+      font-size: 22px
+      line-height: 26px
+  .link__wrapper
+    width: 50px
+    min-width: 50px
+    height: 50px
+    display: inline-flex
+    justify-content center
+    align-items center
+    border: 1px solid #005BB9
+    svg
+      width: 19px
+      height: auto
+    &:hover
+      background-color: #005BB9
+      svg path
+        fill: #fff
+  .bg__about
+    width: 189px
+    height: 186px
+    position: absolute
+    top: 0
+    right: 56px
+    img
+      width: 100%
+      height: auto
+    @media(max-width: 1023px)
+      display: none

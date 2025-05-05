@@ -1,0 +1,204 @@
+@import "../mixin/flex.styl"
+
+.detail-page
+  font-size: 16px
+  line-height: 132.19%
+  font-family: "Roboto", Arial, sans-serif
+  color: rgba(58, 57, 60, 0.78)
+  .main__img
+    width: 100%
+    margin-bottom: 53px
+    img
+      width: 100%
+      height: auto
+    @media(max-width: 767px)
+      marign-bottom: 19px
+  .news__content
+    width: 70%
+    margin: 0 auto
+    @media (max-width: 1440px)
+      width: 82%
+    @media (max-width: 767px)
+      width: 70%
+  .news__title
+    position: relative
+    .news__info
+      position: absolute
+      top: 0
+      left: -250px
+      margin-bottom: 0
+      .news__date
+        display: block
+        margin-bottom: 6px
+      .news__category
+        white-space: nowrap
+    .layout__title
+      text-align: left
+      margin: 0 0 27px 0
+      padding: 0 121px
+      box-sizing: border-box
+    @media(max-width: 1440px)
+      .news__info
+        left: -110px;
+        .news__date
+          display: block
+          margin-bottom: 6px
+      .layout__title
+        width: 100%
+        padding: 0
+    @media(max-width: 767px)
+      .news__info
+        position: relative
+        left: 0
+        margin: 0 0 32px 0
+      .news__date
+        display: inline-block
+        margin-bottom: 0
+      .layout__title
+        display: block
+        margin-bottom: 19px
+  .section__text__p
+    width: 100%
+    margin: 0 0 40px 0
+    padding: 0 121px
+    box-sizing: border-box
+  .news__action__btns
+    width: 100%
+    margin: 0 0 40px 0
+    padding: 0 121px
+    box-sizing: border-box
+  .news__action__btn
+    width: 24px
+    min-width: 24px
+    height: 24px
+  .news__item .news__action__btn
+    width: 16px
+    min-width: 16px
+    height: 16px
+  .img__wrapper
+    width: 100%
+    margin:0 0 40px 0
+    img
+      width: 100%
+  .video__wrapper
+    margin:0 auto 40px auto
+    width: 100%
+    max-width: 1112px
+    height: 720px
+    iframe
+      border: none
+    @media(max-width: 1440px)
+      height: 618px
+      max-width: 954px
+    @media(max-width: 1280px)
+      max-width: 760px
+      height: 492px
+  @media(max-width: 767px)
+    .section__text__p
+      padding: 0
+    .news__action__btns
+      margin: 0 0 30px 0
+      padding: 0
+    .video__wrapper
+      height: 145px
+      width: 100%
+      max-width: none
+      margin: 0 0 40px 0
+  .mailing-form__wrapper
+    margin: 120px auto 114px auto
+
+.slider__wrapper
+  width: 100%
+  height: 750px
+  margin: 0 0 40px 0
+  position: relative
+.slider__wrapper .slider
+  position: absolute
+  right: -35%
+  top: 0
+  bottom: 0
+  width: 135%
+  overflow: hidden
+.slider__wrapper .slick-list
+  width: 2390px !important
+.slider__wrapper .slide__item
+  margin-right: 80px
+  box-sizing: border-box
+  outline: none
+.slider__wrapper .slide__item img
+  width: 100%
+  height: auto
+.slider__wrapper .buttons__slider
+  position: absolute
+  top: calc(50% - 15px)
+  left: 0
+  width: 100%
+  flex(space-between, center, row)
+.slick-dots
+  width: 1155px
+  bottom: 0
+.slider__wrapper .slick-dots li
+  button
+    width: 10px
+    height: 10px
+    margin-right: 25px
+    background-color: #181818
+    opacity: 0.3
+  &.slick-active button
+    background: #0072C7
+    opacity: 1
+
+
+@media(max-width: 1680px)
+  .slider__wrapper
+    width: 954px
+    height: 648px
+  .slider__wrapper .slider
+    width: 120%
+    right: -20%
+  .slider__wrapper .slick-list
+    width: 2072px !important
+  .slick-dots
+    width: 954px
+@media(max-width: 1280px)
+  .slider__wrapper
+    width: 768px
+    height: 527px
+  .slider__wrapper .slider
+    width: 110%
+    right: -10%
+  .slider__wrapper .slick-list
+    width: 1656px !important
+  .slider__wrapper .slide__item
+    margin-right: 60px
+  .slick-dots
+    width: 768px
+@media(max-width: 1023px)
+  .slider__wrapper
+    width: 233px
+    height: 176px
+  .slider__wrapper .slider
+    width: 110%
+    right: -10%
+  .slider__wrapper .slick-list
+    width: 498px !important
+  .slider__wrapper .slide__item
+    margin-right: 16px
+  .slider__wrapper .buttons__slider
+    display: none
+  .slick-dots
+    width: 233px
+  .slider__wrapper .slick-dots li
+    button
+      width: 7px
+      height: 7px
+      margin-right: 15px
+
+
+
+
+
+
+
+
+

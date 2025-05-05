@@ -1,0 +1,26 @@
+@import "../mixin/flex.styl"
+
+.table
+  &__wrapper
+    width: 1260px
+    box-sizing: border-box
+  &__row
+    flex()
+    font-size: 16px
+    line-height: 132%
+    color: #3A393C
+    font-family: Roboto, Arial, sans-serif
+    background-color: #fff
+    padding: 13px 19px 14px 10px
+    box-sizing: border-box
+    &-header
+      background-color: #B19A7C
+      color: #fff
+    &:nth-child(2n+3)
+      background-color: #E6E5E6
+  &__cell
+    min-width: 184px
+    &:first-child
+      flex-grow: 1
+    &:last-child
+      text-align: right

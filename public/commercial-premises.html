@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Коммерческие помещения</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/commercial-style.css">
+  </head>
+  <body>
+    <div class="menu__wrapper menu__header-top">
+      <div class="menu__items">
+        <div class="menu__item menu__item__logo">
+          <div class="menu__item__text">Построено</div>
+          <div class="menu__item__icon"><img src="./img/icons/glavstroy-logo.svg" alt="Главстрой"></div>
+        </div>
+        <div class="menu__item location">
+          <div class="menu__item__icon"><img src="./img/icons/location.svg"></div>
+          <div class="menu__item__text">г.Санкт-Петербург</div>
+        </div>
+        <div class="menu__item metro-logo">
+          <div class="menu__item__icon"><img src="./img/icons/metro-logo.svg"></div>
+          <div class="menu__item__text">Ст. м. “Парнас”</div>
+        </div><a class="menu__item call" href="#">
+          <div class="menu__item__icon"><img src="./img/icons/call.svg"></div>
+          <div class="menu__item__text">+7 (812) 604-04-04</div></a>
+        <div class="menu__item login">
+          <div class="menu__item__main">
+            <div class="menu__item__icon"><img src="./img/icons/logout.svg"></div>
+            <div class="menu__item__text">Выйти</div>
+          </div>
+          <div class="sub-menu__items"><a class="sub-menu__item" href="#">Выход</a></div>
+        </div><a class="menu__item apartment-search" href="#">
+          <div class="button">Подобрать квартиру</div></a>
+      </div>
+    </div>
+    <div class="menu__wrapper menu__header-bottom">
+      <div class="menu__items">
+        <div class="menu__item menu__item__logo">
+          <div class="menu__item__icon"><img src="./img/icons/21-sevdol-logo.svg"></div>
+        </div>
+        <div class="menu__item menu__item-vr">
+          <div class="menu__item__icon"><img src="./img/icons/360-tour.svg"></div>
+          <div class="menu__item__text">VR-тур</div>
+        </div><a class="menu__item" href="#">
+          <div class="menu__item__text">Ход строительства</div></a>
+        <div class="menu__item"><a class="menu__item__text" href="#">Варианты покупки</a>
+          <div class="sub-menu__items"><a class="sub-menu__item" href="#">Ипотека</a><a class="sub-menu__item" href="#">Рассрочка</a><a class="sub-menu__item" href="#">100% оплата</a><a class="sub-menu__item" href="#">Военная ипотека</a><a class="sub-menu__item" href="#">Онлайн покупка</a></div>
+        </div><a class="menu__item" href="#">
+          <div class="menu__item__text">Trade-in</div></a><a class="menu__item" href="#">
+          <div class="menu__item__text">Коммерческие помещения</div></a><a class="menu__item call" href="#">
+          <div class="menu__item__icon"><img src="./img/icons/call.svg"></div></a><a class="menu__item login" href="#">
+          <div class="menu__item__icon"><img src="./img/icons/login.svg"></div></a><a class="menu__item apartment-search" href="#">
+          <div class="button">Подобрать квартиру</div></a><a class="menu__item btn-menu" href="#">
+          <div class="menu__item__text">Меню</div>
+          <div class="menu__item__icon"><img src="./img/icons/menu-icon.svg"></div></a>
+      </div>
+    </div>
+    <div class="layout__wrapper">
+      <div class="main__img__wrapper"><img src="./img/commercial-premises/commercial.png"></div>
+      <div class="filters__wrapper">
+        <div class="filters__wrapper__title">Подбор коммерческого помещения</div>
+        <div class="button show-filter">
+          <div class="icon__wrapper"><img src="./img/commercial-premises/icons/filter.svg"></div>
+          <div class="button__text">Фильтр</div>
+          <div class="button__counter">2</div>
+        </div>
+        <div class="filters__form">
+          <div class="close__filters__form"><img src="./img/commercial-premises/icons/close.svg"></div>
+          <div class="filters__wrapper__title">Фильтр</div>
+          <form class="filters__form__content" action="#">
+            <div class="filters__form__row">
+              <div class="filters__form__cell">
+                <div class="filters__form__label">Объект</div>
+                <div class="object-name__checkbox">
+                  <input type="checkbox" name="object-name-sd" id="object-name-sd" value="object-name-sd">
+                  <input type="checkbox" name="object-name-yount" id="object-name-yount" value="object-name-yount">
+                  <label class="object-name object-name-sd" for="object-name-sd">Северная долина</label>
+                  <label class="object-name object-name-yount" for="object-name-yount">Ютолово</label>
+                </div>
+              </div>
+              <div class="filters__form__cell">
+                <div class="filters__form__label">Стоимость аренды, ₽</div>
+                <div class="range__wrapper">
+                  <input class="range__input" id="input-with-keypress-0">
+                  <input class="range__input" id="input-with-keypress-1">
+                  <div class="range__trak" id="test-slider"></div>
+                </div>
+              </div>
+              <div class="filters__form__cell">
+                <div class="filters__form__label">Площадь</div>
+                <div class="checkbox__section">
+                  <div class="checkbox__wrapper">
+                    <input type="checkbox" id="square-1" name="square-1" value="square-1">
+                    <label for="square-1">до 100 кв.м.</label>
+                  </div>
+                  <div class="checkbox__wrapper">
+                    <input type="checkbox" id="square-2" name="square-2" value="square-2">
+                    <label for="square-2">100-250 кв.м.</label>
+                  </div>
+                  <div class="checkbox__wrapper">
+                    <input type="checkbox" id="square-3" name="square-3" value="square-3">
+                    <label for="square-3">250-500 кв.м.</label>
+                  </div>
+                  <div class="checkbox__wrapper">
+                    <input type="checkbox" id="square-4" name="square-4" value="square-4">
+                    <label for="square-4">более 500 кв.м.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__form__cell form__cell-small">
+                <div class="filters__form__label">Очередь</div>
+                <select class="select__wrapper">
+                  <option value="1">Неважно</option>
+                  <option value="2">1</option>
+                  <option value="3">2</option>
+                </select>
+              </div>
+              <div class="filters__form__cell form__cell-small">
+                <div class="filters__form__label">Корпус</div>
+                <select class="select__wrapper">
+                  <option value="1">Неважно</option>
+                  <option value="2">1</option>
+                  <option value="3">2</option>
+                </select>
+              </div>
+              <div class="filters__form__cell form__cell-normal">
+                <div class="filters__form__label">Назначение</div>
+                <select class="select__wrapper">
+                  <option value="1">Неважно</option>
+                  <option value="2">Ателье по пошиву одежды</option>
+                  <option value="3">Без функционального назначения</option>
+                  <option value="4">Помещение досуга и любительской деятельности</option>
+                  <option value="5">Салон красоты</option>
+                </select>
+              </div>
+              <div class="filters__form__cell form__cell-normal">
+                <div class="filters__form__label">Тестовый селект</div>
+                <select class="makeMeFancy" name="fancySelect">
+                  <option value="0">Выберите продукт</option>
+                  <option value="1">JavaScript + jQuery для начинающих в видеоформате</option>
+                  <option value="2">PHP + MySQL для начинающих</option>
+                  <option value="3">WordPress - профессиональный блог за один день</option>
+                  <option value="4">Joomla - профессиональный сайт за один день</option>
+                </select>
+              </div>
+              <div class="filters__actions__panel">
+                <button class="button button-no-bg" type="reset">Очистить филтр</button>
+                <button class="button button-black" type="submit">Подобрать помещение</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="result__serch">
+        <div class="result__serch__title">Результаты поиска</div>
+        <select class="js-choice">
+          <option value="1">Цена по возрастанию</option>
+          <option value="2">Цена по убыванию</option>
+          <option value="3">Площадь по возрастанию</option>
+          <option value="4">Площадь по убыванию</option>
+        </select>
+        <div class="view-mode__wrapper">
+          <input type="radio" name="view-mode" id="view-mode-tile" value="view-mode-tile" checked>
+          <input type="radio" name="view-mode" id="view-mode-simple" value="view-mode-simple">
+          <label for="view-mode-tile">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="2" stroke="#DADADA" fill="white"></rect>
+              <path d="M11 11.8182C11 11.3663 11.3663 11 11.8182 11H18.3636C18.8155 11 19.1818 11.3663 19.1818 11.8182V18.3636C19.1818 18.8155 18.8155 19.1818 18.3636 19.1818H11.8182C11.3663 19.1818 11 18.8155 11 18.3636V11.8182Z" fill="#DADADA"></path>
+              <path d="M20.8188 11.8182C20.8188 11.3663 21.1852 11 21.637 11H28.1825C28.6344 11 29.0007 11.3663 29.0007 11.8182V18.3636C29.0007 18.8155 28.6344 19.1818 28.1825 19.1818H21.637C21.1852 19.1818 20.8188 18.8155 20.8188 18.3636V11.8182Z" fill="#DADADA"></path>
+              <path d="M20.8188 21.6365C20.8188 21.1846 21.1852 20.8183 21.637 20.8183H28.1825C28.6344 20.8183 29.0007 21.1846 29.0007 21.6365V28.1819C29.0007 28.6338 28.6344 29.0001 28.1825 29.0001H21.637C21.1852 29.0001 20.8188 28.6338 20.8188 28.1819V21.6365Z" fill="#DADADA"></path>
+              <path d="M11 21.6365C11 21.1846 11.3663 20.8183 11.8182 20.8183H18.3636C18.8155 20.8183 19.1818 21.1846 19.1818 21.6365V28.1819C19.1818 28.6338 18.8155 29.0001 18.3636 29.0001H11.8182C11.3663 29.0001 11 28.6338 11 28.1819V21.6365Z" fill="#DADADA"></path>
+            </svg>
+          </label>
+          <label for="view-mode-simple">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="39" height="39" rx="1.5" stroke="#DADADA"></rect>
+              <g clip-path="url(#clip0)">
+                <path d="M28.2969 20.7031H16.0718C15.6834 20.7031 15.3687 20.3883 15.3687 20C15.3687 19.6117 15.6834 19.2969 16.0718 19.2969H28.2969C28.6853 19.2969 29.0001 19.6117 29.0001 20C29.0001 20.3883 28.6853 20.7031 28.2969 20.7031Z" fill="#DADADA"></path>
+                <path d="M28.2969 25.9766H16.0718C15.6834 25.9766 15.3687 25.6618 15.3687 25.2734C15.3687 24.8851 15.6834 24.5703 16.0718 24.5703H28.2969C28.6853 24.5703 29.0001 24.8851 29.0001 25.2734C29.0001 25.6618 28.6853 25.9766 28.2969 25.9766Z" fill="#DADADA"></path>
+                <path d="M28.2969 15.4297H16.0718C15.6834 15.4297 15.3687 15.1149 15.3687 14.7266C15.3687 14.3382 15.6834 14.0234 16.0718 14.0234H28.2969C28.6853 14.0234 29.0001 14.3382 29.0001 14.7266C29.0001 15.1149 28.6853 15.4297 28.2969 15.4297Z" fill="#DADADA"></path>
+                <path d="M11.9492 24.3242C12.4735 24.3242 12.8984 24.7492 12.8984 25.2734C12.8984 25.7977 12.4735 26.2227 11.9492 26.2227C11.425 26.2227 11 25.7977 11 25.2734C11 24.7492 11.425 24.3242 11.9492 24.3242Z" fill="#DADADA"></path>
+                <path d="M11.9492 19.0508C12.4735 19.0508 12.8984 19.4758 12.8984 20C12.8984 20.5242 12.4735 20.9492 11.9492 20.9492C11.425 20.9492 11 20.5242 11 20C11 19.4758 11.425 19.0508 11.9492 19.0508Z" fill="#DADADA"></path>
+                <path d="M11.9492 13.7773C12.4735 13.7773 12.8984 14.2023 12.8984 14.7266C12.8984 15.2508 12.4735 15.6758 11.9492 15.6758C11.425 15.6758 11 15.2508 11 14.7266C11 14.2023 11.425 13.7773 11.9492 13.7773Z" fill="#DADADA"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="18" height="18" fill="white" transform="matrix(1 0 0 -1 11 29)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div class="cards__wrapper">
+        <div class="card__wrapper card__wrapper-new">
+          <div class="card__row object-info__section">
+            <div class="card__cell object-name object-name-sd">ЖК "Северная Долина"</div>
+            <div class="card__cell card__location card__location-top">
+              <div class="icon__wrapper"><img src="./img/commercial-premises/icons/location.svg"></div>Выборгский район, ул. Федора Абрамова, 2
+            </div><a class="card__cell download-pdf" href="#">
+              <div class="icon__wrapper"><img src="./img/commercial-premises/icons/download.svg"></div>Скачать pdf</a>
+          </div>
+          <div class="card__slider">
+            <div class="card__slide__item"><img src="./img/commercial-premises/card-img-1.png"></div>
+            <div class="card__slide__item"><img src="./img/commercial-premises/card-img-1.png"></div>
+          </div>
+          <div class="card__title">Коммерческое помещение №7</div>
+          <div class="card__subtitle">Очередь 7, корпус 3, секция 1</div>
+          <div class="card__location">
+            <div class="icon__wrapper"><img src="./img/commercial-premises/icons/location.svg"></div>Выборгский район, ул. Федора Абрамова, 2
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Площадь</div>
+              <div class="card__text"> 103. 45 м2</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Этаж</div>
+              <div class="card__text"> 1</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Срок сдачи</div>
+              <div class="card__text"> Введен в эксплуатацию</div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Назначение</div>
+              <div class="card__text"> Ателье по пошиву одежды</div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Отделка</div>
+              <div class="card__text"> Без отделки</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Мощность</div>
+              <div class="card__text">1 кВт</div>
+            </div>
+            <div class="card__cell card__cell-square-meter">
+              <div class="card__lable">Стоимость аренды за кв.м.</div>
+              <div class="card__text"> 5 500 ₽/мес.</div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__cell card__cell-square-meter">
+              <div class="card__lable">Аренда за кв.м.</div>
+              <div class="card__text"> 10 678 ₽/мес.</div>
+            </div>
+            <div class="card__cell card__cell__rent-price">
+              <div class="card__lable">Cтоимость аренды</div>
+              <div class="card__text"> 132 456 ₽/мес.</div>
+              <div class="card__text-small">* В стоимость включены КУ</div>
+            </div>
+            <div class="button button-show-info">Подробнее</div>
+          </div>
+          <div class="card__info-section">
+            <div class="close__wrapper"><img src="./img/commercial-premises/icons/close.svg"></div>
+            <div class="text__wrapper">Объект размещается на территории жилого комплекса "Северная долина" - в жилом районе с высокой плотностью (ближайшая станция метро - "Парнас"). Расположен на границе двух крупных кварталов, на перекрестке Толубеевского пр. и ул. Заречной. Шаговая доступность от остановок общественного транспорта. В радиусе 500 м проживает 33 тыс. чел. (прогнозный рост населения в 5-летней перспективе - до 48 тыс. чел.). Число этажей: 3. Имеет отдельный вход с улицы (всего 4 входа). Высота потолков 2,75 - 3,31 м. Выделенная мощность - 52,5 кВт. Сдается без отделки.</div>
+            <div class="button popup__show" data-anchor="#feedback-popup">Оставить заявку</div>
+          </div>
+        </div>
+        <div class="card__wrapper">
+          <div class="card__row object-info__section">
+            <div class="card__cell object-name object-name-yount">ЖК “Юнтолово”</div>
+            <div class="card__cell card__location card__location-top">
+              <div class="icon__wrapper"><img src="./img/commercial-premises/icons/location.svg"></div>Выборгский район, ул. Федора Абрамова, 2
+            </div><a class="card__cell download-pdf" href="#">
+              <div class="icon__wrapper"><img src="./img/commercial-premises/icons/download.svg"></div>Скачать pdf</a>
+          </div>
+          <div class="card__slider">
+            <div class="card__slide__item"><img src="./img/commercial-premises/card-img-2.png"></div>
+            <div class="card__slide__item"><img src="./img/commercial-premises/card-img-2.png"></div>
+          </div>
+          <div class="card__title">Коммерческое помещение №7</div>
+          <div class="card__subtitle">Очередь 7, корпус 3, секция 1</div>
+          <div class="card__location">
+            <div class="icon__wrapper"><img src="./img/commercial-premises/icons/location.svg"></div>Выборгский район, ул. Федора Абрамова, 2
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Площадь</div>
+              <div class="card__text"> 103. 45 м2</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Этаж</div>
+              <div class="card__text"> 1</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Срок сдачи</div>
+              <div class="card__text"> Введен в эксплуатацию</div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Назначение</div>
+              <div class="card__text"> Ателье по пошиву одежды</div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">
+              <div class="card__lable">Отделка</div>
+              <div class="card__text"> Без отделки</div>
+            </div>
+            <div class="card__cell">
+              <div class="card__lable">Мощность</div>
+              <div class="card__text">1 кВт</div>
+            </div>
+            <div class="card__cell card__cell-square-meter">
+              <div class="card__lable">Стоимость аренды за кв.м.</div>
+              <div class="card__text"> 5 500 ₽/мес.</div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__cell card__cell-square-meter">
+              <div class="card__lable">Аренда за кв.м.</div>
+              <div class="card__text"> 10 678 ₽/мес.</div>
+            </div>
+            <div class="card__cell card__cell__rent-price">
+              <div class="card__lable">Cтоимость аренды</div>
+              <div class="card__text"> 132 456 ₽/мес.</div>
+              <div class="card__text-small">* В стоимость включены КУ</div>
+            </div>
+            <div class="button popup__show" data-anchor="#feedback-popup">Оставить заявку</div>
+          </div>
+        </div>
+        <!--.card__wrapper-->
+        <!--    .card__row.object-info__section-->
+        <!--        .card__cell.object-name.object-name-yount ЖК “Юнтолово”-->
+        <!--        .card__cell.card__location.card__location-top-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--            | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--        a(href="#").card__cell.download-pdf-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/download.svg")-->
+        <!--            | Скачать pdf-->
+        <!--    .card__slider-->
+        <!--        img(src="./img/commercial-premises/card-img-2.png")-->
+        <!--    .card__title Коммерческое помещение №7-->
+        <!--    .card__subtitle Очередь 7, корпус 3, секция 1-->
+        <!--    .card__location-->
+        <!--        .icon__wrapper-->
+        <!--            img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--        | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Площадь-->
+        <!--            .card__text  103. 45 м2-->
+        <!--        .card__cell-->
+        <!--            .card__lable Этаж-->
+        <!--            .card__text  1-->
+        <!--        .card__cell-->
+        <!--            .card__lable Срок сдачи-->
+        <!--            .card__text  Введен в эксплуатацию-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Назначение-->
+        <!--            .card__text  Ателье по пошиву одежды-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Отделка-->
+        <!--            .card__text  Без отделки-->
+        <!--        .card__cell-->
+        <!--            .card__lable Мощность-->
+        <!--            .card__text 1 кВт-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Стоимость аренды за кв.м.-->
+        <!--            .card__text  5 500 ₽/мес.-->
+        <!--    .card__footer-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Аренда за кв.м.-->
+        <!--            .card__text  10 678 ₽/мес.-->
+        <!--        .card__cell.card__cell__rent-price-->
+        <!--            .card__lable Cтоимость аренды-->
+        <!--            .card__text  132 456 ₽/мес.-->
+        <!--            .card__text-small * В стоимость включены КУ-->
+        <!--        .button.popup__show(data-anchor="#feedback-popup") Оставить заявку-->
+        <!--.card__wrapper-->
+        <!--    .card__row.object-info__section-->
+        <!--        .card__cell.object-name.object-name-yount ЖК “Юнтолово”-->
+        <!--        .card__cell.card__location.card__location-top-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--            | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--        a(href="#").card__cell.download-pdf-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/download.svg")-->
+        <!--            | Скачать pdf-->
+        <!--    .card__slider-->
+        <!--        img(src="./img/commercial-premises/card-img-2.png")-->
+        <!--    .card__title Коммерческое помещение №7-->
+        <!--    .card__subtitle Очередь 7, корпус 3, секция 1-->
+        <!--    .card__location-->
+        <!--        .icon__wrapper-->
+        <!--            img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--        | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Площадь-->
+        <!--            .card__text  103. 45 м2-->
+        <!--        .card__cell-->
+        <!--            .card__lable Этаж-->
+        <!--            .card__text  1-->
+        <!--        .card__cell-->
+        <!--            .card__lable Срок сдачи-->
+        <!--            .card__text  Введен в эксплуатацию-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Назначение-->
+        <!--            .card__text  Ателье по пошиву одежды-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Отделка-->
+        <!--            .card__text  Без отделки-->
+        <!--        .card__cell-->
+        <!--            .card__lable Мощность-->
+        <!--            .card__text 1 кВт-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Стоимость аренды за кв.м.-->
+        <!--            .card__text  5 500 ₽/мес.-->
+        <!--    .card__footer-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Аренда за кв.м.-->
+        <!--            .card__text  10 678 ₽/мес.-->
+        <!--        .card__cell.card__cell__rent-price-->
+        <!--            .card__lable Cтоимость аренды-->
+        <!--            .card__text  132 456 ₽/мес.-->
+        <!--            .card__text-small * В стоимость включены КУ-->
+        <!--        .button.popup__show(data-anchor="#feedback-popup") Оставить заявку-->
+        <!--.card__wrapper-->
+        <!--    .card__row.object-info__section-->
+        <!--        .card__cell.object-name.object-name-yount ЖК “Юнтолово”-->
+        <!--        .card__cell.card__location.card__location-top-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--            | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--        a(href="#").card__cell.download-pdf-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/download.svg")-->
+        <!--            | Скачать pdf-->
+        <!--    .card__slider-->
+        <!--        img(src="./img/commercial-premises/card-img-2.png")-->
+        <!--    .card__title Коммерческое помещение №7-->
+        <!--    .card__subtitle Очередь 7, корпус 3, секция 1-->
+        <!--    .card__location-->
+        <!--        .icon__wrapper-->
+        <!--            img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--        | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Площадь-->
+        <!--            .card__text  103. 45 м2-->
+        <!--        .card__cell-->
+        <!--            .card__lable Этаж-->
+        <!--            .card__text  1-->
+        <!--        .card__cell-->
+        <!--            .card__lable Срок сдачи-->
+        <!--            .card__text  Введен в эксплуатацию-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Назначение-->
+        <!--            .card__text  Ателье по пошиву одежды-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Отделка-->
+        <!--            .card__text  Без отделки-->
+        <!--        .card__cell-->
+        <!--            .card__lable Мощность-->
+        <!--            .card__text 1 кВт-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Стоимость аренды за кв.м.-->
+        <!--            .card__text  5 500 ₽/мес.-->
+        <!--    .card__footer-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Аренда за кв.м.-->
+        <!--            .card__text  10 678 ₽/мес.-->
+        <!--        .card__cell.card__cell__rent-price-->
+        <!--            .card__lable Cтоимость аренды-->
+        <!--            .card__text  132 456 ₽/мес.-->
+        <!--            .card__text-small * В стоимость включены КУ-->
+        <!--        .button.popup__show(data-anchor="#feedback-popup") Оставить заявку-->
+        <!--.card__wrapper-->
+        <!--    .card__row.object-info__section-->
+        <!--        .card__cell.object-name.object-name-yount ЖК “Юнтолово”-->
+        <!--        .card__cell.card__location.card__location-top-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--            | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--        a(href="#").card__cell.download-pdf-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/download.svg")-->
+        <!--            | Скачать pdf-->
+        <!--    .card__slider-->
+        <!--        img(src="./img/commercial-premises/card-img-2.png")-->
+        <!--    .card__title Коммерческое помещение №7-->
+        <!--    .card__subtitle Очередь 7, корпус 3, секция 1-->
+        <!--    .card__location-->
+        <!--        .icon__wrapper-->
+        <!--            img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--        | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Площадь-->
+        <!--            .card__text  103. 45 м2-->
+        <!--        .card__cell-->
+        <!--            .card__lable Этаж-->
+        <!--            .card__text  1-->
+        <!--        .card__cell-->
+        <!--            .card__lable Срок сдачи-->
+        <!--            .card__text  Введен в эксплуатацию-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Назначение-->
+        <!--            .card__text  Ателье по пошиву одежды-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Отделка-->
+        <!--            .card__text  Без отделки-->
+        <!--        .card__cell-->
+        <!--            .card__lable Мощность-->
+        <!--            .card__text 1 кВт-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Стоимость аренды за кв.м.-->
+        <!--            .card__text  5 500 ₽/мес.-->
+        <!--    .card__footer-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Аренда за кв.м.-->
+        <!--            .card__text  10 678 ₽/мес.-->
+        <!--        .card__cell.card__cell__rent-price-->
+        <!--            .card__lable Cтоимость аренды-->
+        <!--            .card__text  132 456 ₽/мес.-->
+        <!--            .card__text-small * В стоимость включены КУ-->
+        <!--        .button.popup__show(data-anchor="#feedback-popup") Оставить заявку-->
+        <!--.card__wrapper-->
+        <!--    .card__row.object-info__section-->
+        <!--        .card__cell.object-name.object-name-yount ЖК “Юнтолово”-->
+        <!--        .card__cell.card__location.card__location-top-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--            | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--        a(href="#").card__cell.download-pdf-->
+        <!--            .icon__wrapper-->
+        <!--                img(src="./img/commercial-premises/icons/download.svg")-->
+        <!--            | Скачать pdf-->
+        <!--    .card__slider-->
+        <!--        img(src="./img/commercial-premises/card-img-2.png")-->
+        <!--    .card__title Коммерческое помещение №7-->
+        <!--    .card__subtitle Очередь 7, корпус 3, секция 1-->
+        <!--    .card__location-->
+        <!--        .icon__wrapper-->
+        <!--            img(src="./img/commercial-premises/icons/location.svg")-->
+        <!--        | Выборгский район, ул. Федора Абрамова, 2-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Площадь-->
+        <!--            .card__text  103. 45 м2-->
+        <!--        .card__cell-->
+        <!--            .card__lable Этаж-->
+        <!--            .card__text  1-->
+        <!--        .card__cell-->
+        <!--            .card__lable Срок сдачи-->
+        <!--            .card__text  Введен в эксплуатацию-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Назначение-->
+        <!--            .card__text  Ателье по пошиву одежды-->
+        <!--    .card__row-->
+        <!--        .card__cell-->
+        <!--            .card__lable Отделка-->
+        <!--            .card__text  Без отделки-->
+        <!--        .card__cell-->
+        <!--            .card__lable Мощность-->
+        <!--            .card__text 1 кВт-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Стоимость аренды за кв.м.-->
+        <!--            .card__text  5 500 ₽/мес.-->
+        <!--    .card__footer-->
+        <!--        .card__cell.card__cell-square-meter-->
+        <!--            .card__lable Аренда за кв.м.-->
+        <!--            .card__text  10 678 ₽/мес.-->
+        <!--        .card__cell.card__cell__rent-price-->
+        <!--            .card__lable Cтоимость аренды-->
+        <!--            .card__text  132 456 ₽/мес.-->
+        <!--            .card__text-small * В стоимость включены КУ-->
+        <!--        .button.popup__show(data-anchor="#feedback-popup") Оставить заявку-->
+      </div>
+    </div>
+    <div class="popup__wrapper">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#feedback-popup"><img src="./img/commercial-premises/icons/close.svg"></div>
+        <div class="popup__title">Заявка на звонок</div>
+        <form action="#">
+          <div class="popup__input__wrapper">
+            <input type="text" name="name" placeholder="Ваше имя">
+          </div>
+          <div class="popup__input__wrapper">
+            <input type="text" name="name" placeholder="Ваше имя">
+          </div>
+          <button class="button" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup__wrapper" id="feedback-popup">
+      <div class="popup__bg"></div>
+      <div class="popup__body">
+        <div class="popup__close" data-anchor="#feedback-popup"><img src="./img/commercial-premises/icons/close.svg" alt=""></div>
+        <div class="popup__title">Заявка на звонок</div>
+        <div class="feedback__wrapper">
+          <form>
+            <div class="input-text__section">
+              <div class="input-text__wrapper">
+                <input type="text" name="feedback-phone" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="input-text__section">
+              <div class="input-text__wrapper">
+                <input type="text" name="feedback-phone">
+              </div>
+            </div>
+            <input class="button" type="submit" value="Оставить заявку">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer__wrapper">
+      <div class="items__wrapper">
+        <div class="links__wrapper">
+          <div class="item__wrapper">
+            <div class="item__title">Квартиры в продаже</div><a class="item__link" href="#">Квартиры-студии</a><a class="item__link" href="#">1-комнатные квартиры</a><a class="item__link" href="#">2-комнатные квартиры</a><a class="item__link" href="#">3-комнатные квартиры</a>
+          </div>
+          <div class="item__wrapper">
+            <div class="item__title">Паркинг</div><a class="item__link" href="#">Аренда</a><a class="item__link" href="#">Покупка</a><a class="item__link" href="#">Рассрочка</a>
+          </div>
+          <div class="item__wrapper">
+            <div class="item__title">Варианты покупки</div><a class="item__link" href="#">Ипотека</a><a class="item__link" href="#">Рассрочка</a><a class="item__link" href="#">100% оплата</a><a class="item__link" href="#">Военная ипотека</a>
+          </div>
+          <div class="item__wrapper"><a class="item__title" href="#">Этапы сделки</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Контакты</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Ход строительства</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Trade-in</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Коммерческие помещения</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Новости</a></div>
+          <div class="item__wrapper"><a class="item__title" href="#">Документация</a></div>
+        </div>
+        <form class="subscription__form">
+          <div class="form__title">Подпишитесь на наши новости</div>
+          <div class="form__text">Получайте все самые интересные предложения первыми!</div>
+          <div class="form__input__wrapper">
+            <input type="text" placeholder="E-mail">
+          </div>
+          <button class="button" type="submit">Подписаться</button>
+        </form>
+      </div>
+      <div class="items__wrapper">
+        <div class="logo__section">
+          <div class="logo__wrapper"><img src="./img/icons/glavstroy-white.png"></div>
+          <div class="logo__text__p">© 2020, ООО "Главстрой-СПб специализированный застройщик"</div>
+        </div>
+        <div class="text__location">
+          <div class="text__location__p"><img src="img/icons/phone-footer.svg">+7 (812) 604-04-04</div>
+          <div class="text__location__p"><img src="img/icons/location-footer.svg">г. Санкт-Петербург, БЦ "Лахта-2”, ул. Оптиков, д.4, корпус 3, лит. А</div>
+        </div>
+        <div class="social__section">
+          <div class="social__item">
+            <div class="social__title">главстрой спб</div>
+            <div class="social__img__wrapper"><a class="social__img" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM16.5635 15.6589V23.8197H13.1869V15.6592H11.5V12.8469H13.1869V11.1585C13.1869 8.86425 14.1395 7.5 16.8457 7.5H19.0988V10.3126H17.6905C16.637 10.3126 16.5673 10.7056 16.5673 11.4391L16.5635 12.8466H19.1147L18.8162 15.6589H16.5635Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a><a class="social__img" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM16.2213 19.7351C16.0734 19.8911 15.7847 19.9226 15.7847 19.9226H14.8284C14.8284 19.9226 12.7186 20.047 10.86 18.1481C8.83318 16.0764 7.04346 11.966 7.04346 11.966C7.04346 11.966 6.94016 11.6963 7.05207 11.5665C7.17806 11.4198 7.52161 11.4106 7.52161 11.4106L9.80747 11.396C9.80747 11.396 10.0227 11.4306 10.1768 11.5419C10.3044 11.6341 10.3756 11.8054 10.3756 11.8054C10.3756 11.8054 10.745 12.7226 11.2341 13.5522C12.1896 15.1723 12.6341 15.5264 12.9581 15.3528C13.4307 15.1 13.2891 13.0629 13.2891 13.0629C13.2891 13.0629 13.2977 12.3239 13.0512 11.9944C12.8602 11.7394 12.5003 11.6648 12.3414 11.6441C12.2123 11.6272 12.4236 11.3338 12.6975 11.2024C13.1091 11.005 13.8353 10.9935 14.6938 11.0019C15.3629 11.0088 15.5554 11.0495 15.8167 11.1118C16.4234 11.2555 16.4044 11.716 16.3636 12.7098C16.3513 13.007 16.3372 13.352 16.3372 13.7504C16.3372 13.8399 16.3345 13.9354 16.3318 14.0335C16.3176 14.5427 16.3013 15.1258 16.6431 15.3428C16.8184 15.4534 17.2465 15.3589 18.3178 13.5737C18.8257 12.7272 19.206 11.7324 19.206 11.7324C19.206 11.7324 19.2898 11.555 19.4189 11.4789C19.5511 11.4014 19.7296 11.4252 19.7296 11.4252L22.1351 11.4106C22.1351 11.4106 22.8582 11.3253 22.9748 11.6464C23.0977 11.9821 22.7048 12.7672 21.722 14.053C20.7896 15.2732 20.3359 15.7224 20.3775 16.1197C20.4079 16.41 20.7029 16.6726 21.2688 17.1879C22.4504 18.2647 22.767 18.8312 22.8431 18.9673C22.8494 18.9786 22.8541 18.9869 22.8574 18.9923C23.3872 19.855 22.2697 19.9226 22.2697 19.9226L20.1326 19.9517C20.1326 19.9517 19.674 20.0408 19.0699 19.6337C18.7534 19.4206 18.4441 19.0726 18.1496 18.7411C17.6998 18.2349 17.2842 17.7672 16.9296 17.8777C16.334 18.0636 16.352 19.3226 16.352 19.3226C16.352 19.3226 16.3567 19.5922 16.2213 19.7351Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a><a class="social__img" href="#">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 9L15 12L10 15V9Z" fill="white" fill-opacity="0.5"></path>
+                  <path d="M12 24C5.3736 24 0 18.6264 0 12C0 5.3736 5.3736 0 12 0C18.6264 0 24 5.3736 24 12C24 18.6264 18.6264 24 12 24ZM19.4982 11.9877C19.4982 11.9877 19.4982 9.55408 19.1895 8.38055C19.0164 7.73822 18.5099 7.23175 17.8676 7.0589C16.6941 6.75 12 6.75 12 6.75C12 6.75 7.31818 6.75 6.13239 7.07117C5.49005 7.24402 4.98358 7.75067 4.81055 8.39301C4.50165 9.55408 4.50165 12 4.50165 12C4.50165 12 4.50165 14.4335 4.81055 15.607C4.9834 16.2493 5.50232 16.7682 6.13239 16.9411C7.30591 17.25 12 17.25 12 17.25C12 17.25 16.6941 17.25 17.8676 16.9288C18.5099 16.756 19.0164 16.2493 19.1895 15.607C19.5106 14.4335 19.4982 11.9877 19.4982 11.9877Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a></div>
+          </div>
+          <div class="social__item">
+            <div class="social__title">северная долина</div>
+            <div class="social__img__wrapper"><a class="social__img" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM16.2213 19.7351C16.0734 19.8911 15.7847 19.9226 15.7847 19.9226H14.8284C14.8284 19.9226 12.7186 20.047 10.86 18.1481C8.83318 16.0764 7.04346 11.966 7.04346 11.966C7.04346 11.966 6.94016 11.6963 7.05207 11.5665C7.17806 11.4198 7.52161 11.4106 7.52161 11.4106L9.80747 11.396C9.80747 11.396 10.0227 11.4306 10.1768 11.5419C10.3044 11.6341 10.3756 11.8054 10.3756 11.8054C10.3756 11.8054 10.745 12.7226 11.2341 13.5522C12.1896 15.1723 12.6341 15.5264 12.9581 15.3528C13.4307 15.1 13.2891 13.0629 13.2891 13.0629C13.2891 13.0629 13.2977 12.3239 13.0512 11.9944C12.8602 11.7394 12.5003 11.6648 12.3414 11.6441C12.2123 11.6272 12.4236 11.3338 12.6975 11.2024C13.1091 11.005 13.8353 10.9935 14.6938 11.0019C15.3629 11.0088 15.5554 11.0495 15.8167 11.1118C16.4234 11.2555 16.4044 11.716 16.3636 12.7098C16.3513 13.007 16.3372 13.352 16.3372 13.7504C16.3372 13.8399 16.3345 13.9354 16.3318 14.0335C16.3176 14.5427 16.3013 15.1258 16.6431 15.3428C16.8184 15.4534 17.2465 15.3589 18.3178 13.5737C18.8257 12.7272 19.206 11.7324 19.206 11.7324C19.206 11.7324 19.2898 11.555 19.4189 11.4789C19.5511 11.4014 19.7296 11.4252 19.7296 11.4252L22.1351 11.4106C22.1351 11.4106 22.8582 11.3253 22.9748 11.6464C23.0977 11.9821 22.7048 12.7672 21.722 14.053C20.7896 15.2732 20.3359 15.7224 20.3775 16.1197C20.4079 16.41 20.7029 16.6726 21.2688 17.1879C22.4504 18.2647 22.767 18.8312 22.8431 18.9673C22.8494 18.9786 22.8541 18.9869 22.8574 18.9923C23.3872 19.855 22.2697 19.9226 22.2697 19.9226L20.1326 19.9517C20.1326 19.9517 19.674 20.0408 19.0699 19.6337C18.7534 19.4206 18.4441 19.0726 18.1496 18.7411C17.6998 18.2349 17.2842 17.7672 16.9296 17.8777C16.334 18.0636 16.352 19.3226 16.352 19.3226C16.352 19.3226 16.3567 19.5922 16.2213 19.7351Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a><a class="social__img" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM11.702 7.04833C12.5554 7.0095 12.8281 7 15.0007 7H14.9983C17.1716 7 17.4433 7.0095 18.2966 7.04833C19.1483 7.08733 19.73 7.22217 20.24 7.42C20.7666 7.62417 21.2116 7.89751 21.6567 8.34251C22.1017 8.78719 22.375 9.23352 22.58 9.7597C22.7767 10.2684 22.9117 10.8497 22.9517 11.7014C22.99 12.5547 23 12.8274 23 15.0001C23 17.1728 22.99 17.4448 22.9517 18.2981C22.9117 19.1495 22.7767 19.731 22.58 20.2398C22.375 20.7658 22.1017 21.2121 21.6567 21.6568C21.2121 22.1018 20.7665 22.3758 20.2405 22.5802C19.7315 22.778 19.1495 22.9128 18.2978 22.9518C17.4444 22.9907 17.1726 23.0002 14.9998 23.0002C12.8272 23.0002 12.5547 22.9907 11.7014 22.9518C10.8499 22.9128 10.2684 22.778 9.75936 22.5802C9.23352 22.3758 8.78719 22.1018 8.34268 21.6568C7.89784 21.2121 7.62451 20.7658 7.42 20.2396C7.22234 19.731 7.0875 19.1496 7.04833 18.298C7.00967 17.4446 7 17.1728 7 15.0001C7 12.8274 7.01 12.5546 7.04817 11.7012C7.0865 10.8499 7.2215 10.2684 7.41984 9.75953C7.62484 9.23352 7.89818 8.78719 8.34318 8.34251C8.78785 7.89768 9.23419 7.62434 9.76036 7.42C10.269 7.22217 10.8504 7.08733 11.702 7.04833Z" fill="white" fill-opacity="0.5"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2831 8.44145C14.4225 8.44124 14.5724 8.4413 14.7341 8.44137L15.0008 8.44145C17.1368 8.44145 17.39 8.44912 18.2335 8.48745C19.0135 8.52312 19.4368 8.65346 19.7188 8.76296C20.0922 8.90796 20.3583 9.08129 20.6382 9.3613C20.9182 9.6413 21.0915 9.90797 21.2368 10.2813C21.3464 10.563 21.4769 10.9863 21.5124 11.7663C21.5507 12.6097 21.559 12.863 21.559 14.998C21.559 17.133 21.5507 17.3864 21.5124 18.2297C21.4767 19.0097 21.3464 19.4331 21.2368 19.7147C21.0918 20.0881 20.9182 20.3539 20.6382 20.6337C20.3582 20.9137 20.0923 21.0871 19.7188 21.2321C19.4372 21.3421 19.0135 21.4721 18.2335 21.5078C17.3901 21.5461 17.1368 21.5544 15.0008 21.5544C12.8646 21.5544 12.6114 21.5461 11.7681 21.5078C10.9881 21.4718 10.5647 21.3414 10.2826 21.2319C9.90923 21.0869 9.64256 20.9136 9.36256 20.6336C9.08256 20.3536 8.90922 20.0876 8.76389 19.7141C8.65439 19.4324 8.52388 19.0091 8.48838 18.2291C8.45005 17.3857 8.44238 17.1324 8.44238 14.996C8.44238 12.8597 8.45005 12.6077 8.48838 11.7643C8.52405 10.9843 8.65439 10.561 8.76389 10.279C8.90889 9.90564 9.08256 9.63897 9.36256 9.35896C9.64256 9.07896 9.90923 8.90562 10.2826 8.76029C10.5646 8.65029 10.9881 8.52029 11.7681 8.48445C12.5061 8.45112 12.7921 8.44112 14.2831 8.43945V8.44145ZM19.2711 9.7698C18.7411 9.7698 18.3111 10.1993 18.3111 10.7295C18.3111 11.2595 18.7411 11.6895 19.2711 11.6895C19.8011 11.6895 20.2311 11.2595 20.2311 10.7295C20.2311 10.1995 19.8011 9.76947 19.2711 9.76947V9.7698ZM10.8923 14.9999C10.8923 12.7311 12.7318 10.8916 15.0005 10.8915C17.2694 10.8915 19.1084 12.731 19.1084 14.9999C19.1084 17.2687 17.2696 19.1074 15.0007 19.1074C12.7319 19.1074 10.8923 17.2687 10.8923 14.9999Z" fill="white" fill-opacity="0.5"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0007 12.3335C16.4734 12.3335 17.6674 13.5273 17.6674 15.0002C17.6674 16.4729 16.4734 17.6669 15.0007 17.6669C13.5278 17.6669 12.334 16.4729 12.334 15.0002C12.334 13.5273 13.5278 12.3335 15.0007 12.3335V12.3335Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a><a>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 9L15 12L10 15V9Z" fill="white" fill-opacity="0.5"></path>
+                  <path d="M12 24C5.3736 24 0 18.6264 0 12C0 5.3736 5.3736 0 12 0C18.6264 0 24 5.3736 24 12C24 18.6264 18.6264 24 12 24ZM19.4982 11.9877C19.4982 11.9877 19.4982 9.55408 19.1895 8.38055C19.0164 7.73822 18.5099 7.23175 17.8676 7.0589C16.6941 6.75 12 6.75 12 6.75C12 6.75 7.31818 6.75 6.13239 7.07117C5.49005 7.24402 4.98358 7.75067 4.81055 8.39301C4.50165 9.55408 4.50165 12 4.50165 12C4.50165 12 4.50165 14.4335 4.81055 15.607C4.9834 16.2493 5.50232 16.7682 6.13239 16.9411C7.30591 17.25 12 17.25 12 17.25C12 17.25 16.6941 17.25 17.8676 16.9288C18.5099 16.756 19.0164 16.2493 19.1895 15.607C19.5106 14.4335 19.4982 11.9877 19.4982 11.9877Z" fill="white" fill-opacity="0.5"></path>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="items__wrapper">
+        <div class="footer__text">
+          <div class="footer__text__p">Предложение не является публичной офертой. Подробная информация отражена в проектной документации, наличие закрытого двора и системы видеонаблюдения необходимо уточнять у специалистов компании ООО "Главстрой-СПб специализированный застройщик" при заключении договора.<br>*Предусмотрено проектом.</div>
+          <div class="footer__text__p">Ставка по ипотеке в размере 0,1% годовых действует в течение 12 месяцев с даты заключения кредитного договора при условии оформления полного комплексного страхования и внесения первоначального взноса не менее 15% от стоимости приобретаемой недвижимости. Ставка 0,1% годовых обеспечивается за счет субсидирования из средств ООО «Главстрой-СПб специализированный застройщик» Банку ВТБ (ПАО).По истечении 12 месяцев ставка по ипотеке в рублях РФ составит 6,1% годовых в рамках программы «Ипотека с господдержкой 2020» (при условии комплексного страхования). Заемщики - граждане РФ. Программа распространяется на квартиры в строящемся жилом комплексе «Северная долина». Сумма кредита - не более 12 млн. руб. Первоначальный взнос – не менее 15% от стоимости приобретаемой недвижимости. Валюта кредита – рубли. Срок кредита – от 1 до 30 лет. Срок действия программы до 01.07.2021 г. Банк ВТБ (ПАО) оказывает исключительно банковские услуги. Банк вправе отказать в предоставлении кредита без объяснения причин. Банк предоставляет кредит в случае, если заемщик (созаемщик/поручитель, при наличии) соответствует требованиям госпрограммы и Банка и предоставил полный пакет необходимых документов. Банк ВТБ (ПАО). Генеральная лицензия Банка России №1000.</div>
+          <div class="footer__text__p">**Акция за покупку паркинга: размер скидки от базовой цены – 1,5%. При одновременной покупке машино-места в следующих паркингах: корпус 4 (15-я очередь проекта «Северная долина»), или корпус 29 (16-я очередь проекта «Северная долина»), или корпус 33 (16-я очередь проекта «Северная долина»), или паркинг 39-Н адресу ул. Заречная, 41, или паркинг 40-Н по адресу ул. Заречная, 41, или паркинг 88-Н по адресу ул. Заречная, 45/1, или паркинг 76-Н по адресу ул. Заречная, 45/1, или паркинг 66-Н по адресу ул. Заречная, 45/1 и квартиры в 15 или 16-й очередях проекта «Северная долина». Договор на покупку квартиры подписывается после подписания договора на машиноместо и внесения денежных средств на Аккредитив по договору на машиноместо).</div>
+        </div><a class="footer__text footer__text-link" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="./js/choices.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/slick-init.js"></script>
+    <script src="./js/popup.js"></script>
+  </body>
+</html>

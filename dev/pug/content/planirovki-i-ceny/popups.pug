@@ -1,0 +1,27 @@
+.popup__wrapper
+    .popup__bg
+    .popup__body
+        .popup__close(data-anchor="#feedback-popup")
+            img(src="./img/icons/close.svg")
+        .popup__title Заявка на звонок
+        form(action="#")
+            .popup__input__wrapper
+                input(type="text" name="name" placeholder="Ваше имя")
+            .popup__input__wrapper
+                input(type="text" name="name" placeholder="Ваше имя")
+            button(type="submit" class="button") Оставить заявку
+.popup__wrapper#feedback-popup
+    .popup__bg
+    .popup__body
+        .popup__close(data-anchor="#feedback-popup")
+            img(src="./img/icons/close.svg" alt="")
+        .popup__title Заявка на звонок
+        .feedback__wrapper
+            form
+                .input-text__section
+                    .input-text__wrapper
+                        input(type="text" name="feedback-phone" placeholder="Ваше имя")
+                .input-text__section
+                    .input-text__wrapper
+                        input(type="text" name="feedback-phone")
+                input(type="submit" class="button" value="Оставить заявку")

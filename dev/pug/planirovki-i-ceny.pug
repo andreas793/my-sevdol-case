@@ -1,0 +1,20 @@
+doctype
+html
+    head
+        title Заголовок
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="./css/choices.min.css")
+        link(rel="stylesheet" href="./css/planirovki-i-ceny.css")
+    body
+        .layout__wrapper
+            include content/planirovki-i-ceny/filter__section
+            include content/planirovki-i-ceny/result-serch
+            include content/planirovki-i-ceny/cards
+            include content/planirovki-i-ceny/sale
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="js/choices.min.js")
+        script(src="js/choices-init.js")
+        script(src="js/filters.js")
+        script(src="js/pagination.js")
+

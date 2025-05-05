@@ -1,0 +1,158 @@
+.questionnaire__wrapper.item-bottom-anchor(data-anchor="questionnaire")
+    .layout__title Анкета покупателя
+    .questionnaire__item(data-progress-value="90")
+        .questionnaire__title Лаврухина Виолетта Филлиповна
+        .questionnaire__text
+        .questionnaire__progress__wrapper
+            .questionnaire__progress__value
+        .questionnaire__actions
+            .button__img.edit__questionnaire
+                .icon__wrapper
+                    img(src="img/lk/pencil.svg")
+                | Редактировать анкету
+            .button__img.delate__questionnaire
+                .icon__wrapper
+                    img(src="img/lk/deleted-blue.svg")
+                | Удалить
+            .button__img.delate__questionnaire
+                .icon__wrapper
+                    img(src="img/lk/view.svg")
+                | Посмотреть анкету
+        form.questionnaire__form
+            .input__wrapper
+                .input__label Фамилия
+                input(type="text")
+            .input__wrapper
+                .input__label Имя
+                input(type="text")
+            .input__wrapper
+                .input__label Отчество
+                input(type="text")
+            .input__wrapper
+                .input__label E-mail
+                input(type="text")
+            .input__wrapper
+                .input__label Дата рождения
+                input(type="text")
+            .input__wrapper
+                .input__label СНИЛС
+                input(type="text")
+            .input__wrapper
+                .input__label Серия и номер паспорта
+                .input__wrapper-double
+                    input(type="text")
+                    input(type="text")
+            .input__wrapper
+                .input__label Код подразделения
+                input(type="text")
+            .input__wrapper
+                .input__label Дата выдачи
+                input(type="text")
+            .button__section
+                input(type="submit" class="button__wrapper edit__close" value="Сохранить")
+    div
+        .questionnaire__item(data-progress-value="10")
+            .questionnaire__title Лаврухина Виолетта Филлиповна
+            .questionnaire__text
+            .questionnaire__progress__wrapper
+                .questionnaire__progress__value
+            .questionnaire__actions
+                .button__img.edit__questionnaire
+                    .icon__wrapper
+                        img(src="img/lk/pencil.svg")
+                    | Редактировать анкету
+                .button__img.delate__questionnaire
+                    .icon__wrapper
+                        img(src="img/lk/deleted-blue.svg")
+                    | Удалить
+            form.questionnaire__form
+                .input__wrapper
+                    .input__label Фамилия
+                    input(type="text")
+                .input__wrapper
+                    .input__label Имя
+                    input(type="text")
+                .input__wrapper
+                    .input__label Отчество
+                    input(type="text")
+                .input__wrapper
+                    .input__label E-mail
+                    input(type="text")
+                .input__wrapper
+                    .input__label Дата рождения
+                    input(type="text")
+                .input__wrapper
+                    .input__label СНИЛС
+                    input(type="text")
+                .input__wrapper
+                    .input__label Серия и номер паспорта
+                    .input__wrapper-double
+                        input(type="text")
+                        input(type="text")
+                .input__wrapper
+                    .input__label Код подразделения
+                    input(type="text")
+                .input__wrapper
+                    .input__label Дата выдачи
+                    input(type="text")
+                .button__section
+                    input(type="submit" class="button__wrapper edit__close" value="Сохранить")
+        .questionnaire__item.questionnaire__item-add.active
+            form.questionnaire__form
+                .input__wrapper
+                    .input__label Фамилия
+                    input(type="text")
+                .input__wrapper
+                    .input__label Имя
+                    input(type="text")
+                .input__wrapper
+                    .input__label Отчество
+                    input(type="text")
+                .input__wrapper
+                    .input__label E-mail
+                    input(type="text")
+                .input__wrapper
+                    .input__label Дата рождения
+                    input(type="text")
+                .input__wrapper
+                    .input__label СНИЛС
+                    input(type="text")
+                .input__wrapper
+                    .input__label Серия и номер паспорта
+                    .input__wrapper-double
+                        input(type="text")
+                        input(type="text")
+                .input__wrapper
+                    .input__label Код подразделения
+                    input(type="text")
+                .input__wrapper
+                    .input__label Дата выдачи
+                    input(type="text")
+                .button__section
+                    input(type="submit" class="button__wrapper edit__close" value="Сохранить")
+                    .button__wrapper.close-form Отменить
+    .flex__wrapper
+        div
+            .button__img.add-owner
+                .icon__wrapper
+                    svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9")
+                | Добавить собственника
+            .button__img.popup__show(data-anchor="#list-owners")
+                .icon__wrapper
+                    svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M8.61539 0H7.38462V7.38461H0V8.61539H7.38462V16H8.61539V8.61539H16V7.38462H8.61539V0Z" fill="#005BB9")
+                | Выбрать собственника из списка
+        .button__wrapper Отправить анкеты
+    .digital__mortgage
+        .title__wrapper Цифровая ипотека
+        .text__wrapper Отправить анкету в банки
+        label
+            input(type='checkbox' name='checkbox' value='checkbox')
+            .checkbox__wrapper
+                .checkbox__text Включить модуль ЦИ
+        .text__wrapper.small__text * Хинт для модуля ЦИ хинт для модуля ци
+        .img__bg
+            img(src="img/lk/percent.svg")
+        .popup__show(data-anchor="#digital_ipo")
+

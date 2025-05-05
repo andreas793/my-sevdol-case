@@ -1,0 +1,275 @@
+@import "../mixin/flex.styl"
+
+.popup__wrapper
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: 100
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: row
+
+.popup__wrapper.active
+  display: flex
+
+.popup__bg
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, 0.6)
+
+.popup__body
+  position: relative
+  width: 363px
+  background-color: #fff
+  padding: 30px 28px 40px 23px
+  box-sizing: border-box
+  @media(max-width: 767px)
+    width: calc(100% - 20px)
+  .popup__title
+    font-size: 24px
+    line-height: 29px
+    font-family: "Gilroy-Bold", Arial, sans-serif
+    color: #005BB9
+    margin-bottom: 17px
+  .popup__text
+    color: rgba(51, 51, 51, 0.78)
+    font-family: Roboto, Arial, sans-serif
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 27px
+    max-width: 246px
+  .input__wrapper
+    padding: 12px 13px 11px 24px
+    border: 1px solid rgba(58, 57, 60, 0.2)
+    margin-bottom: 8px
+    box-sizing: border-box
+    input
+      border: none
+      outline: none
+      width: 100%
+      font-family: Roboto, Arial, sans-serif
+      font-size: 18px
+      line-height: 25px
+      color: rgba(51, 51, 51, 0.78)
+      &::placeholder
+        font-family: Roboto, Arial, sans-serif
+        font-size: 18px
+        line-height: 25px
+        color: rgba(51, 51, 51, 0.78)
+  input[type="checkbox"]
+    width: 0.01px
+    height: 0.01px
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    z-index: -1
+  .checkbox__wrapper
+    width: 20px
+    height: 20px
+    border: 1px solid #DADADA
+    background-color: #fff
+    position: relative
+    &:before
+      content: ''
+      display: none
+      width: 4px
+      height: 9px
+      border: 1px solid #fff
+      border-top-color: transparent
+      border-left-color: transparent
+      transform: rotate(45deg)
+      position: absolute
+      top: 2px
+      left: 6px
+  input[type="checkbox"]:checked+.checkbox__wrapper
+    background-color: #005BB9
+    border-color: #005BB9
+    &:before
+      display: block
+
+  .button__wrapper
+    margin: 8px auto 0 auto
+    width: 100%
+    padding: 10px 0 13px 0
+    color: #fff
+    background-color: #005BB9
+    border: 1px solid #005BB9
+    cursor: pointer
+    text-align: center
+    font-family: Roboto, Arial, sans-serif
+    font-size: 18px
+    line-height: 25px
+    box-sizing: border-box
+    &:hover
+      background-color: #fff
+      color: #005BB9
+  .popup__close
+    position: absolute
+    top: 8px
+    right: 12px
+    cursor: pointer
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    background-color: rgba(0, 0, 0, 0.6)
+    flex(center, center, row)
+    img
+      width: 12px
+      height: auto
+
+  .tel__wrapper
+    font-family: Roboto-Bold, Arial, sans-serif
+    font-weight: bold
+    white-space: nowrap
+    font-size: 18px
+    line-height: 138%
+  .popup__link
+    font-family: Roboto-Bold, Arial, sans-serif
+    font-size: 16px
+    line-height: 132%
+    color: #005BB9
+    text-decoration: underline
+    margin-bottom: 7px
+    cursor: pointer
+    display: inline-block
+    &:hover
+      text-decoration: none
+.popup__wrapper#digital-mortgage
+  .popup__body
+    flex()
+    width: 902px
+    padding: 0
+  .main__img
+    width: 322px
+    img
+      width: 100%
+      height: auto
+  .feedback__wrapper
+    padding: 55px 123px 60px 60px
+    box-sizing: border-box
+    margin: 0
+  .popup__title
+    text-transform: uppercase
+    font-weight bold
+  .popup__text
+    max-width: 396px
+    margin-bottom: 33px
+    &+.popup__text
+      margin-bottom: 18px
+      max-width: 314px
+  .input__wrapper
+    margin-bottom: 93px
+    width: 330px
+  .button__wrapper
+    margin-top: 0
+    width: 307px
+    padding: 11px 32px 12px 32px
+    font-weight: normal
+  .tel__wrapper
+    font-family: Roboto-Bold, Arial, sans-serif
+    font-weight: bold
+    white-space: nowrap
+  @media(max-width: 1023px)
+    .popup__body
+      width: 300px
+    .main__img
+      display: none
+    .feedback__wrapper
+      padding: 35px 16px 40px 16px
+      width: 100%
+    .input__wrapper
+      margin-top: 0
+      width: 100%
+    .button__wrapper
+      width: 100%
+      font-size: 16px
+
+.popup__wrapper#digital_ipo
+  .popup__body
+    width: 90%
+    height: 90%
+
+  .popup__text
+    max-width: 396px
+    margin-bottom: 33px
+
+  .digital__mortgage-frame
+    width: 100%
+    height: 100%
+
+  iframe
+    width: 100%
+    height: calc(100% - 55px)
+    box-sizing: border-box
+
+  @media (max-width: 1023px)
+    .popup__body
+      width: 100%
+
+.popup__wrapper#feedback-form
+  .popup__text
+    font-size: 16px
+    line-height: 132%
+    color: rgba(51, 51, 51, 0.78)
+    margin-bottom: 13px
+    &:first-child
+      margin-bottom: 24px
+  .tel__wrapper
+    color: #B19A7C
+    margin-bottom: 3px
+  .form__wrapper
+    flex()
+    width: 100%
+    margin-bottom: 24px
+    .input__wrapper
+      margin-bottom: 0
+      padding: 10px 20px 11px 20px
+      flex-grow: 1
+      input
+        font-size: 16px
+        line-height: 23px
+    input[type="submit"]
+      background: #EBF2F9 url("../img/lk/send-blue.svg") no-repeat 50% 50%
+      border: 1px solid #DDE9F5
+      width: 48px
+      height: 48px
+      border-radius: 0
+      cursor: pointer
+      font-size: 0
+      line-height: 0
+      &:hover
+        background: #005BB9 url("../img/lk/send-white.svg") no-repeat 50% 50%
+        border-color: #005BB9
+
+.popup__wrapper#feedback-send
+  .popup__text
+    margin-bottom: 22px
+    font-size: 16px
+    line-height: 132%
+    font-family: Roboto, Arial, sans-serif
+  .popup__text-bold
+    font-size: 18px
+    line-height: 138%
+    font-family: Roboto-Bold, Arial, sans-serif
+    font-weight: bold
+    color: rgba(51, 51, 51, 0.78)
+    margin-bottom: 10px
+  .img__wrapper
+    width: 131px
+    margin: 0 auto 31px auto
+
+
+.popup__wrapper#list-owners
+  .button__wrapper
+    margin-top: 0
+
+
+
+

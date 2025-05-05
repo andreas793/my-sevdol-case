@@ -1,0 +1,562 @@
+@import "../mixin/flex.styl"
+
+.flex__wrapper
+  flex()
+  margin: 115px 0
+  width: 100%
+  @media(max-width: 1280px)
+    margin: 75px 0
+  @media(max-width: 750px)
+    flex-wrap: wrap
+    margin-bottom: 39px
+.no-data-found
+  flex()
+  margin-right: 142px
+  .info__block
+    width: 300px
+    height: 438px
+    padding: 135px 34px 35px 35px
+    border: 1px solid rgba(0,0,0,0.1)
+    background: #fff
+    margin-right: 48px
+    .layout__text.layout__text-bold
+      margin-bottom: 15px
+    .layout__text:last-child
+      font-size: 16px
+  .action__button
+    background-color: rgba(0, 91, 185, 0.08);
+    padding: 24px 24px 27px 24px
+    width: 438px
+    display: block
+    box-sizing: border-box
+    &:first-child
+      margin-bottom: 26px
+    .layout__text
+      max-width: 226px
+      color: #005BB9
+    .icon__wrapper
+      width: 60px
+      height: 60px
+      background-color: #fff
+      border-radius: 50%
+      flex(center, center, row)
+      margin-bottom: 45px
+      img
+        width: 16px
+    &:hover
+      .icon__wrapper
+        background-color: #005BB9
+        svg
+          path
+            fill: #fff
+  @media(max-width: 1366px)
+    margin-right: 36px
+    .action__button
+      width: 300px
+  @media(max-width: 1280px)
+    flex-wrap: wrap
+    .info__block
+      margin-right: 20px
+  @media(max-width: 1024px)
+    margin-right: 0
+    position: relative
+    max-width: 280px
+    .info__block
+      height: auto
+      padding: 19px 57px 19px 12px
+      margin-bottom: 8px
+      margin-right: 0
+      .layout__text
+        font-size: 16px
+        line-height: 132%
+        font-family: Roboto-Bold, Arial, sans-serif
+        font-weight: bold
+        &:nth-child(2)
+          display: none
+        &.layout__text-bold
+          margin-bottom: 0
+    .action__buttons
+      width: 100%
+    .action__button
+      width: 100%
+      padding: 16px 16px 11px 12px
+      margin-bottom: 0
+      &:first-child
+        margin-bottom: 8px
+      .icon__wrapper
+        width: 24px
+        height: 24px
+        margin-bottom: 9px
+        img
+          width: 10px
+  @media(max-width: 767px)
+    padding: 0 10px
+    max-width: 100%
+    .info__block
+      width: 100%
+      .layout__text.layout__text-bold
+        max-width: 211px
+    .action__button
+      .icon__wrapper
+        width: 24px
+        height: 24px
+        margin-bottom: 3px
+        svg
+          width: 10px
+.tabs__wrapper
+  width: 812px
+  margin-right: 116px
+  @media(max-width: 1366px)
+    margin-right: 20px
+  @media(max-width: 1024px)
+    width: 100%
+    margin-right: 0
+  @media(max-width: 767px)
+    margin-right: 0
+    flex()
+    flex-wrap: wrap
+    width: 100%
+    overflow: hidden
+  .tab
+    &__item
+      padding: 16px 0 19px 31px
+      border-bottom: 1px solid #E3E3E3
+      position: relative
+      height: 61px
+      overflow-y: hidden
+      cursor: pointer
+      &:first-child
+        border-top: 1px solid #E3E3E3
+        .button__img
+          display: none
+      &__title
+        font-size: 18px
+        line-height: 25px
+        color: #3A393C
+        font-family: Roboto, Arial, sans-serif
+        position: relative
+        .current
+          background-color: rgba(0, 91, 185, 0.08);
+          width: 32px
+          height: 32px
+          text-align: center
+          font-size: 16px
+          line-height: 21px
+          color: #005BB9
+          display: inline-flex
+          justify-content: center
+          align-items: center
+          border-radius: 50%
+          position: absolute
+          top: 0
+          left: 101px
+      &__content
+        opacity: 0
+        max-height: 206px
+        .cards__wrapper
+          flex()
+          flex-wrap: wrap
+        .card__wrapper-small
+          margin-right: 24px
+          margin-bottom: 16px
+          &:nth-child(2n+2)
+            margin-right: 0
+          &:last-child, &:nth-last-child(2)
+            margin-bottom: 0
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 24px
+        right: 15px
+        width: 6px
+        height: 6px
+        border: 1px solid rgba(51, 51, 51, 0.6)
+        border-top-color: transparent
+        border-left-color: transparent
+        transform: rotate(-45deg)
+        transform-origin: 6px 6px 6px
+        transition: transform 0.4s
+      &.active
+        height: auto
+        max-height: 290px
+        overflow-y: auto
+        cursor: auto
+        padding-bottom: 4px
+        position: relative
+        .tab__item__title
+          margin-bottom: 19px
+        .tab__item__content
+          opacity: 1
+          position: relative
+        .text
+          &__title
+            font-size: 18px
+            line-height: 138%
+            font-family: Roboto-Bold, Arial, sans-serif
+            font-weight: bold
+            color: rgba(51, 51, 51, 0.78)
+            margin-bottom: 11px
+          &__wrapper
+            font-size: 16px
+            line-height: 138%
+            font-family: Roboto-Bold, Arial, sans-serif
+            color: rgba(51, 51, 51, 0.78)
+            margin-bottom: 35px
+        .button__img
+          flex(center, center, row)
+          position: absolute
+          top: 0
+          right: 36px
+          cursor: pointer
+          svg
+            pointer-events: none
+          &:hover
+            .icon__wrapper
+              background-color: #005BB9
+            svg
+              path
+                fill: #fff
+                
+          .button__text
+            display: none
+        &:after
+          transform: rotate(45deg)
+      &:hover
+        &:after
+          border-right-color: #005BB9
+          border-bottom-color: #005BB9
+    &__items__mob
+      display: none
+    &__contents
+      margin-bottom: 16px
+      .period__wrapper
+        flex(flex-start, center, row)
+        font-family: Roboto, Arial, sans-serif
+        font-size: 18px
+        line-height: 25px
+        color: rgba(51, 51, 51, 0.78)
+        background-color: rgba(0,91,185,0.08)
+        padding: 4px 31px
+        .text__date
+          font-weight: bold
+        .img__wrapper
+          width: 24px
+          min-width: 24px
+          height: 24px
+          background-color: #fff
+          flex(center, center, row)
+          border-radius: 50%
+          margin-right: 12px
+          img
+            width: 12px
+            height: 12px
+    @media(max-width: 1366px)
+      &__item__content
+        .card__wrapper-small
+          &:last-child, &:nth-last-child(2)
+            margin-bottom: 16px
+    @media(max-width: 1024px)
+      &__item
+        &.active
+          .button__img
+            right: 0
+            .icon__wrapper
+              width: 24px
+              height: 24px
+              svg
+                width: 10px
+      &__contents
+        .period__wrapper
+          max-width: 281px
+          padding: 8px 12px
+          white-space: nowrap
+          font-size: 16px
+          line-height: 132%
+          border: 1px solid rgba(0, 0, 0, 0.1)
+          border-top: none
+    @media(max-width: 767px)
+      &__items
+        width: 100%
+        flex()
+        margin-bottom: 24px
+      &__item
+        display: none
+        &:after
+          display: none
+        &:first-child
+          border-top: none
+        &.active
+          display: block
+          padding: 11px 10px 16px 10px
+          overflow: inherit
+          width: 100%
+          max-height: inherit
+          .text__title
+            font-size: 16px
+            line-height: 132%
+            max-width: 202px
+          .text__wrapper
+            font-size: 16px
+            line-height: 132%
+            max-width: 202px
+          .button__img
+            display: block
+            position: relative
+            right: 0
+            top: 0
+            border: 1px solid #005BB9
+            color: #005BB9
+            padding: 13px 0 14px 0
+            text-align: center
+            .icon__wrapper
+              display: none
+            .button__text
+              display: block
+        &__title
+          display: none
+        &__content
+          width: 100%
+          padding-bottom: 1px
+          max-height: inherit
+          .cards__wrapper
+            width: 100%
+            flex-wrap: nowrap
+            overflow: auto
+            margin-bottom: 24px
+          .card__wrapper-small
+            &:nth-child(2n+2)
+              margin-right: 16px
+      &__items__mob
+        flex()
+        border-top: 1px solid #E3E3E3
+        border-bottom: 1px solid #E3E3E3
+        margin-bottom: 0
+        .tab__item__mob
+          border-right: 1px solid #E3E3E3
+          width: 33%
+          text-align: center
+          &:last-child
+            border-right: none
+          .tab__item__title
+            display: block
+            padding: 14px 22px 13px 9px
+            font-size: 16px
+            line-height: 132%
+            .current
+              width: 16px
+              height: 16px
+              font-size: 8px
+              line-height: 9px
+              top: 8px
+              left: inherit
+              right: 7px
+          &.active
+            .tab__item__title
+              color: #fff
+              background-color: #005BB9
+              .current
+                background-color: #fff
+      &__contents
+        width: 100%
+        padding: 0 10px
+        order: 1
+        margin-bottom: 0
+        .period__wrapper
+          padding: 8px 12px
+          font-size: 16px
+          line-height: 132%
+          max-width: 100%
+          .text__date
+            margin-left: 8px
+
+.feedback
+  &__location
+    background-color: #F7F5F3
+    padding: 9px 8px 12px 68px
+    width: 438px
+    position: relative
+    margin-bottom: 24px
+    .icon__wrapper
+      position: absolute
+      left: 8px
+      top: 8px
+      width: 44px
+      height: 44px
+    .layout__text
+      &-small
+        color: rgba(51, 51, 51, 0.6)
+  .action__buttons
+    flex()
+    .action__button
+      background-color: #fff;
+      padding: 16px 16px 16px 18px
+      width: 213px
+      border: 1px solid #005BB9
+      display: block
+      box-sizing: border-box
+      cursor: pointer
+      &:first-child
+        margin-right: 12px
+        margin-bottom: 12px
+      .layout__text
+        max-width: 122px
+        color: #005BB9
+      .icon__wrapper
+        width: 40px
+        height: 40px
+        background-color: rgba(0, 91, 185, 0.08)
+        border-radius: 50%
+        flex(center, center, row)
+        margin-bottom: 19px
+        img
+          width: 16px
+      &.active
+        background-color: rgba(0, 91, 185, 0.08)
+        border: 1px solid rgba(0, 91, 185, 0.08)
+        height: 143px
+        .icon__wrapper
+          background-color: #fff
+          margin-bottom: 7px
+        .layout__text
+          max-width: 153px
+          font-size: 16px
+          line-height: 21px
+      &:hover
+        background-color: rgba(0, 91, 185, 0.08)
+        border-color: rgba(0, 91, 185, 0.08)
+        .icon__wrapper
+          background-color: #fff
+          svg
+            path
+              fill: #005BB9
+          
+
+  .manager
+    &__wrapper
+      flex()
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+      margin-bottom: 12px
+    &__img
+      width: 126px
+      height: 189px
+    &__form
+      padding: 30px 15px 23px 40px
+    &__name
+      font-size: 18px
+      line-height: 25px
+      font-family: Roboto-Bold, Arial, sans-serif
+      font-weight: bold
+      color: rgba(51, 51, 51, 0.78)
+      margin-bottom: 10px
+    &__text
+      font-size: 16px
+      line-height: 132%
+      font-family: Roboto, Arial, sans-serif
+      margin-bottom: 33px
+      color: rgba(51, 51, 51, 0.6)
+    &__phone__wrapper
+      flex(flex-start, center, row)
+      .img__wrapper
+        width: 40px
+        height: 40px
+        background-color: #F8F8F8
+        flex(center, center, row)
+        border-radius: 50%
+        margin-right: 12px
+        img
+          width: 16px
+    &__phone
+      font-size: 18px
+      line-height: 132%
+      font-family: Roboto-Bold, Arial, sans-serif
+      font-weight: bold
+      color: rgba(51, 51, 51, 0.6)
+      margin-bottom: 3px
+    &__link
+      font-size: 16px
+      line-height: 132%
+      color: #005BB9
+      font-family: Roboto, Arial, sans-serif
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+
+  @media(max-width: 1280px)
+    width: 300px
+    &__location
+      width: 100%
+      padding: 9px 32px 8px 51px
+      margin-bottom: 12px
+      .icon__wrapper
+        top: calc(50% - 12px)
+        left: 16px
+        width: 24px
+        height: 24px
+      .layout__text
+        font-size: 16px
+        line-height: 132%
+        &-small
+          font-size: 12px
+          line-height: 14px
+          margin-bottom: 7px
+    .action__buttons
+      .action__button
+        width: calc(50% - 4px)
+        &:first-child
+          margin-right: 8px
+        .icon__wrapper
+          width: 24px
+          height: 24px
+          margin-bottom: 8px
+          svg
+            width: 10px
+        .layout__text
+          font-size: 16px
+          line-height: 132%
+        &.active
+          padding: 15px 8px 16px 7px
+          height: auto
+          min-height: 94px
+          .icon__wrapper
+            display: none
+    .manager
+      &__wrapper
+        padding: 9px 5px 21px 5px
+      &__img
+        width: 60px
+        height: 60px
+        min-width: 60px
+        border-radius: 50%
+        margin-right: 8px
+      &__form
+        padding: 0
+      &__name
+        font-size: 16px
+        line-height: 132%
+        margin-bottom: 6px
+      &__text
+        font-size: 12px
+        line-height: 14px
+        margin-bottom: 9px
+      &__phone__wrapper
+        .img__wrapper
+          display: none
+      &__phone
+        font-size: 16px
+        line-height: 132%
+        margin-bottom: 3px
+      &__link
+        font-size: 12px
+        line-height: 14px
+  @media(max-width: 1024px)
+    position: absolute
+    top: 70px
+    right: 74px
+  @media(max-width: 767px)
+    order: 1
+    position: relative
+    top: 0
+    right: 0
+    padding: 0 10px
+    width: 100%

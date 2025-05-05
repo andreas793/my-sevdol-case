@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  padding: 16px 30px;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  color: #fff;
+  background-color: #0072c7;
+  border: 1px solid #0072c7;
+  border-radius: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.button:hover {
+  color: #fff;
+}
+
+/*# sourceMappingURL=../maps/content/button.css.map */

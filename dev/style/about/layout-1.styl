@@ -1,0 +1,165 @@
+@import "../mixin/flex.styl"
+.layout__wrapper-1
+  .layout__title
+    font-family: "Gilroy-SemiBold", Arial, sans-serif
+    font-size: 50px
+    line-height: 114%
+    text-transform: uppercase
+    color: #005BB9
+    margin-bottom: 16px
+    @media(max-width: 1023px)
+      font-size: 32px
+      line-height: 38px
+      margin-bottom: 11px
+.layout
+  &__subtitle
+    font-family: "Gilroy-Bold", Arial, sans-serif
+    font-size: 24px
+    line-height: 112%
+    text-transform: uppercase
+    color: #B19A7C
+    margin-bottom: 35px
+    @media(max-width: 1023px)
+      font-size: 24px
+      line-height: 111%
+      margin-bottom: 39px
+  &__main__img
+    margin-bottom: 78px
+    @media(max-width: 768px)
+      margin-bottom: 50px
+    @media(max-width: 767px)
+      margin-bottom: 30px
+    img
+      width: 100%
+      height: auto
+  &__wrapper-1
+    margin-bottom: 120px
+    box-sizing: border-box
+    .layout__title
+      max-width: 593px
+    @media(max-width: 1439px)
+      padding: 0 74px
+      margin-bottom: 80px
+    @media(max-width: 767px)
+      padding: 0 9px
+.about__list__wrapper
+  flex()
+  .layout__text__wrapper
+   margin-right: 60px
+  @media(max-width: 1599px)
+    flex-wrap: wrap
+    .layout__text__wrapper
+      margin: 0 auto 56px auto
+  .layout__text
+    font-size: 18px
+    line-height: 139%
+    color: rgba(51,51,51,0.78)
+    font-family: "Roboto-Bold", Arial, sans-serif
+    font-weight: bold
+    max-width: 787px
+    margin-bottom: 30px
+    @media(max-width: 1023px)
+      max-width: 100%
+
+  .item
+    &s__wrapper
+      flex()
+      flex-wrap: wrap
+      width: 843px
+      @media(max-width: 1023px)
+        width: 100%
+    &__wrapper
+      width: 397px
+      margin-bottom: 29px
+      margin-right: 49px
+      &:nth-child(2n+2)
+        margin-right: 0
+      @media(max-width: 1023px)
+        width: calc(50% - 15px)
+        margin-right: 30px
+      @media(max-width: 767px)
+        width: 100%
+        margin-right: 0
+        &:last-child
+          margin-bottom: 0
+    &__title
+      flex()
+      margin-bottom: 9px
+    &__icon
+      width: 24px
+      min-width: 24px
+      height: 24px
+      margin-right: 15px
+      @media(max-width: 767px)
+        width: 17px
+        min-width: 17px
+      img
+        width: 100%
+        height: auto
+    &__text_t
+      font-family: "Gilroy-SemiBold", Arial, sans-serif
+      font-size: 24px
+      line-height: 29px
+      color: #B19A7C
+      @media(max-width: 767px)
+        font-size: 18px
+        line-height: 138%
+    &__text_p
+      font-family: "Roboto", Arial, sans-serif
+      font-size: 18px
+      line-height: 25px
+      color: rgba(51,51,51,0.78)
+      @media(max-width: 767px)
+        font-size: 16px
+        line-height: 132%
+.awards
+  &__wrapper
+    padding: 43px 45px 56px 26px
+    border: 1px solid #B19A7C
+    box-sizing: border-box
+    width: 464px
+    @media(max-width: 1429px)
+      margin: 0 auto
+    @media(max-width: 768px)
+      width: 100%
+      padding: 35px 45px 37px 45px
+    @media(max-width: 767px)
+      padding: 26px 18px 41px 19px
+  &__img
+    width: 100%
+    margin-bottom: 85px
+    @media(max-width: 768px)
+      margin-bottom: 20px
+    @media(max-width: 767px)
+      margin-bottom: 31px
+    img
+      width: 100%
+      height: auto
+  &__list__li
+    font-family: "Roboto", Arial, sans-serif
+    font-size: 18px
+    line-height: 139%
+    color: rgba(51, 51, 51, 0.78)
+    margin-bottom: 9px
+    font-weight: bold
+    position: relative
+    padding-left: 31px
+    width: 390px
+    box-sizing: border-box
+    &:last-child
+      margin-bottom: 0
+    &:before
+      content: ''
+      display: inline-block
+      width: 22px
+      height: 1px
+      background-color: #B19A7C
+      position: absolute
+      left: 0
+      top: 9px
+    @media(max-width: 767px)
+      width: 100%
+
+
+
+

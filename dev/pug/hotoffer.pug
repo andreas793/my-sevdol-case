@@ -1,0 +1,16 @@
+doctype
+html
+    head
+        title Горячие предложения
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="./css/hotoffer.css")
+    body
+        include content/hotoffer/baner
+        .layout__wrapper
+            .layout__title Вам будет интересно
+            include content/hotoffer/acordeon
+        .phone__form__wrapper
+            .phone__form__title Оставьте заявку, и мы подберем для вас оптимальный вариант!
+            button(class="button__wrapper") Оставить заявку
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")

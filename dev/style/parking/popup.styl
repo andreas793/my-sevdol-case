@@ -1,0 +1,264 @@
+.popup__wrapper
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: 100
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: row
+
+
+.popup__wrapper.active
+  display: flex
+
+
+.popup__bg
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(58, 57, 60, 0.1)
+
+
+.popup__body
+  position: relative
+  width: 363px
+  background-color: #fff
+  padding: 30px 28px 40px 23px
+  box-sizing: border-box
+  .popup__title
+    font-size: 24px
+    line-height: 29px
+    font-family: "Gilroy-SemiBold", Arial, sans-serif
+    color: #005BB9
+    margin-bottom: 9px
+  .popup__text
+    color: rgba(51, 51, 51, 0.78)
+    font-family: Roboto, Arial, sans-serif
+    font-size: 16px
+    line-height: 132%
+    margin-bottom: 27px
+    max-width: 246px
+  .parking__number
+    font-size: 18px
+    line-height: 138%
+    color: rgba(51, 51, 51, 0.78)
+    font-family: Roboto-Bold, Arial, sans-serif
+    font-weight: bold
+    margin-bottom: 19px
+    span
+      color: #005BB9
+  .input__wrapper
+    padding: 12px 13px 15px 13px
+    border: 1px solid rgba(58, 57, 60, 0.2)
+    margin-bottom: 8px
+    input
+      border: none
+      outline: none
+      width: 100%
+  .button__wrapper
+    margin: 8px auto 0 auto
+    width: 100%
+    padding: 14px 0 18px 0
+    color: #fff
+    background-color: #005BB9
+    cursor: pointer
+    text-align: center
+    font-family: Roboto, Arial, sans-serif
+    border: none
+    font-size: 14px
+    line-height: 16px
+  .input-text__section
+    width: 100%
+    box-sizing: border-box
+    padding: 15px 20px
+    margin-bottom: 10px
+    border: 1px solid #DADADA
+    border-radius: 2px
+    cursor: pointer
+    &:last-child
+      margin-bottom: 20px
+    input
+      width: 100%
+      border: none !important
+      box-sizing: border-box
+      margin: 0 !important
+      height: auto!important
+      &:focus
+        border: none !important
+        outline: none !important
+        box-shadow: none!important
+  div:last-child
+    margin-bottom: 0
+
+.popup__close
+  position: absolute
+  top: 8px
+  right: 12px
+  cursor: pointer
+  width: 24px
+  height: 24px
+  border-radius: 50%
+  background-color: rgba(0, 0, 0, 0.2)
+  flex(center, center, row)
+  img
+    width: 12px
+    height: auto
+
+.popup__wrapper-parking-info
+  .popup__body
+    padding: 0
+    width: 300px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  .popup__close
+    top: 0
+    right: -28px
+    &:hover
+      background-color: rgba(0, 0, 0, 0.4)
+  .popup__table
+    &__wrapper
+      flex()
+      flex-wrap: wrap
+      .table__number
+        font-size: 18px
+        line-height: 138%
+        color: rgba(51, 51, 51, 0.78)
+        font-family: Roboto-Bold, Arial, sans-serif
+        margin-right: 9px
+        font-weight: bold
+      .parking-type
+        display: inline-flex
+        justify-content: flex-start
+        align-items: center
+        font-size: 18px
+        line-height: 25px
+        font-family: Roboto, Arial, sans-serif
+        &:before
+          content: ''
+          display: block
+          width: 6px
+          height: 6px
+          margin-right: 8px
+          border-radius: 50%
+        &-standart
+          color: #B19A7C
+          &:before
+            background-color: #B19A7C
+        &-family
+          color: #A3AEC1
+          &:before
+            background-color: #A3AEC1
+        &-increased
+          color: #799CA3
+          &:before
+            background-color: #799CA3
+        &-boxing
+          color: #476A87
+          &:before
+            background-color: #476A87
+        &-small-class
+          color: #0A2F49
+          &:before
+            background-color: #0A2F49
+        &-other
+          color: #B7202E
+          &:before
+            background-color: #B7202E
+        &-family-small
+          color: #F38723
+          &:before
+            background-color: #F38723
+        &-standard-small
+          color: #5A4F9B
+          &:before
+            background-color: #5A4F9B
+        &-limited
+          color: #65431C
+          &:before
+            background-color: #65431C
+
+      .popup__cell
+        &:nth-child(1)
+          width: 100%
+          padding: 3px 16px
+          flex(flex-start, center, row)
+          font-weight: normal
+          border-bottom: 1px solid rgba(58, 57, 60, 0.1)
+          margin-right: 0
+        &:nth-child(2n+2)
+          width: 157px
+          margin-right: 33px
+          padding-left: 12px
+        &:nth-child(2n+3)
+          padding-right: 12px
+        &:nth-child(2),&:nth-child(3)
+          margin-bottom: 15px
+          margin-top: 19px
+        &:nth-child(4),&:nth-child(5)
+          margin-bottom: 19px
+        &-price
+          .popup__cell__text
+            font-weight: bold
+        &__label
+          font-size: 12px
+          line-height: 14px
+          color: rgba(51, 51, 51, 0.6)
+          font-family: Roboto, Arial, sans-serif
+        &__text
+          white-space: nowrap
+          font-size: 16px
+          line-height: 132%
+          color: rgba(51, 51, 51, 0.78)
+          font-family: Roboto, Arial, sans-serif
+      .button__wrapper
+        padding: 5px 0 6px 0
+        font-size: 16px
+        line-height: 132%
+        color: #fff
+        font-family: Roboto, Arial, sans-serif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

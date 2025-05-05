@@ -1,0 +1,70 @@
+@import "../mixin/flex.styl"
+
+.layout__wrapper-5
+  background-color: #F7F5F3
+  margin-bottom: 115px
+  padding: 103px 0
+  box-sizing: border-box
+  position: relative
+  @media(max-width: 1366px)
+    padding: 72px 0
+  @media(max-width: 767px)
+    padding: 35px 0 52px 0
+  .content__section
+    max-width: 1366px
+    margin: 0 auto
+  .layout__text
+    max-width: 49%
+    @media(max-width: 1366px)
+      margin-left: 72px
+    @media(max-width: 1024px)
+      margin: 0 72px
+      max-width: 100%
+    @media(max-width: 767px)
+      margin: 0 10px
+  .slider__wrapper
+    position: absolute
+    right: 0
+    top: -25px
+    width: 44%
+    overflow: hidden
+    .slider
+      width: 200%
+    .slick-slide img
+      width: 100%
+      height: auto
+    .slick-initialized .slick-slide
+      margin-right: 25px
+    .buttons__slider
+      position: absolute
+      right: 58px
+      bottom: 53px
+    .slick-arrow
+      width: 40px
+      min-width: 40px
+      height: 40px
+    .slick-arrow.slick-prev
+      background: url("../img/about/icons/slider-prev.svg") no-repeat 50% 50%
+      left: 0
+    .slick-arrow.slick-next
+      background: url("../img/about/icons/slider-next.svg") no-repeat 50% 50%
+      left: 10px
+    @media(max-width: 1680px)
+      top: -20px
+    @media(max-width: 1279px)
+      position: relative
+      top: inherit
+      right: inherit
+      width: auto
+      margin: 0 auto 17px 74px
+    @media(max-width: 1024px)
+      .slider
+        width: 190%
+      .buttons__slider
+        display: none
+    @media(max-width: 767px)
+      margin: 0 0 16px 10px
+      .slider
+        width: 170%
+      .slick-initialized .slick-slide
+        margin-right: 10px

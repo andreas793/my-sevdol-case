@@ -1,0 +1,36 @@
+@media (max-width: 450px) {
+  .layout-5 {
+    display: none;
+  }
+}
+.layout-5 .layout__title {
+  margin-bottom: 40px;
+}
+.layout-5 .map__section img {
+  width: 100%;
+  height: auto;
+}
+.layout-5 .button__section {
+  margin-bottom: 20px;
+}
+.layout-5 .button__section .button {
+  margin-right: 18px;
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #4a8197;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #4a8197;
+}
+.layout-5 .button__section .button:hover {
+  background-color: #558fa7;
+}
+.layout-5 .button__section .button:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=../maps/content/layout-5.css.map */

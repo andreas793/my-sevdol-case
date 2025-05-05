@@ -1,0 +1,21 @@
+.form__wrapper.form-sms-authorization
+    .form__bg
+        img(src="./img/reg/main-bg-2.png")
+    .form__content.step-1-1
+        .form__title__wrapper
+            .form__title Личный кабинет
+        .form__body
+            form.form-step.form-step-1-1(action="#")
+                .input__wrapper
+                    input(type="text" placeholder="Телефон" )
+                input(type="submit" class="button__wrapper" value="Получить SMS с кодом" disabled)
+            form.form-step.form-step-1-2
+                .form__text Код отправлен на номер
+                .form__text.form__text-bold + 7 (953) 609-09-90
+                    .change-phone Изменить
+                .input__wrapper
+                    input(type="text" placeholder="Код из СМС")
+                input(type="submit" class="button__wrapper" value="Войти в личный кабинет" disabled)
+                .form__text.form__text-bold Отправить код повторно через
+                    span.timer__wrapper 4:56
+                .form__text.resend-link Отправить код повторно

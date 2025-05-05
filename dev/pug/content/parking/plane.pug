@@ -1,0 +1,27 @@
+.plane__section
+    .plane__wrapper
+        img(src="img/parking/plane-2.png" usemap="#parking_map")
+        canvas#canvasMap(width="117" height="930")
+        map(name="parking_map")
+            area(target="" alt="" title="" href="1" coords="381,162,396,162,396,196,381,196" shape="poly")
+        .magnific-popup
+            a(href="img/parking/plane.png" class="gallery-magnific-popup button__wrapper-white") На весь экран
+    .plane__info
+        img(src="img/parking/card.png")
+        .location__wrapper
+            .img__wrapper
+                img(src="img/parking/icons/location.svg")
+            .location__text ул. Федора Абрамова, д. 4, литера А
+        .parking__type__wrapper
+            .parking__type Надземный
+            .parking__price от 399 000 ₽
+        .button__wrapper.popup__show(data-anchor="#application-1") Оставить заявку
+        a(href="#").link__wrapper
+            span Смотреть на карте
+            .img__wrapper
+                img(src="img/parking/icons/link.svg")
+    .plane__side
+        .plane__side-floor 2 этаж
+        .plane__side-amount Свободно
+            span 14
+            | мест

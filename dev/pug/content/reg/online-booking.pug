@@ -1,0 +1,36 @@
+.form__wrapper
+    .form__bg
+        img(src="./img/reg/main-bg.png")
+    .form__content.step-1-1
+        .form__title__wrapper
+            .form__title.form__title-1 Онлайн-бронирование (шаг 1 из 2)
+            .form__title.form__title-2 Онлайн-бронирование (шаг 2 из 2)
+            .form__text Всего за 2 шага вы сможете забронировать квартиру на 3 суток
+        .form__body
+            form.form-step.form-step-1-1(action="#")
+                .input__wrapper
+                    input(type="text" placeholder="Телефон" )
+                .form__text На ваш номер телефона придет СМС с кодом для входа в личный кабинет
+                input(type="submit" class="button__wrapper" value="Далее" disabled)
+            form.form-step.form-step-1-2
+                .form__text Код отправлен на номер
+                .form__text.form__text-bold + 7 (953) 609-09-90
+                    .change-phone Изменить
+                .input__wrapper
+                    input(type="text" placeholder="Код из СМС")
+                .form__text.form__text-bold Отправить код повторно через
+                    span.timer__wrapper 4:56
+                .form__text.resend-link Отправить код повторно
+                input(type="submit" class="button__wrapper" value="Далее" disabled)
+            form.form-step.form-step-2
+                .input__wrapper.required
+                    input(type="text" placeholder="Фамилия" required)
+                .input__wrapper.required
+                    input(type="text" placeholder="Имя" required)
+                .input__wrapper
+                    input(type="text" placeholder="Отчество")
+                input(type="submit" class="button__wrapper" value="Зарегистрироваться" disabled)
+            .agreement__text Даю согласие на обработку моих
+                a(href="#") персональных данных
+
+

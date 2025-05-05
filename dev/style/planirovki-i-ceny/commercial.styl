@@ -1,0 +1,1036 @@
+@import "../mixin/flex.styl"
+.layout__wrapper
+  max-width: 1260px
+  margin: 180px auto 100px auto
+  .result__serch
+    margin-bottom: 30px
+    flex()
+    flex-wrap: wrap;
+    @media(max-width: 767px)
+      padding: 20px 10px 0 10px
+      border-top: 1px solid #DADADA
+      flex-direction: column
+      align-items: flex-end
+      .choices
+        margin-right: 0
+        margin-bottom: 20px !important
+        width: 100%
+    &__title
+      font-size: 24px
+      line-height: 34px
+      font-family: 'Geometria', Arial, sans-serif
+      font-weight: 500
+      flex-grow: 1
+      @media(max-width: 767px)
+        display: none
+    .checkbox__wrapper
+      margin-right: 20px
+      align-self: center
+      flex(flex-start, center, row)
+      @media(max-width: 767px)
+        align-self: flex-end
+        label
+          flex-direction: row-reverse
+          &:before
+            margin-right: 0
+            margin-left: 10px
+          &:after
+            left: auto
+            right: 4px
+        .tooltip__icon
+          order: 01
+        margin-left: 0
+        margin-right: 6px
+      input:checked+label
+        color: #0072C7
+      input:checked+label:before
+        border-color: #0072C7
+      input:checked+label:after
+        background: none
+        border: 1px solid #0072C7
+        border-top-color: transparent
+        border-right-color: transparent
+        height: 6px
+        transform: rotate(-45deg)
+    .view-mode__wrapper
+      align-self: center
+
+.button
+  &-no-bg
+    background-color: transparent
+    border-color: transparent
+    color: #A3A3A3
+    font-family: "Geometria", Arial, sans-serif
+    &:hover
+      border-color: #003349
+      color: #003349
+    &:focus
+      border-color: #003349
+      color: #003349
+      background-color: transparent
+  &-black
+    background-color: #003349
+    border-color: #003349
+    font-family: "Geometria", Arial, sans-serif
+    &:focus
+      background-color: #003349
+      border-color: #003349
+
+
+.checkbox__wrapper
+  label
+    position: relative
+    cursor: pointer
+    color: #353535
+    flex(flex-start, center, row)
+    font-family: "Geometria", Arial, sans-serif
+    font-size: 14px
+    line-height: 17px
+    &:before
+      content: ''
+      display: block
+      width: 20px
+      min-width: 20px
+      height: 20px
+      position: relative
+      margin-right: 10px
+      background-color: #FFF
+      border: 1px solid #DADADA
+      border-radius 3px
+    &:after
+      content: ''
+      display: none
+      width: 12px
+      height: 14px
+      position: absolute
+      left: 5px
+      top: 4px
+      background: url('../img/planirovki-i-ceny/icons/send.svg') no-repeat 50% 50%
+      background-size: 100% auto
+  input[type='checkbox']
+    display: none
+  input:checked+label:after
+    display: block
+  input:checked+label
+    color: #003349
+  input:checked+label:before
+    border-color: #003349
+  input:invalid+label:before
+    border-color: #FF4747
+
+
+.checkbox__wrapper-btn
+  position: relative
+  label
+    color: #353535
+    font-family: "Geometria", Arial, sans-serif
+    font-size: 14px
+    line-height: 17px
+    border: 1px solid #DCDCDC
+    border-radius: 3px
+    cursor: pointer
+    min-width: 60px
+    height: 50px
+    flex(center, center, row)
+    box-sizing border-box
+    padding: 16px 26px
+
+  input[type='checkbox']
+    width: 0.01px
+    height: 0.01px
+    position absolute
+    left: -100px
+    top: 0
+    opacity: 0
+    z-index: -100
+  input[type='checkbox']:checked+label, input[type='checkbox']:checked:hover+label
+    color: #353535
+    background: rgba(220, 220, 220, 0.2)
+    border-color: #3A393C
+  input[type='checkbox']:hover+label
+    color: #353535
+    background: rgba(220, 220, 220, 0.2)
+    border-color: #3A393C
+
+
+.view-mode__wrapper
+  flex()
+  position: relative
+  @media(max-width: 1023px)
+    display: none
+  input[type="radio"]
+    width: 0.01px
+    height: 0.01px
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -100
+    opacity: 0
+  label
+    width: 40px
+    min-width: 40px
+    height: 40px
+    margin-right: 10px
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+    svg
+      width: 100%
+      height: auto
+    &:hover
+      svg
+        path
+          fill: #003349
+  input[id="view-mode-tile"]:checked~label[for="view-mode-tile"] svg path,
+  input[id="view-mode-simple"]:checked~label[for="view-mode-simple"] svg path
+    fill: #003349
+
+  input[id="view-mode-tile"]:checked~label[for="view-mode-tile"] svg rect,
+  input[id="view-mode-simple"]:checked~label[for="view-mode-simple"] svg rect
+    fill: rgba(220, 220, 220, 0.2)
+
+
+.filters__wrapper
+  position: relative
+  &__title
+    font-size: 24px
+    line-height: 34px
+    font-family: "Geometria", Arial, sans-serif
+    font-weight: 500
+    margin-bottom: 20px
+    @media(max-width: 767px)
+      padding: 0 10px
+  &>.button
+    width: 100%
+    text-align center
+    display: none
+    .icon__wrapper
+      width: 14px
+      height: 14px
+      display: inline-block
+      margin-right: 14px
+      img
+        width: 100%
+        height: auto
+    .button__text
+      font-size: 16px
+      line-height: 20px
+      color: #fff
+      font-family: "Geometria", Arial, sans-serif
+      display: inline-block
+      margin-right: 14px
+    .button__counter
+      display: inline-block
+      width: 16px
+      height: 16px
+      text-align center
+      color: #0072C7
+      font-family: "Geometria", Arial, sans-serif
+      font-size: 12px
+      line-height: 14px
+      background-color: white
+      border-radius 50%
+    @media(max-width: 767px)
+      display: block
+      width: calc(100% - 20px)
+      margin: 0 auto 20px auto
+
+  .filters__form
+    display: block
+    .close__filters__form
+      display: none
+    &__row
+      flex()
+      flex-wrap: wrap
+      height: 107px
+      overflow: hidden
+    &__row-all
+      height: auto
+    &__content
+      box-sizing: border-box
+    &__cell
+      margin: 0 26px 30px 0
+    &__label
+      color: #A3A3A3
+      margin-bottom: 10px
+      font-family: 'Geometria', Arial, sans-serif
+      font-size: 14px
+      line-height: 17px
+    .filters__wrapper__title
+      display: none
+  .form__cell
+    &-small
+      width: 141px
+    &-normal
+      width: 322px
+  .checkbox__section
+    .checkbox__wrapper
+        width: 140px
+        margin-bottom: 4px
+        &:last-child
+          margin-bottom: 0
+    &-number-rooms
+      flex()
+      .checkbox__wrapper-btn
+        margin-right: 20px
+        &:last-child
+          margin-right: 0
+        @media(max-width: 767px)
+          margin-right: 5px
+
+
+  .filters__actions__panel
+    flex(flex-end, flex-start, row)
+    padding-bottom: 40px
+    margin-bottom: 40px
+    border-bottom: 1px solid #dcdcdc
+    box-sizing: border-box
+    .all-parametrs__wrapper
+      flex-grow: 1
+      input[type="checkbox"]
+        width: 0.01px
+        height: 0.01px
+        opacity: 0
+        position: absolute
+        z-index: -100
+        left: 0
+        top: 0
+    .all-parametrs__label
+      color: #0072C7
+      font-family: "Geometria", Arial, sans-serif
+      line-height: 22px
+      font-size: 16px
+      font-weight: normal
+      cursor: pointer
+      display: inline-flex
+      justify-content: flex-start
+      align-items: center
+    .all-parametrs__text:after
+      content: ""
+      min-width: 7px
+      width: 7px
+      height: 7px
+      display: inline-block
+      margin-left: 7px
+      border: 1px solid #0072C7
+      border-top-width: 0
+      border-left-width: 0
+      transform: rotate(45deg) translateY(-4px)
+    .all-parametrs__text.all-parametrs__show:after
+      margin-left: 10px
+      transform: rotate(225deg) translateY(-2px)
+    .all-parametrs__show
+      display: none
+    .all-parametrs__wrapper input[type="checkbox"]:checked~.all-parametrs__hide
+      display: none
+    .all-parametrs__wrapper input[type="checkbox"]:checked~.all-parametrs__show
+      display: block
+    .button.button-no-bg
+      margin-right: 10px
+      text-transform: none
+      letter-spacing: 0
+
+
+
+
+
+.filters__wrapper
+  @media(max-width: 767px)
+    .filters__form
+        display: none
+        &-active
+          display: block
+          position: fixed
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+          background-color: #fff
+          z-index: 10000
+          overflow-y: auto
+          .close__filters__form
+            display: block
+            position: absolute
+            top: 10px
+            right: 10px
+            width: 40px
+            height: 40px
+            img
+              width: 100%
+              height: auto
+        &__row
+          padding: 10px
+          &-all
+            height: auto
+        &__cell
+          margin-bottom: 20px
+          margin-right: 0
+          width: 100%
+          &.form__cell-small
+            width: 100%
+          &.form__cell-normal
+            width: 100%
+        .filters__wrapper__title
+          display: block
+          padding-left: 10px
+          padding-top: 30px
+          font-size: 24px
+          line-height: 34px
+          color: #3A393C
+          font-family: "Geometria", Arial, sans-serif
+          font-weight: 500
+        .filters__actions__panel
+          width: 100%
+          flex()
+          flex-direction: column-reverse
+          padding: 0 10px
+          border-bottom-color: transparent
+          .button
+            width: 100%
+            &-no-bg
+              border: 1px solid #003349
+              color: #003349
+            &-black
+              margin-bottom: 20px
+    .filters__form__row-all
+      height: auto
+    .filters__actions__panel .all-parametrs__wrapper
+      display: none
+
+.cards__header
+  &__row
+    display: none
+    margin-bottom: 20px
+    padding: 0 20px
+    &.cards__header-show
+      flex()
+      @media(max-width: 1023px)
+        display: none
+  &__cell
+    color: #A3A3A3
+    font-size: 14px
+    line-height: 20px
+    font-family: 'Geometria', Arial, sans-serif
+    margin-right: 60px
+  &-deadline
+    margin-right: 120px
+  &-floor
+    margin-right: 135px
+  &-group-row
+    &.cards__header-show
+      justify-content: space-between
+    .cards__header__cell
+      width: 100%
+      margin-right: 0
+      &:first-child
+        max-width: 170px
+      &:last-child
+        min-width: 260px
+
+
+.cards__wrapper
+  flex()
+  flex-wrap: wrap
+  @media(max-width: 1300px)
+    justify-content: space-around
+  .card
+    &__wrapper
+      width: 300px
+      border: 1px solid #DCDCDC
+      box-sizing border-box
+      padding: 51px 20px 20px 20px
+      margin: 0  20px 20px 0
+      font-family: "Geometria", Arial, sans-serif
+      font-size: 14px
+      line-height: 18px
+      color: #3A393C
+      position: relative
+      &:nth-child(4n+4)
+        margin-right: 0
+      @media(max-width: 1300px)
+        margin-right: 0
+    &__slider
+      width: 100%
+      margin: 0 auto 14px auto
+      flex(center, center, row)
+      img
+        width: 100%
+        max-width: 200px
+        height: auto
+        max-height: 200px
+        margin: auto
+    &__row
+      flex()
+      &-meters-apartment
+        margin-bottom: 20px
+        white-space: nowrap
+        .card__cell-deadline
+          display: none
+      sup
+        font-size: 8px
+        line-height: 8px
+      &-type
+        position: absolute
+        top: 10px
+        left: 10px
+        flex-wrap: wrap
+
+    &__cell
+      margin-bottom: 20px
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+      &-type-finishing,
+      &-type-notfinish,
+      &-type-office,
+      &-type-discount
+        display: inline-block
+        box-sizing: border-box
+        border-radius: 5px
+        background: rgba(0, 114, 199, 0.05)
+        padding: 8px 12px
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.02em
+        font-family: "Geometria", Arial, sans-serif
+        color: #0072C7
+        white-space: nowrap
+        margin: 0 10px 10px 0
+      &-type-notfinish
+        background: rgba(0, 51, 73, 0.05)
+        color: rgba(0, 51, 73, 0.5)
+      &-type-office
+        background: rgba(183, 49, 44, 0.05)
+        color: #B7312C
+      &-type-discount
+        background: #EBFBE9
+        color: #38792A
+      &-turn
+        display: none
+    &__title
+      font-size: 20px
+      line-height: 24px
+      display: inline-block
+      margin-right: 10px
+      font-family: "Geometria-Bold", Arial, sans-serif
+      color: #353535
+      .card__number
+        display: none
+      .card__cell-type-finishing,
+      .card__cell-type-notfinish,
+      .card__cell-type-office,
+      .card__cell-type-discount
+        display: none
+    &__meters-apartment
+      font-size: 20px
+      line-height: 24px
+      font-family: "Geometria-Bold", Arial, sans-serif
+      color: #353535
+    &__lable
+      font-size: 12px
+      line-height: 14px
+      margin-bottom: 8px
+      color: #A3A3A3
+    &__text
+      font-size: 16px
+      line-height: 19px
+      color: #353535
+    &__footer
+      border-top: 1px solid #DADADA
+      padding-top: 20px
+      box-sizing: border-box
+      flex(space-between, center, row)
+      flex-wrap: wrap
+      .card
+        &__cell
+          display: inline-block
+          margin-bottom: 0
+          margin-right: 0
+          &-square-meter
+            font-size: 14px
+            line-height: 17px
+            color: #A3A3A3
+            width: 50%
+          &-price
+            font-size: 20px
+            line-height: 30px
+            font-weight: 500
+            margin-bottom: 4px
+            color: #0072C7
+            font-family: "Geometria-Bold", Arial, sans-serif
+            text-align: right
+            width: 50%
+  @media all and (min-width: 1023px)
+    &-row
+      display: block
+      .card
+        &__wrapper
+          width: 100%
+          margin: 0 0 26px 0
+          padding-top: 20px
+          flex(flex-start, center, row)
+        &__slider
+          width: auto
+          max-width: 100px
+          height: auto
+          max-height: 120px
+          box-sizing border-box
+          margin: 0 0 0 0
+        &__title
+          width: 147px
+          position: relative
+          margin-bottom: 34px
+          display: block
+          font-size: 16px
+          line-height: 19px
+          .card__number
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 4px
+            margin-top: 10px
+            display: block
+            color: #A3A3A3
+          .card__row
+            position: absolute
+            left: 0
+            bottom: -49px
+          .card__cell-type-finishing,
+          .card__cell-type-notfinish,
+          .card__cell-type-office,
+          .card__cell-type-discount
+            display: inline-block
+            margin-top: 8px
+            margin-right: 10px
+        &__row
+          &-type
+            display: none
+          &-meters-apartment
+            border-right: 1px solid #DADADA
+            align-items: center
+            margin-bottom: 0
+            margin-left: 40px
+            .card__cell-deadline
+              display: block
+              margin-bottom: 0
+              margin-right: 40px
+            .card__meters-apartment
+              font-size: 16px
+              line-height: 19px
+              font-family: "Geometria", Arial, sans-serif
+              width: 115px
+          &-info
+            padding: 0 40px
+            box-sizing: border-box
+            justify-content: space-between
+            .card__cell
+              margin: 0
+              &-turn, &-korp
+                display: block
+                width: 115px
+              &-floor
+                width: 65px
+                margin-right: 0
+        &__cell
+          &__meters-apartment
+            width: 147px
+            display: block
+          &-deadline
+            display: none
+          &-turn
+            display: block
+        &__lable
+          display: none
+        &__footer
+          border-top: none
+          border-left: 1px solid #DADADA
+          width: 294px
+          box-sizing: border-box
+          flex-direction: column-reverse
+          .card__cell
+            margin-bottom: 4px
+            margin-right: 0
+            display: block
+            &-price
+              margin-right: 0
+
+.cards__wrapper .card-group__wrapper
+  padding: 20px
+.cards__wrapper  .card
+  &-group__wrapper
+    width: 300px
+    height: 300px
+    padding: 12px
+    margin-bottom: 38px
+    background-color: #fff
+    @media(max-width: 1024px)
+      height: auto
+    &:before
+      content: ''
+      display: block
+      width: 290px
+      height: 50px
+      border: 1px solid #DCDCDC
+      position: absolute
+      bottom: -9px
+      left: 4px
+      z-index: -1
+      background-color: #fff
+    &:after
+      content: ''
+      display: block
+      width: 282px
+      height: 50px
+      border: 1px solid #DCDCDC
+      position: absolute
+      bottom: -18px
+      left: 9px
+      z-index: -2
+    .card
+      &__top
+        flex(space-between, flex-start, row)
+        @media(max-width: 1024px)
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          padding: 12px
+          z-index: 10
+        &__rooms
+          padding: 6px
+          width: 32px
+          height: 32px
+          text-align: center
+          font-size: 16px
+          line-height: 132%
+          font-family: Roboto-Bold, Arial, sans-serif
+          color: #fff
+          background-color: #B19A7C
+          box-sizing: border-box
+        &__group-name
+          font-family: Roboto, Arial, sans-serif
+          color: #005BB9
+          font-size: 16px
+          line-height: 132%
+          background-color: #DAE8F4
+          padding: 6px 12px
+          box-sizing: border-box
+      &__slider
+        @media(max-width: 1024px)
+          margin-top: 29px
+          z-index: 10
+          position: relative
+      &__row
+        position: relative
+        flex-direction: column
+        @media(max-width: 1024px)
+          z-index: 10
+      &__cell
+        flex(space-between, center, row)
+        width: 100%
+        border-bottom: 1px solid #DCDCDC
+        padding: 18px 3px 3px 5px
+        margin-bottom: 0
+        display: none
+        &:first-child
+          border-bottom-color: #E5EEF7
+          background-color: #E5EEF7
+        &:last-child
+          display: flex
+          border-bottom-color: transparent
+          padding-top: 12px
+          margin-bottom: 7px
+          box-sizing: border-box
+          .card__title, .card__value
+            font-family: "Geometria-Bold", Arial, sans-serif
+      &__title
+        font-size: 14px
+        line-height: 17px
+        font-family: "Geometria", Arial, sans-serif
+        color: #353535
+      &__bg
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 10
+        display: none
+        background-color: rgba(95%, 97%, 98%, 0.9);
+        padding: 24px
+      &__bottom
+        display: none
+        margin-top: 12px
+        input[type="checkbox"]
+          width: 0.01px
+          height: 0.01px
+          position: absolute
+          left: 0
+          top: 0
+          z-index: -10
+          opacity: 0
+        input[type="checkbox"]:checked~.card__row
+          display: block
+        input[type="checkbox"]:checked+.card__bottom__title:after
+          transform: rotate(135deg)
+          top: 6px
+        input[type="checkbox"]:checked~.card__bg
+          display: block
+          z-index: 5
+        .card__bottom__title
+          color: #005BB9
+          font-size: 14px
+          line-height: 132%
+          padding: 10px 0 0 0
+          box-sizing: border-box
+          display: block
+          position: relative
+          z-index: 10
+          &:before
+            content: ''
+            display: block
+            width: 300px
+            height: 1px
+            background: rgba(0, 0, 0, 0.1)
+            position: absolute
+            top: 0
+            left: -12px
+          &:after
+            content: ''
+            display: block
+            width: 8px
+            height: 8px
+            border: 1px solid #005BB9
+            border-left-color: transparent
+            border-bottom-color: transparent
+            transform: rotate(45deg)
+            position: absolute
+            top: 14px
+            right: 0
+        .card__row
+          display: none
+        .card__cell
+          display: flex
+          margin-right: 0
+          padding-left: 5px
+          padding-right: 5px
+          box-sizing: border-box
+          &:first-child
+            border-bottom-color: #E5EEF7
+            background-color: #E5EEF7
+            padding-top: 10px
+            margin-top: 19px
+          &:last-child .card__title,
+          &:last-child .card__value
+            font-family: "Roboto", Arial, sans-serif
+        @media(max-width: 1024px)
+          display: block
+    @media(min-width: 1025px)
+      &:hover
+        .card__top
+          position: relative
+          z-index 20
+          margin-bottom: 16px
+        .card__slider
+            position: absolute
+            top: 55px
+            left: 0
+        .card__bg
+          display: block
+        .card__cell
+          position: relative
+          display: flex
+          z-index: 20
+          &:last-child
+            padding-top: 24px
+        .button
+          position: relative
+          z-index: 20
+    .button-no-bg
+      border-color: #0072C7
+      color: #0072C7
+      width: 100%
+      max-width: 276px
+      text-align: center
+      font-size: 14px
+      font-family: "Geometria", Arial, sans-serif
+      @media(max-width: 1024px)
+        position: relative
+        z-index: 10
+        background: #005BB9
+        border-color: #005BB9
+        color: #fff
+      &:hover
+        background: #005BB9
+        border-color: #005BB9
+        color: #fff
+
+.cards__wrapper-row
+  .card-group__wrapper
+    .card
+      &__slider
+        margin-right: 70px
+      &__row
+        width: 100%
+        flex-direction: row
+        justify-content: space-between
+      &__cell
+        flex(flex-start, center, row)
+        width: 100%
+        border-bottom: none
+        padding: 0 0
+        margin: 0
+        &:last-child
+          margin-bottom: 0
+      &__title
+        display: none
+
+.popup__wrapper
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: 100
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: row
+
+
+.popup__wrapper.active
+  display: flex
+
+
+.popup__bg
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(58, 57, 60, 0.1)
+
+
+.popup__body
+  position: relative
+  width: 434px
+  background-color: #fff
+  padding: 30px 28px 40px 23px
+  box-sizing: border-box
+  .popup__title
+    font-size: 20px
+    line-height: 25px
+    font-family: "Geometria", Arial, sans-serif
+    font-weight: 500
+    color: #3A393C
+    margin-bottom: 30px
+  .button
+    margin: 0 auto
+    width: 100%
+  .input-text__section
+    width: 100%
+    box-sizing: border-box
+    padding: 15px 20px
+    margin-bottom: 10px
+    border: 1px solid #DADADA
+    border-radius: 2px
+    cursor: pointer
+    &:last-child
+      margin-bottom: 20px
+    input
+      width: 100%
+      border: none !important
+      box-sizing: border-box
+      margin: 0 !important
+      height: auto!important
+      &:focus
+        border: none !important
+        outline: none !important
+        box-shadow: none!important
+.popup__close
+  position: absolute
+  top: 25px
+  right: 25px
+  cursor: pointer
+  img
+    width: 40px
+    height: 40px
+
+
+
+.cst_btn
+  background: #3A393C
+  width: 160px
+  height: 48px
+  font-family: "Geometria", Arial, sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 48px
+  text-align: center
+  color: #FFFFFF
+  margin: 0 auto
+  cursor: pointer
+
+.cst_icon
+  width: 60px
+  height: 60px
+  margin: 0 auto 20px auto
+  cursor: pointer
+
+
+.cst_title
+  font-family: "Geometria", Arial, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 20px
+  color: #3A393C
+  margin-bottom: 20px
+  text-align: center
+
+
+.cst_mess
+  font-family: "Geometria", Arial, sans-serif
+  font-style: normal
+  font-size: 14px
+  line-height: 18px
+  color: #3A393C
+  margin-bottom: 20px
+  text-align: center
+
+
+.choices
+  .choices__inner
+    padding: 15px 20px !important
+    box-sizing border-box !important
+  .choices__list--single
+    padding: 0 16px 0 4px
+
+
+.tooltip-custom
+  position: fixed
+  padding: 14px 20px
+  border-radius: 3px
+  font-size: 14px
+  line-height: 17px
+  color: #fff
+  background: rgba(53, 53, 53, 0.9)
+  font-family: "Geometria", Arial, sans-serif
+  max-width: 265px
+  z-index: 10002
+.tooltip__icon
+    display: inline-block
+    width: 16px
+    min-width: 16px
+    height: 16px
+    border: 1px solid #DCDCDC
+    border-radius 50%
+    color: #353535
+    font-size: 12px
+    line-height: 17px
+    text-align: center
+    margin-left: 6px
+    cursor: pointer
+
+
+

@@ -1,0 +1,268 @@
+@import "../mixin/flex.styl"
+
+.form
+  &__wrapper
+    margin: 0 auto 99px auto
+    width: 100%
+    max-width: 908px
+    font-family: Roboto, Arial, sans-serif
+    color: rgba(51, 51, 51, 0.78)
+    position: relative
+    padding: 0 0 0 348px
+    overflow: hidden
+    @media(max-width: 1023px)
+      margin: 0 74px 99px 74px
+      max-width: auto
+      width: auto
+      padding: 0 0 0 200px
+    @media(max-width: 767px)
+      margin: 0 10px 99px 10px
+      padding: 0
+    .agreement__text
+      font-size: 12px
+      line-height: 14px
+      a
+        color: #005BB9
+    .form__text-bold
+      font-size: 18px
+      line-height: 138%
+      color: rgba(51, 51, 51, 0.78)
+      font-family: Roboto-Bold, Arial, sans-serif
+      font-weight: bold
+    .timer__section
+      .resend-link
+        display: none
+      &.not-active
+        .form__text.form__text-bold
+          display: none
+        .resend-link
+          display: block
+    .timer__wrapper
+      display: inline-block
+      color: #B19A7C
+      margin-left: 16px
+
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    @media(max-width: 767px)
+      display: none
+  &__content
+    padding: 40px 0 56px 0
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    background-color: #fff
+  &__title
+    display: none
+    font-family: Gilroy-Bold, Arial, sans-serif
+    font-size: 24px
+    line-height: 111.9%
+    color: #005BB9
+    text-transform uppercase
+    margin-bottom: 9px
+  &__title__wrapper
+    padding: 0 0 26px 61px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    margin-bottom: 40px
+    position: relative
+    @media(max-width: 767px)
+      padding: 0 16px 26px 16px
+    &:before
+      content: ''
+      display: block
+      width: 50%
+      height: 2px
+      background-color: #005BB9
+      position: absolute
+      bottom: -1px
+      left: 0
+    .form__text
+      font-size: 18px
+      line-height: 25px
+      max-width: 329px
+  &__text
+    font-size: 16px
+    line-height: 132%
+  &__body
+    padding:  0 0 0 61px
+    @media(max-width: 767px)
+      padding: 0 16px
+  &-step
+    display: none
+    .input__wrapper
+      max-width: 300px
+      width: 100%
+      padding: 12px 16px 11px 16px
+      border: 1px solid rgba(0, 0, 0, 0.1)
+      background-color: #fff
+      position: relative
+      &::placeholder
+        color: rgba(51, 51, 51, 0.6)
+      input
+        width: 100%
+        height: auto
+        border: none
+        outline: none
+        background-color: transparent
+        padding: 0
+        margin: 0
+        font-size: 18px
+        line-height: 25px
+      &.error
+        border: 1px solid #B7202E
+      &.required
+        &:after
+          content: '*'
+          display: block
+          position: absolute
+          top: -7px
+          right: -12px
+          font-size: 18px
+          line-height: 25px
+          color: #005BB9
+    .button__wrapper
+      font-size: 18px
+      line-height: 25px
+      text-align: center
+      color: #fff
+      padding: 11px 32px 12px 32px
+      display: inline-block
+      background-color: #005BB9
+      box-shadow: none
+      border: 1px solid #005BB9
+      cursor: pointer
+      width: 100%
+      max-width: 279px
+      @media(max-width: 767px)
+        max-width: 268px
+      &:disabled
+        background-color: #F5F5F5
+        border-color: #F5F5F5
+        color: rgba(51, 51, 51, 0.6)
+        cursor: default
+
+    .change-phone
+      font-weight: normal
+      font-size: 18px
+      line-height: 25px
+      font-family: Roboto, Arial, sans-serif
+      color: #005BB9
+      display: inline-block
+      margin-left: 24px
+      cursor: pointer
+
+    .resend-link
+      color: #005BB9
+      &:hover
+        text-decoration: underline
+        cursor: pointer
+      &.active
+        display: block
+  &__content.step-1-1
+    .form-step-1-1, .form__title-1
+      display: block
+  &__content.step-1-2
+    padding: 34px 0 45px 0
+    .form-step-1-2, .form__title-1
+      display: block
+  &__content.step-2
+    padding: 40px 0 37px 0
+    .form__title-2, .form-step-2
+      display: block
+    .form__title__wrapper:before
+      left: inherit
+      right: 0
+  &-step-1-1
+    .input__wrapper
+      margin-bottom: 17px
+    .form__text
+      margin-bottom: 63px
+      max-width: 283px
+    .button__wrapper
+      margin-bottom: 19px
+  &-step-1-2
+    .form__text
+      margin-bottom: 4px
+    .form__text-bold
+      margin-bottom: 18px
+    .input__wrapper
+      margin-bottom: 15px
+    .input__wrapper+.form__text-bold
+      margin-bottom: 31px
+    .resend-link
+      margin-bottom: 39px
+    .button__wrapper
+      margin-bottom: 18px
+  &-step-2
+    .input__wrapper
+      margin-bottom: 12px
+    .button__wrapper
+      margin-bottom: 12px
+  &-sms-authorization
+    padding: 0 0 0 322px
+    @media(max-width: 1023px)
+      padding: 0 0 0 200px
+    @media(max-width: 767px)
+      padding: 0 16px
+    .form__title__wrapper
+      padding-bottom: 0
+      margin-bottom: 43px
+      border: 0
+      &:before
+        display: none
+    .form__title
+      margin-bottom: 0
+      display: block
+    .form__content
+      min-height: 505px
+      padding: 59px 0 59px 0
+    .form-step
+      .input__wrapper
+        max-width: 438px
+        @media(max-width: 1024px)
+          max-width: 320px
+      .button__wrapper
+        max-width: 279px
+  &__wrapper.authorization-with-captcha
+    padding: 0 0 0 322px
+    .form__title__wrapper
+      border-bottom: none
+      padding-bottom: 0
+      &:before
+        display: none
+    @media(max-width: 1023px)
+      .input__wrapper
+        max-width: 320px
+    .capcha__wrapper
+      flex()
+      margin-bottom: 8px
+      .img__wrapper
+        width: 206px
+        height: 60px
+        padding: 4px 14px
+        margin-right: 26px
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        @media(max-width: 1023px)
+          width: 152px
+          height: 48px
+      .input__wrapper
+        max-width: 206px
+        padding: 17px 24px 18px 24px
+        margin-bottom: 0
+        @media(max-width: 1023px)
+          padding: 11px
+          max-width: 152px
+    .reload__btn
+      width: 24px
+      height: 24px
+      margin-bottom: 20px
+      cursor: pointer
+
+
+
+
+
+
+
+

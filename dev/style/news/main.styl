@@ -1,0 +1,62 @@
+@font-face
+  font-family: "Gilroy"
+  src: url("../fonts/Gilroy-Regular.ttf") format("ttf"),
+          url("../fonts/Gilroy-Regular.eot") format("eot"),
+          url("../fonts/Gilroy-Regular.woff") format("woff")
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Bold"
+  src: url("../fonts/Gilroy-Bold.ttf") format("ttf"),
+          url("../fonts/Gilroy-Bold.eot") format("eot"),
+          url("../fonts/Gilroy-Bold.woff") format("woff")
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Roboto"
+  src: url("../fonts/Roboto-Regular.ttf") format("ttf")
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Geometria"
+  src: url("../fonts/Geometria.ttf") format("ttf"), url("../fonts/Geometria.eot") format("eot"), url("../fonts/Geometria.woff")  format("woff")
+  font-style: normal
+  font-display: swap
+
+
+.layout__wrapper
+  max-width: 1597px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  @media(max-width: 1597px)
+    max-width: none
+    width: 83%
+  @media(max-width: 767px)
+    width: 100%
+
+.layout__title
+  text-align: center
+  font-family: "Gilroy-Bold", Arial, sans-serif
+  font-size: 24px
+  line-height: 29px
+  text-transform: uppercase
+  color: #3a393c
+  margin-bottom: 54px
+  @media(max-width: 767px)
+    margin: 0 auto 27px auto
+    max-width: 320px
+.link__key
+  width: 52px
+  height: 52px
+  position: absolute
+  right: 16px
+  bottom: 16px
+  display: none
+  img
+    width: 100%
+    height: auto
+  @media(max-width: 767px)
+    display: block

@@ -1,0 +1,265 @@
+@import "../mixin/flex.styl"
+
+.table
+  &__wrapper-parking
+    display: none
+    margin-bottom: 116px
+    &.active
+      display: block
+    @media(max-width: 1023px)
+      margin-bottom: 75px
+    @media(max-width: 767px)
+      display: block
+  &__body
+    margin-bottom: 40px
+    @media(max-width: 1024px)
+      flex()
+      flex-wrap: wrap
+    @media(max-width: 767px)
+      justify-content: center
+  &__row
+    max-width: 1169px
+    margin: 0 auto
+    flex(flex-start, center, row)
+    font-family: Roboto, Arial, sans-serif
+    font-size: 16px
+    line-height: 132%
+    color: rgba(51, 51, 51, 0.78)
+    padding: 23px 21px 28px 24px
+    position: relative
+    @media(min-width:1025px)
+      &:nth-child(2n+2)
+        background-color: #EFEBE5
+    @media(max-width: 1024px)
+      flex-wrap: wrap
+      width: 300px
+      min-width: 300px
+      margin-right: 20px
+      margin-bottom: 20px
+      margin-left: 0
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+      padding: 0
+    &.table__header
+      background-color: #B19A7C
+      color: #fff
+      padding: 13px 21px 14px 24px
+      @media(max-width: 1024px)
+        display: none
+      .table__cell:nth-child(1)
+        font-weight: normal
+        font-family: Roboto, Arial, sans-serif
+    .button__wrapper
+      width: 100%
+      padding: 5px 0 6px 0
+      color: #fff
+      background-color: #005BB9
+      cursor: pointer
+      text-align: center
+      font-family: Roboto, Arial, sans-serif
+    .duble__text
+      display: none
+    .tooltip__wrapper
+      display: none
+    @media(min-width: 1025px)
+      &.double__seat
+        padding: 21px 21px 20px 24px
+        &-family
+          .duble__text
+            background-color: #A3AEC1
+        &-family-small
+          .duble__text
+            background-color: #f38723
+      .button__wrapper
+        display: none
+        position: absolute
+        right: 21px
+        bottom: 8px
+        width: 164px
+      .duble__text
+        position: absolute
+        left: 8px
+        bottom: 8px
+        padding: 8px 16px
+        width: 80%
+        color: #fff
+        font-size: 12px
+        line-height: 14px
+        font-family: Roboto, Arial, sans-serif
+        .img__wrapper
+          width: 16px
+          min-width: 16px
+          height: 16px
+          margin-right: 6px
+      &:hover
+        .table__cell-price
+          position: relative
+          top: -18px
+        &.double__seat
+          padding: 1px 21px 40px 23px
+          .table__cell-price
+            top: 0
+        .duble__text
+          flex(flex-start, center, row)
+        .button__wrapper
+          display: block
+    @media(max-width: 1024px)
+      flex-wrap: wrap
+      .button__wrapper
+        order: 1
+        margin-top: 19px
+      .tooltip__wrapper
+        display: flex
+
+    @media(max-width: 767px)
+      margin-right: 0
+  &__cell
+    &__label
+      font-size: 12px
+      line-height: 14px
+      color: rgba(51, 51, 51, 0.6)
+      font-family: Roboto, Arial, sans-serif
+      marign-bottom: 5px
+      @media(min-width: 1025px)
+        display: none
+    &__text
+      white-space: nowrap
+    &-price
+      .table__cell__text
+        font-family: Roboto-Bold, Arial, sans-serif
+        font-weight: bold
+    &:nth-child(2)
+      flex(flex-start, center, row)
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        min-width: 6px
+        height: 6px
+        border-radius: 50%
+        margin-right: 10px
+      &.parking-type-standart
+        color: #B19A7C
+      &.parking-type-standart:before
+        background-color: #B19A7C
+      &.parking-type-family
+        color: #A3AEC1
+      &.parking-type-family:before
+        background-color: #A3AEC1
+      &.parking-type-increased
+        color: #799CA3
+      &.parking-type-increased:before
+        background-color: #799CA3
+      &.parking-type-boxing
+        color: #476A87
+      &.parking-type-boxing:before
+        background-color: #476A87
+      &.parking-type-small-class
+        color: #0A2F49
+      &.parking-type-small-class:before
+        background-color: #0A2F49
+      &.parking-type-other
+        color: #B7202E
+      &.parking-type-other:before
+        background-color: #B7202E
+      &.parking-type-family-small
+        color: #F38723
+      &.parking-type-family-small:before
+        background-color: #F38723
+      &.parking-type-standard-small
+        color: #5A4F9B
+      &.parking-type-standard-small:before
+        background-color: #5A4F9B
+      &.parking-type-limited
+        color: #65431C
+      &.parking-type-limited:before
+        background-color: #65431C
+    @media(min-width: 1025px)
+      &:nth-child(1)
+        font-family: Roboto-Bold, Arial, sans-serif
+        font-weight: bold
+        width: 30px
+        min-width: 30px
+        margin-right: 15px
+        line-height: 16px
+      &:nth-child(2)
+        width: 116px
+        min-width: 116px
+      &:nth-child(3)
+        width: 130px
+        min-width: 130px
+        text-align: center
+        flex-grow: 1
+      &:nth-child(4)
+        width: 170px
+        min-width: 170px
+        text-align: center
+        flex-grow: 1
+      &:nth-child(5)
+        width: 40px
+        min-width: 40px
+        text-align: center
+        flex-grow: 1
+      &:nth-child(6)
+        text-align: center
+        min-width: 105px
+
+    @media(max-width: 1024px)
+      &:nth-child(1)
+        font-size: 16px
+        line-height: 138%
+        border-bottom: 1px solid rgba(58, 57, 60, 0.1);
+        padding: 3px 9px 4px 16px
+        margin-bottom: 4px
+      &:nth-child(2)
+        font-size: 16px
+        line-height: 138%
+        flex-grow: 1
+        min-width: 200px
+        border-bottom: 1px solid rgba(58, 57, 60, 0.1);
+        padding: 3px 0 4px 0
+        margin-bottom: 4px
+        &:before
+          margin-right: 7px
+      &:nth-child(3)
+       padding: 15px 0 0 16px
+       width: 200px
+      &:nth-child(4)
+        order: 1
+        width: 200px
+        padding: 15px 0 0 16px
+      &:nth-child(5)
+        padding: 15px 0 0 0
+      &:nth-child(6)
+        order: 1
+        padding: 15px 0 0 0
+
+
+  &__body+.button__wrapper-white
+      padding: 13px 32px 14px 32px
+      background-color: transparent
+      position: relative
+      font-family: Roboto, Arial, sans-serif
+      color: #005BB9
+      font-size: 16px
+      line-height: 132%
+      text-align: center
+      display: block
+      width: 100%
+      max-width: 250px
+      margin: 0 auto
+      border: 1px solid #005BB9
+      box-sizing: border-box
+      @media(max-width: 1023px)
+        padding:5px 24px 6px 24px
+        max-width: 234px
+
+
+
+
+
+
+
+
+
+
+

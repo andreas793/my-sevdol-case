@@ -1,0 +1,45 @@
+@import "../mixin/flex.styl"
+.layout
+  &__title
+    font-size: 51px
+    line-height: 45.9px
+    font-family: "Gilroy-Bold", Arial, sans-serif
+    color: #003349
+    text-transform: uppercase
+    @media(max-width: 450px)
+      font-size: 28px
+      line-height: 90%
+  &__text
+    color: #3A393C
+    font-size: 18px
+    line-height: 150%
+    font-family: 'Roboto', Arial, sans-serif
+    max-width: 1020px
+    @media(max-width: 450px)
+      font-size: 14px
+      line-height: 150%
+      max-width: 100%
+  &__wrapper
+    margin: 0 auto 100px auto
+    max-width: 1365px
+    .items__wrapper
+      flex()
+      .item
+        &__wrapper
+          flex(flex-start, center, row)
+          &:last-child
+            margin-right: 0
+        &__icon
+          box-sizing border-box
+          img
+            width: 100%
+            height: auto
+        &__text
+          font-size: 17px
+          line-height: 130%
+          color: #3A393C
+          font-family 'Roboto', Arial, sans-serif
+    @media(max-width: 450px)
+      padding: 0 10px
+
+

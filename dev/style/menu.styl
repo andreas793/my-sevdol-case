@@ -1,0 +1,223 @@
+@import "mixin/flex.styl"
+
+.menu
+  &__wrapper
+    width: 100%
+    font-family: 'Roboto', Arial, sans-serif
+    font-size: 13px
+    line-height: 15px
+    color: #3A393C
+    box-sizing: border-box
+    position: fixed
+    left: 0
+    z-index: 99
+    background-color: #fff
+    transition: top, 1s
+  &__items
+    flex(flex-start, center, row)
+    max-width: 1570px
+    width: 100%
+    margin: 0 auto
+    box-sizing border-box
+  &__item
+    flex(flex-start, center, row)
+    margin-right: 35px
+    padding: 10px 0
+    cursor: pointer
+    box-sizing border-box
+    position: relative
+    &.active
+      .sub-menu__items
+        display: block
+    &__main
+      flex(flex-start, center, row)
+      width: 100%
+      height: 100%
+    .sub-menu
+      &__items
+        position: absolute
+        top:80%
+        left: 10px
+        border: 1px solid #f0f0f0
+        box-sizing: border-box
+        border-radius 2px
+        box-shadow: 3px 3px 4px rgba(215px, 215px, 215px, 0.2)
+        background-color: #fff
+        display: none
+        z-index 200
+        &:hover
+          display: block
+        a
+          display: block
+      &__item
+        display: block
+        padding: 10px 36px 10px 20px
+        font-size: 13px
+        line-height: 15px
+        color: #3A393C
+        font-family: 'Roboto', Arial, sans-serif
+        cursor: pointer
+        white-space: nowrap
+        &:hover
+          background-color: #F7F7F7
+
+    @media(max-width: 450px)
+      margin-right: 0
+    @media(max-width: 1279px)
+      .sub-menu
+        &__items
+          left: auto
+          right: 0
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: #3A393C
+    &__icon
+      margin-right: 8px
+      img
+        width: 100%
+        height: auto
+    &__text
+      color: #3A393C
+      & + .menu__item__icon
+        margin-left: 12px
+        margin-right: 0
+    &__logo
+      flex-grow: 1
+    &.menu__item-vr
+      .menu__item__text
+        color: #0072c7
+    &.btn-menu
+      padding: 26px 15px
+      background-color: #F8F8F8
+      .menu__item__icon
+        width: 20px
+        min-width: 20px
+        margin-left: 0
+        img
+          width: 100%
+          height: auto
+      .menu__item__text
+        font-size: 14px
+        line-height: 17px
+        margin-right: 10px
+
+
+
+  &__header
+    &-top
+      border-bottom: 1px solid rgba(169,169,169, 0.21)
+      top: 0
+      left: 0
+      .menu__items
+        padding: 10px 0
+        @media(max-width: 1024px)
+          padding: 10px
+          align-items: flex-start
+          justify-content: space-between
+      .menu__item
+        &__logo
+          cursor: auto
+        &.apartment-search
+          display: none
+        &.login, &.logout
+          margin-right: 134px
+        @media(max-width: 1024px)
+          display: none
+          padding: 0
+          &.apartment-search, &.location, &.metro-logo
+            display: flex
+            .menu__item
+              &__text
+                font-size: 10px
+                line-height: 12px
+              &__icon
+                min-width: 15px
+                width: 15px
+                height: 15px
+                margin-right: 6px
+          &.metro-logo
+            position: absolute
+            bottom: 10px
+            left: 12px
+          .button
+            font-size: 10px
+            line-height: 12px
+            padding: 15px 0 13px 0
+            width: 150px
+            min-width: 150px
+            text-align center
+    &-bottom
+      top: 70px
+      &.hide-menu
+        top: 0
+        z-index: 200
+      @media(max-width: 1024px)
+        padding: 0 0 0 10px
+        top: 63px
+        .menu__items
+          padding: 14px 0
+      .menu__item
+        &.call, &.logout, &.login
+          display: none
+        &__logo
+          cursor: auto
+        @media(max-width: 1024px)
+          display: none
+          &.call, &.logout, &.login, &__logo, &.btn-menu
+            display: block
+          &.menu__item
+            &__logo
+              padding: 0
+              .menu__item__icon
+                width: 114px
+                display: block
+
+          &.login, &.call
+            margin-right: 20px
+            .menu__item__icon
+              margin: 0
+            .menu__item__text
+              display: none
+          &.btn-menu
+              padding: 15px 17px
+              .menu__item__icon
+                width: 20px
+                min-width: 20px
+              .menu__item__text
+                display: none
+
+.menu__wrapper .menu__item__icon
+  width: 24px
+.menu__wrapper.menu__header-top .menu__item.menu__item__logo .menu__item__icon
+  width: 153px
+.menu__wrapper.menu__header-bottom .menu__item.menu__item__logo .menu__item__icon
+  width: 190px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

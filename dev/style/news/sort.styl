@@ -1,0 +1,180 @@
+@import "../mixin/flex.styl"
+.sort
+  &__wrapper
+    flex(flex-start, center, row)
+    flex-wrap: wrap
+    .search__wrapper
+      flex(flex-start, center, row)
+      margin-bottom: 15px
+      .input__wrapper
+        width: 399px
+        min-width: 399px
+        padding: 12px
+        margin-right: 8px
+        border: 1px solid rgba(58, 57, 60, 0.2)
+        background-color: #fff
+        box-sizing: border-box
+        input
+          border: none
+          outline: none
+          box-shadow: none
+          font-size: 14px
+          line-height: 16px
+          font-family: "Roboto", Arial, sans-serif
+          color: rgba(58, 57, 60, 0.78)
+          width: 100%
+          &:placeholder
+            font-family: "Roboto", Arial, sans-serif
+      .search__btn
+        border: none
+        box-shadow: none
+        width: 44px
+        min-width: 44px
+        height: 44px
+        background:#3A393C url("../img/news/search.svg") no-repeat 50% 50%
+        cursor: pointer
+        border-radius: 0;
+        img
+          width: 20px
+          height: 20px
+      @media(max-width: 1597px)
+        margin-bottom: 8px
+        .input__wrapper
+          width: 183px
+          min-width: 183px
+          padding: 6px 12px
+          input
+            font-size: 12px
+            line-height: 14px
+        .search__btn
+          width: 32px
+          min-width: 32px
+          height: 32px
+      @media(max-width: 1365px)
+        margin-bottom: 12px
+        .input__wrapper
+          width: 114px
+          min-width: 114px
+      @media(max-width: 767px)
+        margin-bottom: 0
+        margin-left: 15%
+        .input__wrapper
+          width: auto
+          min-width: auto
+          flex-grow: 1
+        .search__btn
+          margin-right: 16px
+
+  &__item
+    font-family: "Gilroy", Arial, sans-serif
+    font-size: 14px
+    line-height: 16px
+    white-space: nowrap
+    position: relative
+  &__year
+    flex()
+    flex-grow: 1
+    margin-bottom: 15px
+    @media(max-width: 1597px)
+      margin-bottom: 8px
+    @media(max-width: 1023px)
+      overflow-x: auto
+      width: 100%
+      margin-bottom: 20px
+    .sort__item
+      color: rgba(51, 51, 51, 0.6)
+      margin-right: 40px
+      @media(max-width: 1597px)
+        margin-right: 33px
+      @media(max-width: 1365px)
+        margin-right: 19px
+      @media(max-width: 767px)
+        &:first-child
+          margin-left: 15%
+      &-active
+        color: #0072C7
+        font-family: "Gilroy-Bold", Arial, sans-serif
+        &:after
+          content: ''
+          display: block
+          width: 100%
+          height: 2px
+          background-color: #0072C7
+          position: absolute
+          bottom: -2px
+          left: 0
+
+  &__btn
+    display: none
+    @media(max-width: 767px)
+      display: block
+      width: 32px
+      min-width: 32px
+      height: 32px
+      padding: 4px
+      box-sizing border-box
+      background-color: #0072C7
+      img
+        width: 100%
+        height: auto
+
+  &__topic
+    flex(space-between, center, row)
+    flex-wrap: wrap
+    align-self: center
+    width: 100%
+    padding-top: 16px
+    margin-bottom: 83px
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+    .sort__item
+      color: rgba(0, 0, 0, 0.6)
+      padding: 8px 11px 8px 8px
+      margin-right: 17px
+      &-active
+        color: #fff
+        background-color: #0072C7
+    .close__wrapper
+      display: none
+    @media(max-width: 1597px)
+      padding-top: 8px
+      justify-content: center
+
+
+@media(max-width: 767px)
+  .sort
+    &__topic
+      display: none
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      flex-wrap: nowrap
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100vh
+      background-color: white
+      z-index: 10000
+      overflow-y: auto
+      padding: 36px 12px 12px 12px
+      &-active
+        display: flex
+      .sort__item
+        margin-right: 0
+        margin-bottom: 8px
+      .close__wrapper
+        display: block
+        position: absolute
+        top: 12px
+        right: 36px
+        width: 24px
+        height: 24px
+        img
+          width: 100%
+          height: auto
+    &__wrapper
+      margin-bottom: 31px
+
+
+
+

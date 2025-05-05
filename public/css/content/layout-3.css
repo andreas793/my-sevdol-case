@@ -1,0 +1,255 @@
+.layout-3 {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 450px) {
+  .layout-3 {
+    padding: 0;
+    margin-bottom: 74px;
+  }
+}
+.layout-3 .main__img {
+  width: 100%;
+}
+.layout-3 .main__img img {
+  width: 100%;
+  height: auto;
+}
+.layout-3 .main__img-mob {
+  display: none;
+}
+@media (max-width: 767px) {
+  .layout-3 .main__img-mob {
+    display: block;
+  }
+  .layout-3 .main__img-desk {
+    display: none;
+  }
+}
+.layout-3 .infographics__section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.layout-3 .infographics__section .item {
+  position: absolute;
+  max-width: 181px;
+}
+.layout-3 .infographics__section .item__text {
+  color: #fff;
+}
+.layout-3 .infographics__section .item .number {
+  font-family: 'Gilroy-Bold', Arial, sans-serif;
+  font-size: 48px;
+  line-height: 90%;
+  margin-bottom: 3px;
+}
+.layout-3 .infographics__section .item .text {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 24px;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.layout-3 .infographics__section .item__icon {
+  border: 3px solid #fff;
+  border-radius: 2px;
+  background-color: rgba(0,51,73,0.5);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 23px;
+  width: 100px;
+  height: 100px;
+}
+.layout-3 .infographics__section .item__icon img {
+  width: 100%;
+  height: auto;
+}
+.layout-3 .infographics__section .item__line {
+  width: 2px;
+  height: 153px;
+  margin-left: 49px;
+  position: relative;
+  background-color: #fff;
+}
+.layout-3 .infographics__section .item__line:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  left: -4px;
+  bottom: -10px;
+}
+.layout-3 .infographics__section .item.parking {
+  top: 32%;
+  left: 19%;
+}
+.layout-3 .infographics__section .item.house {
+  top: 15%;
+  left: 41%;
+}
+.layout-3 .infographics__section .item.bell {
+  top: 10%;
+  left: 58%;
+}
+.layout-3 .infographics__section .item.cart {
+  top: 35%;
+  left: 71%;
+}
+.layout-3 .infographics__section .logo__wrapper {
+  width: 225px;
+  position: absolute;
+  left: 75%;
+  top: 86%;
+}
+.layout-3 .infographics__section .logo__wrapper img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1250px) and (min-width: 768px) {
+  .layout-3 .infographics__section .logo__wrapper {
+    left: 36%;
+    top: 76%;
+  }
+}
+@media (max-width: 450px) {
+  .layout-3 .infographics__section .logo__wrapper {
+    left: auto;
+    right: 10px;
+    top: 54px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 1250px) {
+  .layout-3 .infographics__section .item.parking {
+    top: 15%;
+  }
+  .layout-3 .infographics__section .item.house {
+    top: 4%;
+  }
+  .layout-3 .infographics__section .item.bell {
+    top: 1%;
+  }
+  .layout-3 .infographics__section .item.cart {
+    top: 24%;
+  }
+}
+@media (max-width: 1249px) and (min-width: 768px) {
+  .layout-3 .infographics__section .item {
+    max-width: 140px;
+  }
+  .layout-3 .infographics__section .item__icon {
+    padding: 5px;
+    width: 75px;
+    height: 75px;
+  }
+  .layout-3 .infographics__section .item__text .number {
+    font-size: 38px;
+  }
+  .layout-3 .infographics__section .item__text .text {
+    font-size: 18px;
+  }
+  .layout-3 .infographics__section .item__line {
+    margin-left: 37.5px;
+  }
+  .layout-3 .infographics__section .item.parking {
+    top: 20%;
+  }
+  .layout-3 .infographics__section .item.parking .item__line {
+    height: 80px;
+  }
+  .layout-3 .infographics__section .item.house {
+    top: 3%;
+  }
+  .layout-3 .infographics__section .item.house .item__line {
+    height: 40px;
+  }
+  .layout-3 .infographics__section .item.bell {
+    top: 4%;
+    left: 55%;
+  }
+  .layout-3 .infographics__section .item.bell .item__line {
+    height: 20px;
+  }
+  .layout-3 .infographics__section .item.cart {
+    top: 5%;
+    left: 71%;
+  }
+  .layout-3 .infographics__section .item.cart .item__line {
+    height: 120px;
+  }
+}
+@media (max-width: 450px) {
+  .layout-3 .infographics__section .item {
+    max-width: 100%;
+  }
+  .layout-3 .infographics__section .item__icon {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
+    padding: 13px;
+    border-width: 1.7px;
+    border-radius: 1.16px;
+  }
+  .layout-3 .infographics__section .item__text {
+    position: absolute;
+    left: 70px;
+    top: 0;
+    min-width: 207px;
+  }
+  .layout-3 .infographics__section .item__text .number {
+    font-size: 20px;
+    line-height: 90%;
+    margin-bottom: 21px;
+  }
+  .layout-3 .infographics__section .item__text .text {
+    font-size: 14px;
+    line-height: 90%;
+    margin-bottom: 0;
+    font-family: 'Gilroy-Bold', Arial, sans-serif;
+  }
+  .layout-3 .infographics__section .item__line {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 0;
+    height: 1px;
+    width: 89px;
+  }
+  .layout-3 .infographics__section .item__line:after {
+    left: 100%;
+    bottom: -2.5px;
+    min-width: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .layout-3 .infographics__section .item.parking {
+    left: 10px;
+    top: 174px;
+  }
+  .layout-3 .infographics__section .item.house {
+    left: 10px;
+    top: 244px;
+  }
+  .layout-3 .infographics__section .item.bell {
+    left: 10px;
+    top: 314px;
+  }
+  .layout-3 .infographics__section .item.cart {
+    left: 10px;
+    top: 384px;
+  }
+  .layout-3 .infographics__section .item.cart .item__text {
+    top: 39px;
+  }
+}
+
+/*# sourceMappingURL=../maps/content/layout-3.css.map */

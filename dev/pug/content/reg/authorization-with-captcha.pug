@@ -1,0 +1,18 @@
+.form__wrapper.authorization-with-captcha
+    .form__bg
+        img(src="./img/reg/main-bg-2.png")
+    .form__content.step-1-1
+        .form__title__wrapper
+            .form__title.form__title-1 Личный кабинет
+        .form__body
+            form.form-step.form-step-1-1(action="#")
+                .input__wrapper
+                    input(type="text" placeholder="Телефон" )
+                .capcha__wrapper
+                    .img__wrapper
+                        img(src="img/reg/capcha.png")
+                    .input__wrapper
+                        input(type="text" placeholder="Код с картинки")
+                .reload__btn
+                    img(src="img/reg/reload.svg")
+                input(type="submit" class="button__wrapper" value="Получить SMS с кодом" disabled)

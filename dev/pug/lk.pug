@@ -1,0 +1,32 @@
+doctype
+html
+    head
+        title ЛК
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="./css/simplebar.css")
+        link(rel="stylesheet" href="./css/lk.css")
+    body
+        .layout__booking
+            include content/lk/booking
+            .flex__wrapper
+                .tab__items-bottom
+                    .tab__item-bottom.active(data-key="steps") Этапы сделки
+                    .tab__item-bottom(data-key="questionnaire") Анкета покупателя
+                    .tab__item-bottom(data-key="#digital_ipo") Цифровая ипотека
+                include content/lk/questionnaire
+                include content/lk/steps
+                .digital__mortgage.item-bottom-anchor
+                    .title__wrapper Цифровая ипотека
+                    .text__wrapper Отправить анкету в банки
+                    label
+                        input(type='checkbox' name='checkbox' value='checkbox')
+                        .checkbox__wrapper
+                            .checkbox__text Включить модуль ЦИ
+                    .img__bg
+                        img(src="img/lk/percent.svg")
+                    .popup__show(data-anchor="#digital_ipo")
+        include content/lk/popup
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="js/lk/script.js")
+        script(src="js/lk/simplebar.js")

@@ -1,0 +1,269 @@
+@import "../mixin/flex.styl"
+
+.card
+  &__wrapper
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    position: relative
+    padding: 29px 16px 35px 182px
+  &__title
+    font-size: 24px
+    line-height: 29px
+    font-family: Gilroy-SemiBold, Arial, sans-serif
+    color: #3A393C
+    margin-bottom: 20px
+    flex(flex-start, center, row)
+  &__subtitle
+    font-size: 12px
+    line-height: 14px
+    font-family: Roboto, Arial, sans-serif
+    color: rgba(51, 51, 51, 0.6)
+    display: none
+  &__wrapper
+    .finishing__type
+      flex(flex-start, center, row)
+      margin-left: 37px
+      .img__wrapper
+        width: 33px
+        height: 33px
+        margin-right: 12.20px
+      .text__wrapper
+        font-size: 10px
+        line-height: 96%
+        font-family: Gilroy, Arial, sans-serif
+        background-color: #F3F8FC
+        border-radius: 4px
+        padding: 9px 8px
+        color: #005BB9
+    .parking-type
+      margin-left: 37px
+      background-color: transparent
+      color: rgba(177, 154, 124, 0.78)
+      font-size: 16px
+      line-height: 132%
+      font-family: Gilroy, Arial, sans-serif
+    .deleted__button
+      position: absolute
+      top: 12px
+      right: 18px
+      width: 24px
+      height: 24px
+      cursor: pointer
+      svg
+        pointer-events: none
+      &:hover
+        svg
+          path
+            fill: #005BB9
+  &__img
+    position: absolute
+    top: 12px
+    left: 17px
+    width: 134px
+    height: 133px
+    flex(center, center, row)
+    overflow: hidden
+    img
+      width: auto
+      height: 100%
+      max-width: 134px
+  &__row
+    flex()
+  &__cell
+    margin-right: 33px
+    white-space: nowrap
+    &:last-child
+      margin-right: 0
+    &-price
+      .card__text
+        font-weight: bold
+  &__label
+    font-size: 12px
+    line-height: 14px
+    color: rgba(51, 51, 51, 0.6)
+    font-family: Roboto, Arial, sans-serif
+    margin-bottom: 9px
+  &__text
+    font-size: 16px
+    line-height: 132%
+    color: rgba(51, 51, 51, 0.78)
+    font-family: Roboto, Arial, sans-serif
+    &.parking-type
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        min-width: 6px
+        height: 6px
+        border-radius: 50%
+        margin-right: 10px
+      &-standart
+        color: #B19A7C
+      &-standart:before
+        background-color: #B19A7C
+      &-family
+        color: #A3AEC1
+      &-family:before
+        background-color: #A3AEC1
+      &-increased
+        color: #799CA3
+      &-increased:before
+        background-color: #799CA3
+      &-boxing
+        color: #476A87
+      &-boxing:before
+        background-color: #476A87
+      &-small-class
+        color: #0A2F49
+      &-small-class:before
+        background-color: #0A2F49
+      &-other
+        color: #B7202E
+      &-other:before
+        background-color: #B7202E
+      &-family-small
+        color: #F38723
+        width: 100px
+        white-space: normal
+        font-size: 12px
+        line-height: 11px
+      &-family-small:before
+        background-color: #F38723
+      &-standard-small
+        color: #5A4F9B
+      &-standard-small:before
+        background-color: #5A4F9B
+      &-limited
+        color: #65431C
+      &-limited:before
+        background-color: #65431C
+  &__wrapper-small
+    width: 322px
+    margin-right: 24px
+    padding: 10px 10px 12px 96px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    cursor: pointer
+    &.active
+      border: 1px solid #005BB9
+    &:hover
+      border: 1px solid #005BB9
+    &:nth-child(2n+2)
+      margin-right: 0
+    .card__title
+      font-size: 16px
+      line-height: 132%
+      margin-bottom: 15px
+    .card__img
+      top: 5px
+      left: 12px
+      width: 76px
+      height: 81px
+      img
+        max-width: 76px
+    .deleted__button
+      width: 16px
+      height: 16px
+      top: 8px
+      right: 12px
+      svg
+        width: 100%
+        height: auto
+    .card__cell
+      margin-right: 24px
+      &:nth-child(2n+2)
+        margin-right: 0
+
+@media(max-width: 1024px)
+  .card__wrapper:not(&.card__wrapper-small)
+      width: 281px
+      padding: 15px 16px 0 16px
+      .card
+        &__title
+          margin-bottom: 67px
+          flex-wrap: wrap
+          font-size: 16px
+          line-height: 132%
+          .finishing__type
+            width: 100%
+            margin-left: 0
+            margin-top: 12px
+            .text__wrapper
+              display: none
+        &__subtitle
+          display: block
+          width: 100%
+          margin-top: 5px
+        &__img
+          width: 249px
+          height: 102px
+          top: 56px
+        &__row
+          flex-wrap: wrap
+        &__cell
+          margin-bottom: 15px
+          &:nth-child(2n+1)
+            width: 96px
+          &:nth-child(2n+2)
+            margin-right: 0
+          &-floor, &-corp
+            display: none
+          &-price
+            font-family: Roboto-Bold, Arial, sans-serif
+            font-weight: bold
+        &__label
+          margin-bottom: 5px
+@media(max-width: 1024px)
+  .tabs__wrapper
+    .tab__item__content
+      .card__wrapper.card__wrapper-small
+        width: 268px
+        padding: 10px 24px 12px 80px
+        margin-right: 16px
+        &:nth-child(2n+2)
+          margin-right: 0
+        .card__img
+          left: 0
+        .deleted__button
+          width: 16px
+          height: 16px
+          top: 8px
+          right: 8px
+
+@media(max-width: 767px)
+  .tabs__wrapper
+    .card
+      &__wrapper
+        &:not(&.card__wrapper-small)
+          width: 100%
+          .card
+            &__cell
+              width: 50%
+              margin-right: 0
+            &__img
+              width: 50%
+              left: 25%
+        &.card__wrapper-small
+          min-width: 235px
+          width: 235px
+          margin-right: 16px
+          padding-left: 60px
+          &:nth-child(2n+2)
+            margin-right: 16px
+          .card__title
+            max-width: 150px
+          .card__img
+            width: 56px
+            left: 2px
+          .card__cell
+            display: none
+            &-price
+              display: block
+          .deleted__button
+            width: 16px
+            height: 16px
+            top: 5px
+            right: 5px
+
+
+
+
+

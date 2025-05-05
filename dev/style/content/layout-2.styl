@@ -1,0 +1,80 @@
+.layout-2
+  @media(max-width: 450px)
+      margin-bottom: 60px
+  .layout
+    &__title
+      margin-bottom: 54px
+    &__text
+      margin-bottom: 100px
+    @media(max-width: 450px)
+      &__title
+        margin-bottom: 30px
+      &__text
+        margin-bottom: 40px
+  .items__wrapper
+    .item
+      &__wrapper
+        margin-right: 94px
+        align-items: flex-end
+      &__icon
+        margin-right: 30px
+        width: 70px
+        min-width: 70px
+        height: 70px
+      &__text
+        max-width: 210px
+        font-size: 17px
+
+    &-infrastructure
+      margin-bottom: 74px
+      @media (max-width: 1250px)
+        flex-wrap: wrap
+        justify-content: space-between
+        .item__wrapper
+            margin-right: 0
+            width: 50%
+      @media(max-width: 450px)
+        .item
+          &__wrapper
+            flex-direction: column
+            align-items center
+            &:nth-child(1), &:nth-child(2)
+              margin-bottom: 40px
+          &__icon
+            margin-right: 0
+            margin-bottom: 25px
+          &__text
+            max-width: 140px
+            text-align: center
+            font-size: 14px
+            line-height: 130%
+    &-list
+      .item__wrapper
+        align-items: center
+        margin-right: 49px
+        &:before
+          content: ''
+          display: block
+          height: 10px
+          width: 10px
+          min-width: 10px
+          border-radius: 1px
+          background-color: #0072CE
+          margin-right: 10px
+        .item__text
+          max-width: 100%
+      @media(max-width: 450px)
+        flex-direction: column
+        margin-left: 50px
+        .item
+          &__wrapper
+            margin-bottom: 15px
+            margin-right: 0
+            &:last-child
+              margin-bottom: 0
+          &__text
+            font-size: 14px
+            line-height: 130%
+
+
+

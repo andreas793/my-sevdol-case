@@ -1,0 +1,31 @@
+@import "../mixin/flex.styl"
+.layout-5
+  @media(max-width: 450px)
+    display: none
+  .layout
+    &__title
+      margin-bottom: 40px
+  .map__section
+    img
+      width: 100%
+      height: auto
+  .button__section
+    margin-bottom: 20px
+    flex()
+    .button
+      margin-right: 18px
+      padding: 10px 30px
+      font-size: 14px
+      line-height: 16px
+      color: #fff
+      font-family: 'Roboto', Arial, sans-serif
+      background-color: #4A8197
+      border-radius: 2px
+      box-shadow none
+      border-color: #4A8197
+      &:hover
+        background-color: #558FA7
+      &:last-child
+        margin-right: 0
+
+

@@ -1,0 +1,107 @@
+@import "../mixin/flex.styl"
+
+.layout__wrapper-2
+  max-width: 1920px
+  margin: 0 auto 392px auto
+  padding: 94px 0 279px 0
+  position: relative
+  background:#005BB9 url("../img/about/icons/layout-bg.svg") no-repeat 84% 70px
+  @media(max-width: 1599px)
+   padding: 79px 73px 103px 73px
+  @media(max-width: 1024px)
+    background: #005BB9
+    margin: 0 auto 228px auto
+  @media(max-width: 767px)
+    padding: 78px 10px 131px 10px
+    margin: 0 auto 183px auto
+  .content__section
+    max-width: 1366px
+    margin: 0 auto
+  .layout
+    &__title
+      color: #fff
+      margin-bottom: 29px
+      position: relative
+      &:before
+        content: ''
+        display: block
+        width: 123px
+        height: 35.5px
+        position: absolute
+        top: -35.5px
+        left: 30px
+        background: url(../img/about/icons/title-bg.svg) no-repeat 50% 50%
+    &__text__p
+      color: #fff
+      font-size: 18px
+      line-height: 25px
+      margin-bottom: 45px
+      font-family: "Roboto", Arial, sans-serif
+      max-width: 765px
+      @media(max-width: 1023px)
+        font-size: 16px
+        line-height: 132%
+  .about
+    &__items
+      flex()
+      @media(max-width: 1023px)
+        flex-wrap: wrap
+    &__item
+      flex(flex-start, flex-end, row)
+      color: #fff
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+      &__value
+        font-size: 45px
+        line-height: 52px
+        margin-right: 9px
+        font-family: "Gilroy", Arial, sans-serif
+      &__p
+        font-family: "Roboto", Arial, sans-serif
+        font-size: 12px
+        line-height: 14px
+      @media(max-width: 1023px)
+        margin-bottom: 21px
+        &:last-child
+          margin-bottom: 0
+      @media(max-width: 767px)
+        width: calc(50% - 21px)
+        margin-right: 0
+        margin-bottom: 9px
+        &:last-child
+          margin-bottom: 0
+        &:nth-child(2n+2)
+          margin-left: 41px
+  .gallery__list
+    position: absolute
+    left: 0
+    bottom: -203px
+    @media(max-width: 1599px)
+      bottom: -139px
+    @media(max-width: 767px)
+      left: 8px
+      bottom: -120px
+.gallery
+  &__list
+    flex()
+  &__item
+    max-width: 777px
+    margin-right: 26px
+    &:first-child
+      max-width: 725px
+    img
+      width: 100%
+      height: auto
+    @media(max-width: 1599px)
+      max-width: 352px
+      margin-right: 24px
+      &:first-child
+        max-width: 329px
+    @media(max-width: 767px)
+      max-width: 302px
+      &:nth-child(2)
+        display: none
+
+
+

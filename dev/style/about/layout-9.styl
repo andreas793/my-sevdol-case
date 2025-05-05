@@ -1,0 +1,145 @@
+@import "../mixin/flex.styl"
+
+.layout__wrapper-9
+  margin-bottom: 105px
+  .content__section
+    flex()
+    @media(max-width: 1439px)
+      flex-wrap: wrap
+      justify-content center
+    @media(max-width: 1024px)
+      justify-content: flex-start
+      padding: 0 72px
+      box-sizing border-box
+    @media(max-width: 767px)
+      padding: 0 10px
+  .layout__img
+    max-width: 902px
+    width: 100%
+    img
+      width: 100%
+      height: auto
+    .layout__title
+      display: none
+    @media(max-width: 1439px)
+      margin-bottom: 40px
+      order: -1
+      .layout__title
+        display: block
+        padding-left: 0
+  .accordion
+    &__wrapper
+      width: 437px
+      margin-right: 27px
+      margin-bottom: 117px
+      .layout__title
+        padding-bottom: 26px
+        margin-bottom: 0
+        border-bottom: 1px solid #C4C4C4
+      @media(max-width: 1439px)
+        width: 100%
+        max-width: 902px
+        margin-right: 0
+        margin-bottom: 80px
+        .layout__title
+          display: none
+
+.accordion
+  &__item
+    padding: 22px 0
+    box-sizing: border-box
+    border-bottom: 1px solid #c4c4c4
+    display: block
+    height: 90px
+    overflow: hidden
+    cursor: pointer
+  &__label
+    font-size: 45px
+    line-height: 52px
+    font-family: Gilroy, Arial, sans-serif
+    width: 100%
+    color: #B19A7C
+    margin-bottom: 13px
+    margin-left: 11px
+    position: relative
+    &:before
+      content: ""
+      display: block
+      top: 26px
+      right: 31px
+      position: absolute
+      width: 24px
+      height: 1px
+      background-color: #C4C4C4
+    &:after
+      content: ""
+      display: block
+      top: 14px
+      right: 42px
+      position: absolute
+      width: 1px
+      height: 24px
+      background-color: #C4C4C4
+  &__text
+    font-family: "Roboto", Arial, sans-serif
+    font-size: 18px
+    line-height: 34px
+    color: rgba(51, 51, 51, 0.78)
+    padding-left: 28px
+    box-sizing: border-box
+    position: relative
+    &:before
+      content: ""
+      display: inline-block
+      position: absolute
+      width: 22px
+      height: 1px
+      background-color: #B19A7C
+      left: 0
+      top: 17px
+  &__wrapper
+    input[type="radio"]
+      position: absolute
+      z-index: -10
+      visibility: hidden
+    input[type="radio"]:checked+.accordion__item
+      height: auto
+    input[type="radio"]:checked+.accordion__item .accordion__label:after
+      background-color: transparent
+
+
+
+
+.layout__wrapper-9
+  .subscribe__section
+    padding: 43px 115px 48px 115px
+    background: url("../img/about/subscr-bg.png") no-repeat 50% 50%
+    box-sizing: border-box
+    @media(max-width: 1024px)
+      padding: 43px 82px 48px 82px
+    @media(max-width: 767px)
+      background: url("../img/about/subscr-mob-bg.png") no-repeat 50% 50%
+      background-size: cover
+      padding: 43px 10px 48px 10px
+    .layout__title
+      margin-bottom: 17px
+      color: #fff
+    .layout__text
+      max-width: 480px
+      margin-bottom: 58px
+      color: #fff
+    .subscribe-btn
+      padding: 11px 40px 12px 40px
+      font-size: 18px
+      line-height: 25px
+      color: #fff
+      font-family: Roboto, Arial, sans-serif
+      border: 1px solid #fff
+      display: inline-block
+      cursor: pointer
+      white-space: nowrap
+    @media(max-width: 1024px)
+      .layout__title
+        padding-left: 0
+      .layout__text
+        margin-left: 0

@@ -1,0 +1,27 @@
+doctype
+html
+    head
+        title Заголовок
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="css/jquery-ui.min.css")
+        link(rel="stylesheet" href="css/jquery.multiselect.css")
+        link(rel="stylesheet" href="css/multiselect.css")
+        link(rel="stylesheet" href="css/magnific-popup.css")
+        link(rel="stylesheet" href="./css/parking.css")
+    body
+        include content/breadcrumb/index
+        .layout__wrapper
+            include content/parking/filter
+            include content/parking/plane
+            include content/parking/table
+            .layout__title Типы парковочных мест
+            include content/parking/parking-type
+            include content/parking/application-popup
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="js/jquery-ui.min.js")
+        script(src="js/jquery.multiselect.js")
+        script(src="js/magnific-popup.min.js")
+        script(src="js/gallery.js")
+        script(src="js/popup.js")
+

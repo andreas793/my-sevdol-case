@@ -1,0 +1,79 @@
+.pagination__wrapper
+  display: flex
+  justify-content: center
+  margin-bottom: 119px
+.pagination__wrapper ul
+  margin: 0
+  display: flex
+  padding: 0
+
+.pagination__wrapper ul li
+  color: #A3A3A3
+  list-style: none
+  text-align: center
+  font-size: 16px
+  line-height: 19px
+  cursor: pointer
+  font-family: "Roboto", Arial, sans-serif
+  padding: 0 4px
+
+.pagination__wrapper ul li.numb
+  list-style: none
+  line-height: 19px
+  margin-right: 19px
+
+
+.pagination__wrapper ul li.dots
+  font-size: 16px
+  cursor: default
+  margin-right: 20px
+
+.pagination__wrapper ul li.prev
+  margin-right: 20px
+  &:hover
+    color: #0072C7 !important
+  &:before
+    content: ''
+    display: inline-block
+    width: 13px
+    height: 8px
+    background: url("../img/news/arrow-pag-prev.svg") no-repeat 50% 50%
+    margin-right: 4px;
+  &:hover:before
+      background: url("../img/news/arrow-pag-prev-blue.svg") no-repeat 50% 50%
+
+.pagination__wrapper ul li.next
+  &:hover
+    color: #0072C7!important
+  &:after
+    content: ''
+    display: inline-block
+    width: 13px
+    height: 8px
+    background: url("../img/news/arrow-pag-next.svg") no-repeat 50% 50%
+    margin-left: 4px;
+  &:hover:after
+    background: url("../img/news/arrow-pag-next-blue.svg") no-repeat 50% 50%
+
+
+.pagination__wrapper ul li.numb:hover,
+.pagination__wrapper ul li:first-child:hover,
+.pagination__wrapper ul li:last-child:hover
+  color: #A3A3A3
+
+.pagination__wrapper li.active,
+.pagination__wrapper li.active.numb:hover
+  color: white
+  background-color: #0072C7
+
+@media(max-width: 767px)
+  .pagination__wrapper
+    margin-bottom: 74px
+  .pagination__wrapper .btn.prev,
+  .pagination__wrapper .btn.next
+    display: none
+
+
+
+
+

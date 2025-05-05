@@ -1,0 +1,102 @@
+.cards__header__row
+    .cards__header__cell Планировка
+    .cards__header__cell Комнатность
+    .cards__header__cell Площадь
+    .cards__header__cell.cards__header-deadline Сдача дома
+    .cards__header__cell Очередь
+    .cards__header__cell Корпус
+    .cards__header__cell.cards__header-floor Этаж
+    .cards__header__cell Стоимость
+.cards__wrapper
+    .card__wrapper
+        .card__row.card__row-type
+            .finishing__img
+                img(src="img/planirovki-i-ceny/finishing.svg")
+            .card__cell.card__cell-type-finishing c отделкой
+            .card__cell.card__cell-type-notfinish без отделки
+            .card__cell.card__cell-type-office "домашний офис"
+            .card__cell.card__cell-type-discount скидка 2%
+        .card__slider
+            img(src="img/planirovki-i-ceny/card-img-1.png")
+        .card__row.card__row-meters-apartment
+            .card__title
+                .card__number № 312
+                div 1-комнатная
+                .card__row
+                    .card__cell-type-finishing c отделкой
+                    .card__cell-type-notfinish без отделки
+                    .card__cell-type-office "домашний офис"
+                    .card__cell-type-discount скидка 2%
+            .card__meters-apartment 54.25 м
+                sup 2
+            .card__cell.card__cell-deadline
+                .card__lable Срок сдачи
+                .card__text  2 квартал 2022
+        .card__row.card__row-info
+            .card__cell.card__cell-deadline
+                .card__lable Срок сдачи
+                .card__text  2 кв. 2022
+            .card__cell.card__cell-turn
+                .card__lable Очередь
+                .card__text  6
+            .card__cell.card__cell-korp
+                .card__lable Корпус
+                .card__text  10
+            .card__cell.card__cell-floor
+                .card__lable Этаж
+                .card__text  3 из 22
+        .card__footer
+            .card__cell.card__cell-square-meter от 24 678 ₽/мес.
+            .card__cell.card__cell-price 2 587 890 ₽
+
+.cards__header__row.cards__header-group-row
+    .cards__header__cell Планировка
+    .cards__header__cell Колличество квартир
+    .cards__header__cell Этажи
+    .cards__header__cell Площадь
+    .cards__header__cell Стоимость
+    .cards__header__cell
+.cards__wrapper
+    .card__wrapper.card-group__wrapper
+        .card__top
+            .card__top__rooms 1K
+            .card__top__group-name 1_109Y
+        .card__slider
+            img(src="./img/planirovki-i-ceny/card-img-1.png")
+        .card__bg
+        .card__row
+            .card__cell
+                .card__title Балкон
+                .card__value Да
+            .card__cell
+                .card__title Этажи
+                .card__value 1-22
+            .card__cell
+                .card__title Площадь
+                .card__value от 28.32 м
+                    sap 2
+            .card__cell
+                .card__title Стоимость
+                .card__value от 2 587 890
+        .button.button-no-bg Смотреть все варианты
+        .card__bottom
+            input(type="checkbox" id="bottom-chek-1")
+            label.card__bottom__title(for="bottom-chek-1") Подробнее
+            .card__bg
+            .card__row
+                .card__cell
+                    .card__title Балкон
+                    .card__value Да
+                .card__cell
+                    .card__title Этажи
+                    .card__value 1-22
+                .card__cell
+                    .card__title Площадь
+                    .card__value от 28.32 м
+                        sap 2
+
+.pagination__wrapper(data-total-pages=20 data-page=1)
+    ul
+
+.
+

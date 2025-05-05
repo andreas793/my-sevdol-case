@@ -1,0 +1,167 @@
+@import "../mixin/flex.styl"
+
+.cards__items__wrapper
+  width: 100%
+  max-width: 1092px
+  margin: 0 auto
+  flex(flex-start, flex-start, row)
+  flex-wrap: wrap
+  @media(max-width: 1092px)
+    flex(flex-start, center, column)
+  .card
+    &__wrapper
+      width: 300px
+      min-width: 300px
+      border: 1px solid #DCDCDC
+      box-sizing border-box
+      padding: 42px 20px 20px 21px
+      margin: 0  96px 20px 0
+      font-family: "Geometria", Arial, sans-serif
+      font-size: 14px
+      line-height: 18px
+      color: #3A393C
+      position: relative
+      &:hover
+        box-shadow: 10px 10px 20px rgba(0, 48, 72, 0.05),
+                    5px 5px 15px rgba(0, 0, 0, 0.1)
+      &:nth-child(3n+3)
+        margin-right: 0
+      @media(max-width: 1092px)
+        width: 300px
+        min-width: 300px
+        margin: 0 0 20px 0
+    &__ticket
+      position: absolute
+      &-label
+        width: 76px
+        height: 111px
+        top: -4px
+        right: -43px
+      &-diamond
+        width: 55px
+        height: 55px
+        top: -8px
+        right: -20px
+      img
+        width: 100%
+        height: auto
+
+    &__slider
+      width: 200px
+      height: 200px
+      overflow: hidden
+      margin: 0 auto 14px auto
+      flex(center, center, row)
+      img
+        width: auto
+        max-width: 200px
+        height: 100%
+        max-height: 200px
+        margin: auto
+    &__row
+      flex()
+      &-meters-apartment
+        margin-bottom: 20px
+        white-space: nowrap
+        .card__cell-deadline
+          display: none
+      sup
+        font-size: 8px
+        line-height: 8px
+      &-type
+        position: absolute
+        top: 10px
+        left: 10px
+        flex-wrap: wrap
+
+    &__cell
+      margin-bottom: 20px
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+        white-space: nowrap
+      &-type-finishing,
+      &-type-notfinish,
+      &-type-office,
+      &-type-discount
+        display: inline-block
+        box-sizing: border-box
+        border-radius: 5px
+        background: rgba(0, 114, 199, 0.05)
+        padding: 8px 12px
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.02em
+        font-family: "Geometria", Arial, sans-serif
+        color: #0072C7
+        white-space: nowrap
+        margin: 0 10px 10px 0
+      &-type-notfinish
+        background: rgba(0, 51, 73, 0.05)
+        color: rgba(0, 51, 73, 0.5)
+      &-type-office
+        background: rgba(183, 49, 44, 0.05)
+        color: #B7312C
+      &-type-discount
+        background: #EBFBE9
+        color: #38792A
+      &-turn
+        display: none
+    &__title
+      font-size: 20px
+      line-height: 24px
+      display: inline-block
+      margin-right: 10px
+      font-family: "Gilroy-SemiBold", Arial, sans-serif
+      color: #353535
+    &__meters-apartment
+      font-size: 20px
+      line-height: 24px
+      font-family: "Gilroy-SemiBold", Arial, sans-serif
+      color: #353535
+    &__lable
+      font-size: 12px
+      line-height: 14px
+      margin-bottom: 8px
+      color: #A3A3A3
+    &__text
+      font-size: 16px
+      line-height: 19px
+      color: #353535
+    &__footer
+      border-top: 1px solid #DADADA
+      padding-top: 20px
+      box-sizing: border-box
+      flex(space-between, center, row)
+      .card
+        &__cell
+          display: inline-block
+          margin-bottom: 0
+          margin-right: 0
+          &-square-meter
+            font-size: 14px
+            line-height: 17px
+            color: #A3A3A3
+          &-price
+            font-size: 20px
+            line-height: 30px
+            font-weight: 500
+            margin-bottom: 4px
+            color: #0072CE
+            font-family: "Gilroy-SemiBold", Arial, sans-serif
+@media(max-width: 767px)
+  .cards__items__wrapper
+    .card__row .card__title, .card__row .card__meters-apartment
+      font-size: 16px
+      line-height: 20px
+    .card__cell
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+      .card__text
+        font-size: 13px
+        line-height: 19px
+
+
+
+

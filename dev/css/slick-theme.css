@@ -1,0 +1,60 @@
+.slick-dots {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 10px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  position: absolute;
+  bottom: -35px;
+}
+.slick-dots li {
+  margin-right: 5px;
+  font-size: 0;
+}
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+.slick-dots button {
+  padding: 0;
+  font-size: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #A3A3A3;
+  border: none;
+  outline: none;
+}
+.slick-dots .slick-active button {
+  width: 4px;
+  height: 4px;
+  background-color: #3A393C;
+}
+.slick-arrow {
+  font-size: 0;
+  border: 0;
+  padding: 0;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+.slick-arrow.slick-next {
+  background: url("../img/news/slider-next.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 15px
+}
+.slick-arrow.slick-prev {
+  background: url("../img/news/slider-prev.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -15px;
+}

@@ -1,0 +1,98 @@
+@import "../mixin/flex.styl"
+.layout__wrapper-4
+    margin-bottom: 120px
+    @media(max-width: 767px)
+      margin-bottom: 80px
+.safety
+  &__items
+    flex()
+    @media(max-width: 1366px)
+      width: 694px
+      margin: 0 auto
+      flex-wrap: wrap
+    @media(max-width: 767px)
+      width: 100%
+      padding: 0 10px
+      box-sizing: border-box
+  &__item
+    width: 322px
+    min-width: 322px
+    height: 218px
+    padding: 31px 40px
+    box-sizing: border-box
+    position: relative
+    border: 1px solid #B19A7C
+    margin-right: 25px
+    &:last-child
+      margin-right: 0
+    @media(max-width: 1366px)
+      &:first-child
+        margin-bottom: 25px
+      &:nth-child(2n+2)
+        margin-right: 0
+    @media(max-width: 1023px)
+      width: 300px
+      min-width: 300px
+      height: 251px
+      padding: 25px 32px
+      &:first-child,
+      &:nth-child(3)
+        margin-right: 20px
+        margin-bottom: 20px
+    @media(max-width: 767px)
+      width: 100%
+      min-width: auto
+      height: auto
+      margin-right: 0 !important
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+  &__icon
+    width: 60px
+    height: 60px
+    margin-bottom: 42px
+    @media(max-width: 1279px)
+      width: 44px
+      height: 44px
+      margin-bottom: 14px
+    img
+      width: 100%
+      height: auto
+  &__title
+    font-family: Gilroy-SemiBold, Arial, sans-serif
+    font-size: 24px
+    line-height: 29px
+    color: #B19A7C
+    @media(max-width: 1024px)
+      font-size: 18px
+      line-height: 139%
+      margin-bottom: 3px
+
+  &__text
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    opacity: 0
+    font-family: Roboto, Arial, sans-serif
+    font-size: 16px
+    line-height: 123%
+    padding: 56px 40px
+    box-sizing: border-box
+    background-color: #B19A7C
+    color: #fff
+    @media(max-width: 1024px)
+      color: rgba(51, 51, 51, 0.78)
+      opacity: 1
+      position: relative
+      bottom: auto
+      top: auto
+      right: auto
+      left: auto
+      background-color: transparent
+      padding: 0
+  &__item:hover .safety__text
+    opacity: 1
+
+

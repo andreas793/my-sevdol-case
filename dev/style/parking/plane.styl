@@ -1,0 +1,264 @@
+@import "../mixin/flex.styl"
+
+.plane
+  &__section
+    flex()
+    position: relative
+    margin-bottom: 115px
+    @media(max-width: 1023px)
+      flex-wrap: wrap
+      margin-bottom: 27px
+  &__wrapper
+    width: 1018px
+    margin-right: 26px
+    position: relative
+    @media(max-width: 1366px)
+      width: 701px
+    @media(max-width: 1023px)
+      width: 100%
+      margin-right: 0
+      margin-bottom: 40px
+      order: 1
+    .button__wrapper-white
+      padding: 11px 32px 12px 32px
+      background-color: #fff
+      font-family: Roboto, Arial, sans-serif
+      color: #005BB9
+      font-size: 16px
+      line-height: 132%
+      text-align: center
+      display: none
+      width: 100%
+      max-width: 218px
+      border: 1px solid #005BB9
+      box-sizing: border-box
+      position: absolute
+      bottom: 40px
+      left: calc(50% - 109px)
+      cursor: pointer
+      white-space: nowrap
+      &:after
+        content: ''
+        display: inline-block
+        min-width: 24px
+        width: 24px
+        height: 24px
+        margin-left: 9px
+        background: url('../img/parking/icons/full-screen.svg') no-repeat 50% 50%
+        background-size: cover
+      @media(max-width: 1023px)
+        padding:5px 28px 6px 24px
+        max-width: 190px
+        left: calc(50% - 90px)
+        bottom: 32px
+        &:after
+          min-width: 16px
+          width: 16px
+          height: 16px
+      @media(max-width: 767px)
+        flex(flex-start, center, row)
+        position: relative
+        top: 0
+        left: 0
+        margin: 0 auto
+    canvas
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      pointer-events: none
+    @media(min-width: 767px)
+      &-small
+        padding: 12px 95px 17px 65px
+        .button__wrapper-white
+          flex(flex-start, center, row)
+        canvas
+          display: none
+
+
+  &__side
+    position: absolute
+    bottom: 26px
+    right: 0
+    width: 322px
+    @media(max-width: 1366px)
+      right: inherit
+      left: 728px
+      bottom: 0
+      width: auto
+    @media(max-width: 1023px)
+      left: 0
+      bottom: 0
+      position: relative
+      order: 2
+      flex(flex-start, flex-end, row)
+    &-floor
+      font-family: Gilroy-SemiBold, Arial, sans-serif
+      font-size: 24px
+      line-height: 29px
+      margin-bottom: 8px
+      color: rgba(51, 51, 51, 0.78)
+      @media(max-width: 1023px)
+        margin-bottom: 0
+        margin-right: 32px
+    &-amount
+      font-family: Roboto, Arial, sans-serif
+      font-size: 18px
+      line-height: 25px
+      color: rgba(51, 51, 51, 0.78)
+      @media(max-width: 1023px)
+        font-size: 16px
+        line-height: 132%
+      span
+        color: #005BB9
+        margin: 0 6px
+  &__info
+    width: 322px
+    padding: 0 0 32px 0
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    position: relative
+    @media(max-width: 1366px)
+      width: 220px
+      padding-bottom: 0
+    @media(max-width: 1023px)
+        width: 100%
+        padding: 17px 32px 15px 32px
+        margin-bottom: 32px
+        &>img
+          display: none
+    .location
+      &__wrapper
+        margin-top: 32px
+        margin-bottom: 19px
+        padding: 0 24px
+        flex()
+        @media(max-width: 1366px)
+          padding: 0 10px 0 16px
+        @media(max-width: 1023px)
+            max-width: 374px
+            margin-top: 0
+        .img__wrapper
+          width: 13px
+          min-width: 13px
+          margin-right: 7px
+      &__text
+        font-family: Roboto, Arial, sans-serif
+        font-size: 16px
+        line-height: 132%
+        color: rgba(51, 51, 51, 0.78)
+    .parking
+      &__type__wrapper
+        flex(space-between, flex-start, row)
+        font-family: Roboto, Arial, sans-serif
+        margin-bottom: 48px
+        padding: 0 24px
+        @media(max-width: 1366px)
+          flex-wrap: wrap
+          padding:0 10px 0 16px
+          margin-bottom: 26px
+          .parking__type
+            margin-bottom: 18px
+        @media(max-width: 1023px)
+          max-width: 374px
+          justify-content: flex-start
+          margin-bottom: 0
+          .parking__type
+            margin-bottom: 0
+      &__type
+        padding: 1px 24px 2px 24px
+        color: #B19A7C
+        font-size: 16px
+        line-height: 132%
+        background-color: rgba(51, 51, 51, 0.1)
+        @media(max-width: 1023px)
+          margin-right: 33px
+      &__price
+        color: #B19A7C
+        font-family: Roboto-Bold, Arial, sans-serif
+        font-weight: bold
+        font-size: 18px
+        line-height: 138%
+    .button__wrapper
+      border: 1px solid #005BB9
+      text-align: center
+      font-size: 18px
+      line-height: 25px
+      color: #005BB9
+      padding: 10px 0 13px 0
+      margin: 0 24px
+      font-family: Roboto, Arial, sans-serif
+      cursor: pointer
+      @media(max-width: 1366px)
+        margin: 0
+      @media(max-width: 1023px)
+        max-width: 174px
+        width: 100%
+        padding: 5px 0 6px 0
+        background-color: #005BB9
+        color: #fff
+        font-size: 16px
+        line-height: 132%
+        position: absolute
+        right: 40px
+        top: 17px
+    .link__wrapper
+      flex(center, center, row)
+      position: absolute
+      top: 0
+      right: 0
+      background-color: #fff
+      width: 32px
+      height: 32px
+      padding: 7px
+      box-sizing: border-box
+      span
+        display: none
+        font-size: 16px
+        line-height: 132%
+        color: #005BB9
+        font-family: Roboto, Arial, sans-serif
+        margin-right: 12px
+        @media(max-width: 1023px)
+          display: block
+      .img__wrapper
+        width: 12px
+        min-width: 12px
+        height: 12px
+      @media(max-width: 1023px)
+        top: inherit
+        background-color: transparent
+        width: auto
+        height: auto
+        padding: 0
+        bottom: 16px
+        right: 40px
+    @media(max-width: 767px)
+      padding: 18px 16px 21px 16px
+      .location__wrapper
+        padding: 0
+        margin-bottom: 19px
+        .img__wrapper
+          width: 10px
+          min-width: 10px
+          margin-right: 8px
+      .parking__type__wrapper
+        padding: 0
+        margin: 0 0 32px 0
+        justify-content: space-between
+      .parking__type
+        margin-right: 0
+      .parking__price
+        font-size: 16px
+      .button__wrapper
+        position: relative
+        top: 0
+        right: 0
+        margin: 0 auto 9px auto
+        width: 100%
+        max-width: 100%
+      .link__wrapper
+        position: relative
+        bottom: 0
+        right: 0
+        justify-content: center

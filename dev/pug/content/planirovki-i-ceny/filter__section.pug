@@ -1,0 +1,59 @@
+.filters__wrapper
+    .filters__wrapper__title Подбор коммерческого помещения
+    .button.show-filter
+        .icon__wrapper
+            img(src="./img/planirovki-i-ceny/icons/filter.svg")
+        .button__text Фильтр
+    .filters__form
+        .close__filters__form
+            img(src="./img/planirovki-i-ceny/icons/close.svg")
+        .filters__wrapper__title Фильтр
+        form(action="#").filters__form__content
+            .filters__form__row
+                .filters__form__cell
+                    .filters__form__label Количество комнат
+                    .checkbox__section-number-rooms
+                        .checkbox__wrapper-btn
+                            input(type='checkbox' id='stud' name='room-1' value='stud')
+                            label(for='stud') Студия
+                        .checkbox__wrapper-btn
+                            input(type='checkbox' id='room-1' name='room-1' value='room-1')
+                            label(for='room-1') 1
+                        .checkbox__wrapper-btn
+                            input(type='checkbox' id='room-2' name='room-2' value='room-2')
+                            label(for='room-2') 2
+                        .checkbox__wrapper-btn
+                            input(type='checkbox' id='room-3' name='room-3' value='room-3')
+                            label(for='room-3') 3
+
+                .filters__form__cell
+                    .filters__form__label Этаж
+                    .checkbox__section
+                        .checkbox__wrapper
+                            input(type='checkbox' id='not-first-floor' name='not-first-floor' value='not-first-floor')
+                            label(for='not-first-floor') Не первый
+                        .checkbox__wrapper
+                            input(type='checkbox' id='not-last-floor' name='not-last-floor' value='not-last-floor')
+                            label(for='not-last-floor') Не последний
+                .filters__form__cell
+                    .filters__form__label Дополнительно
+                    .checkbox__wrapper
+                        input(type='checkbox' id='balcony1' name='balcony' value='balcony')
+                        label(for='balcony1') С балконом
+
+            .filters__actions__panel
+                .all-parametrs__wrapper
+                    label(class="all-parametrs__label")
+                        input(type="checkbox" name="all_parametrs")
+                        .all-parametrs__text.all-parametrs__hide Больше параметров
+                        .all-parametrs__text.all-parametrs__show Свернуть
+                input(class="button button-no-bg" type="submit" id="del_filter" name="del_filter" value="Сбросить параметры")
+                input(class="button button-black" type="submit" id="set_filter" name="set_filter" value="Подобрать квартиру")
+
+
+
+
+
+
+
+

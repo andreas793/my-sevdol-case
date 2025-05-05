@@ -1,0 +1,22 @@
+doctype
+html
+    head
+        title Новости
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="./css/news.css")
+    body
+        .layout__wrapper
+            .layout__title#title-page Новости
+            include content/news/sort
+            include content/news/news__list
+            .pagination__wrapper(data-total-pages=20 data-page=1)
+                ul
+            include content/news/mailing-form
+            .layout__title Возможно Вас заинтересует
+            include content/news/cards
+            a(href="#title-page" class="link__key")
+                img(src="img/news/link-key.svg")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="js/news/script.js")
+        script(src="js/news/pagination.js")
